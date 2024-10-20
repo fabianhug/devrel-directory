@@ -12,8 +12,9 @@ export default function LandingPage() {
           devrel.directory
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Your comprehensive resource for Developer Relations. Explore our
-          documentation and stay updated with our blog.
+          Your comprehensive resource for Developer Relations. Find resources,
+          tools, and guides for your DevRel journey. Read the latest articles
+          and stay updated with the DevRel community.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Button asChild>
