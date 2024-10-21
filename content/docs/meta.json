@@ -1,7 +1,27 @@
 {
     "pages": [
-        "definition-of-developer-relations",
-        "importance",
-        "glossary"
+        "index",
+        "definition-of-developer-relations/definition",
+        "---Fundamentals---",
+        "fundamentals/importance",
+        "fundamentals/devrel-strategy",
+        "---Practices---",
+        "practices/best-practices",
+        "practices/devrel-activities",
+        "practices/devrel-for-companies",
+        "---Tracking and Measuring DevRel Success---",
+        "tracking/measuring-success",
+        "---Tools and Technologies---",
+        "tools-and-technologies/overview",
+        "tools-and-technologies/essential-tools",
+        "tools-and-technologies/devrel-and-dx",
+        "---Industry Insights---",
+        "industry-insights/devrel-in-industries",
+        "---Career---",
+        "career/getting-hired",
+        "---Additional Resources---",
+        "additional-resources/resources",
+        "additional-resources/glossary",
+        "additional-resources/contributing"
     ]
 }

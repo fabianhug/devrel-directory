@@ -26,3 +26,6 @@ yarn-error.log*
 .env*.local
 .vercel
 next-env.d.ts
+
+CONTENT-OUTLINE.md
+PROMPTS.md
