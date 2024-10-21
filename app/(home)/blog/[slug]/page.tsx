@@ -88,7 +88,7 @@ export async function generateMetadata(props: {
   return createMetadata({
     title: page.data.title,
     description:
-      page.data.description ?? "The library for building documentation sites",
+      page.data.description ?? "A comprehensive guide to Developer Relations",
   });
 }
 
