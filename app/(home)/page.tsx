@@ -31,7 +31,7 @@ export default function LandingPage() {
           </Button>
           <Button asChild variant="outline">
             <Link
-              href="https://github.com/0xfabs/devrel.directory"
+              href="https://github.com/fabianhug/devrel-directory"
               target="_blank"
               rel="noopener noreferrer"
             >

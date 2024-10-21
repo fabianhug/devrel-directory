@@ -24,7 +24,7 @@ export const baseOptions: HomeLayoutProps = {
     },
     {
       text: "Contribute",
-      url: "https://github.com/0xfabs/devrel.directory",
+      url: "https://github.com/fabianhug/devrel-directory",
       active: "url",
     },
   ],
