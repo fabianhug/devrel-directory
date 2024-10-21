@@ -37,7 +37,8 @@ export default function Page(): React.ReactElement {
           devrel.directory blog
         </h1>
         <p className="text-sm md:text-base">
-          A directory of developer relations professionals
+          Explore the latest insights, trends, and best practices in Developer
+          Relations
         </p>
       </div>
       <div className="grid grid-cols-1 border md:grid-cols-3 lg:grid-cols-4">
@@ -53,7 +54,11 @@ export default function Page(): React.ReactElement {
             </p>
 
             <p className="mt-auto pt-4 text-xs text-fd-muted-foreground">
-              {new Date(post.data.date ?? post.file.name).toDateString()}
+              {new Date(post.data.date ?? post.file.name).toDateString()} by{" "}
+              {post.data.author.startsWith("[") &&
+              post.data.author.endsWith(")")
+                ? post.data.author.match(/\[(.*?)\]/)?.[1] ?? post.data.author
+                : post.data.author}
             </p>
           </Link>
         ))}
