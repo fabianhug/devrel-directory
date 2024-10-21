@@ -29,6 +29,16 @@ export default function LandingPage() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
+          <Button asChild variant="outline">
+            <Link
+              href="https://github.com/0xfabs/devrel.directory"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contribute
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

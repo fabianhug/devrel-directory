@@ -22,5 +22,10 @@ export const baseOptions: HomeLayoutProps = {
       url: "/blog",
       active: "nested-url",
     },
+    {
+      text: "Contribute",
+      url: "https://github.com/0xfabs/devrel.directory",
+      active: "url",
+    },
   ],
 };
