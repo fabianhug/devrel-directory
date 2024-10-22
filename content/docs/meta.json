@@ -1,7 +1,7 @@
 {
     "pages": [
         "index",
-        "---Fundamentals---",
+        "---📖 Fundamentals---",
         "fundamentals/definition",
         "fundamentals/importance",
         "fundamentals/roles-and-responsibilities",
@@ -9,7 +9,7 @@
         "fundamentals/understanding-developer-personas",
         "fundamentals/bridging-technical-and-non-technical-communication",
 
-        "---Practices---",
+        "---⚙️ Practices---",
         "practices/best-practices",
         "practices/devrel-activities",
         "practices/devrel-for-companies",
@@ -20,51 +20,51 @@
         "practices/advocacy-vs-marketing",
         "practices/open-source-management",
 
-        "---Tracking and Measuring DevRel Success---",
+        "---📊 Tracking and Measuring DevRel Success---",
         "tracking/measuring-success",
 
-        "---Tools and Technologies---",
+        "---🛠️ Tools and Technologies---",
         "tools-and-technologies/overview",
         "tools-and-technologies/essential-tools",
         "tools-and-technologies/devrel-and-dx",
 
-        "---Industry Insights---",
+        "---🏭 Industry Insights---",
         "industry-insights/devrel-in-industries",
 
-        "---Career---",
+        "---💼 Career---",
         "career/getting-hired",
         "career/career-paths",
         "career/transitioning-to-devrel",
         "career/personal-branding",
         "career/balancing-skills",
 
-        "---Skills Development---",
+        "---🚀 Skills Development---",
         "skills-development/technical-writing",
         "skills-development/public-speaking",
         "skills-development/social-media-management",
         "skills-development/data-analysis",
 
-        "---Challenges and Solutions---",
+        "---🧩 Challenges and Solutions---",
         "challenges-and-solutions/common-challenges",
         "challenges-and-solutions/scaling-devrel",
         "challenges-and-solutions/remote-teams",
 
-        "---Networking and Collaboration---",
+        "---🤝 Networking and Collaboration---",
         "networking-and-collaboration/internal-relationships",
         "networking-and-collaboration/external-communities",
         "networking-and-collaboration/partnerships",
 
-        "---Emerging Trends---",
+        "---🌐 Emerging Trends---",
         "emerging-trends/ai-and-ml",
         "emerging-trends/low-code-no-code",
         "emerging-trends/cloud-native-serverless",
 
-        "---Ethics and Responsibility---",
+        "---⚖️ Ethics and Responsibility---",
         "ethics-and-responsibility/ethical-considerations",
         "ethics-and-responsibility/diversity-and-inclusion",
         "ethics-and-responsibility/sustainability",
 
-        "---Additional Resources---",
+        "---📚 Additional Resources---",
         "additional-resources/resources",
         "additional-resources/glossary",
         "additional-resources/contributing"
