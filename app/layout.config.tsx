@@ -23,6 +23,11 @@ export const baseOptions: HomeLayoutProps = {
       active: "nested-url",
     },
     {
+      text: "Changelog",
+      url: "/changelog",
+      active: "nested-url",
+    },
+    {
       text: "Contribute",
       url: "https://github.com/fabianhug/devrel-directory",
       active: "url",

@@ -17,4 +17,9 @@ export const blog = defineCollections({
   type: "doc",
 });
 
+export const changelog = defineCollections({
+  dir: "content/changelog",
+  type: "doc",
+});
+
 export default defineConfig();
