@@ -25,7 +25,7 @@ export default async function ChangelogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background text-foreground ">
       <Changelog items={changelogItems} />
     </div>
   );

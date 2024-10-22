@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 
 interface ChangelogItem {
@@ -62,7 +61,7 @@ export default function Changelog({ items = [] }: ChangelogProps) {
             ))}
           </div>
 
-          {/* fix me */}
+          {/* FIXME: having this format for title and description would be nice */}
           {/* <h2 className="text-3xl font-bold mb-4 text-foreground">
             {item.title}
           </h2>
