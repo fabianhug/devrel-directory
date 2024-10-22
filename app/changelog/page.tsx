@@ -1,7 +1,8 @@
 import { changelog } from "@/app/source";
 import Changelog from "@/components/changelog";
+import { Metadata } from "next";
 
-export default function ChangelogPage() {
+export default async function ChangelogPage() {
   const changelogItems = changelog.getPages().map((page) => ({
     date: new Date(page.data.date).toLocaleDateString("en-US", {
       month: "long",
@@ -15,7 +16,7 @@ export default function ChangelogPage() {
     title: page.data.title,
     description: page.data.description,
     image: page.data.image,
-    url: page.url,
+    body: page.data.body,
   }));
 
   // Sort the items by date, most recent first
@@ -35,6 +36,14 @@ function getTagColor(tag: string): string {
     Feature: "#3b82f6",
     Enhancement: "#8b5cf6",
     Design: "#f59e0b",
+    Test: "#10b981",
   };
   return colors[tag] || "#6b7280"; // Default color if tag is not found
+}
+
+export function generateMetadata(): Metadata {
+  return {
+    title: "Changelog | DevRel Directory",
+    description: "Latest updates and improvements to the DevRel Directory",
+  };
 }

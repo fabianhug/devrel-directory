@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import defaultMdxComponents from "fumadocs-ui/mdx";
 
 interface ChangelogItem {
   date: string;
@@ -11,7 +11,7 @@ interface ChangelogItem {
   title: string;
   description: string;
   image?: string;
-  url: string;
+  body: React.ComponentType<{ components: typeof defaultMdxComponents }>;
 }
 
 interface ChangelogProps {
@@ -61,14 +61,14 @@ export default function Changelog({ items = [] }: ChangelogProps) {
               <Tag key={tagIndex} name={tag.name} color={tag.color} />
             ))}
           </div>
-          <Link href={item.url}>
-            <h2 className="text-3xl font-bold mb-4 text-foreground hover:underline">
-              {item.title}
-            </h2>
-          </Link>
+
+          {/* fix me */}
+          {/* <h2 className="text-3xl font-bold mb-4 text-foreground">
+            {item.title}
+          </h2>
           <p className="text-muted-foreground mb-6">{item.description}</p>
           {item.image && (
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="rounded-lg overflow-hidden shadow-lg mb-6">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -76,7 +76,10 @@ export default function Changelog({ items = [] }: ChangelogProps) {
                 height={400}
               />
             </div>
-          )}
+          )} */}
+          <div className="prose dark:prose-invert">
+            <item.body components={defaultMdxComponents} />
+          </div>
         </div>
       ))}
     </div>
