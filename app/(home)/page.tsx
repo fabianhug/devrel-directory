@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-white">
-      <div className="absolute inset-0 bg-grid-gray-200/50 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-background/50">
+      <div className="absolute inset-0 bg-grid-secondary/50 bg-center [mask-image:linear-gradient(180deg,hsl(var(--background)),transparent)]" />
       <div className="relative z-10 w-full max-w-2xl px-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
           devrel.directory
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mt-6 text-lg leading-8 text-muted-foreground">
           Your comprehensive resource for Developer Relations. Find resources,
           tools, and guides for your DevRel journey. Read the latest articles
           and stay updated with the DevRel community.
