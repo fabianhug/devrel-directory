@@ -1,14 +1,35 @@
 ---
 title: Start Here
-description: A comprehensive guide to Developer Relations
+description: A comprehensive guide to Developer Relations (DevRel)
 author: 0xfabs
 ---
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+import { CpuIcon, GalleryVerticalEnd, BookOpen, Terminal } from 'lucide-react';
+import { Card, Cards } from '@/components/card';
 
 # Welcome to devrel.directory
 
-<Callout>
-  devrel.directory is your comprehensive resource for understanding, implementing, and excelling in Developer Relations (DevRel). Whether you're new to the field or a seasoned professional, you'll find valuable insights and practical guidance here.
-</Callout>
+devrel.directory is your comprehensive resource for understanding, implementing, and excelling in DevRel. Whether you're new to the field or a seasoned professional, you'll find valuable insights and practical guidance here.
+
+<Cards>
+
+<Card icon={<CpuIcon className="text-purple-300" />} title="Definition" >
+Explore the comprehensive [Definition of Developer Relations](/docs/fundamentals/definition) to understand its core concepts and importance in the tech / web3 industry.
+</Card>
+
+<Card icon={<GalleryVerticalEnd className="text-blue-300" />} title="Changelog">
+Stay updated with the latest improvements and updates to devrel.directory by checking the [changelog](/changelog).
+</Card>
+
+<Card icon={<BookOpen />} title="Blog">
+Read insightful articles and stay informed about DevRel trends in the [blog](/blog).
+</Card>
+
+<Card icon={<Terminal />} title="GitHub">
+Contribute to the devrel.directory project or explore our open-source code on [GitHub](https://github.com/fabianhug/devrel-directory/).
+</Card>
+
+</Cards>
 
 ## What is Developer Relations?
 
