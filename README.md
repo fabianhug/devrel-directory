@@ -4,7 +4,9 @@
 ![Framework](https://img.shields.io/badge/Framework-Fumadocs-blue)
 ![Topic](https://img.shields.io/badge/Topic-Developer%20Relations-green)
 
-Welcome to the DevRel Directory! This is a comprehensive resource for all things [Developer Relations (DevRel)](https://en.wikipedia.org/wiki/Developer_relations). Built on the [Fumadocs](https://github.com/fuma-nama/fumadocs) framework, this project aims to provide a wealth of DevRel knowledge and resources.
+Welcome to the [devrel.directory](https://devrel.directory)! This is a comprehensive resource for all things [Developer Relations (DevRel)](https://en.wikipedia.org/wiki/Developer_relations). Built on the [Fumadocs](https://github.com/fuma-nama/fumadocs) framework, this project aims to provide a wealth of DevRel knowledge and resources.
+
+![devrel.directory](https://github.com/user-attachments/assets/0b4802f5-2ea3-4db2-a534-a7cdeb984d50)
 
 ## 📚 What's Inside
 
