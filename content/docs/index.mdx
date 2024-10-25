@@ -4,7 +4,7 @@ description: A comprehensive guide to Developer Relations (DevRel)
 author: 0xfabs
 ---
 import { File, Folder, Files } from 'fumadocs-ui/components/files';
-import { CpuIcon, GalleryVerticalEnd, BookOpen, Terminal } from 'lucide-react';
+import { CpuIcon, GalleryVerticalEnd, BookOpen, Terminal, Users, Lightbulb, Target, Book, PlusCircle, Edit, CheckSquare, Bug, Image, PenTool } from 'lucide-react';
 import { Card, Cards } from '@/components/card';
 
 # Welcome to devrel.directory
@@ -60,18 +60,47 @@ Our comprehensive guide covers various aspects of DevRel:
 - **Case Studies**: Real-world examples of successful DevRel initiatives
 - **Community**: Connect with other DevRel professionals
 
-## Getting Started
+---
+
+## Getting Started with DevRel
 
 To begin your journey into DevRel, we recommend exploring these key areas:
 
-1. [Definition of Developer Relations](/docs/fundamentals/definition): Understand the core concepts and importance of DevRel
-2. [Roles and Responsibilities](/docs/fundamentals/roles-and-responsibilities): Learn about the various roles within DevRel and their key responsibilities
-3. [The Importance of DevRel](/docs/fundamentals/importance): Discover why DevRel is crucial for tech companies and developer ecosystems
-4. [Crafting a DevRel Strategy](/docs/fundamentals/devrel-strategy): Learn how to create and implement effective DevRel strategies
+<Cards>
+  <Card
+    icon={<Book className="text-purple-300" />}
+    title="Definition of Developer Relations"
+  >
+    Understand the core concepts and principles of Developer Relations in the [Definition](/docs/fundamentals/definition) section. Here, you'll find a comprehensive overview of DevRel, its key components, and its impact on organizations and developer communities.
+  </Card>
+
+  <Card
+    icon={<Users className="text-purple-300" />}
+    title="Roles and Responsibilities"
+  >
+    Explore the various roles within DevRel and their key responsibilities in the [Roles and Responsibilities](/docs/fundamentals/roles-and-responsibilities) section. Here, you'll find detailed descriptions of roles such as 'Developer Advocate', 'Developer Evangelist', 'Developer Experience', and 'Developer Marketing', along with their specific skills and responsibilities.
+  </Card>
+
+  <Card
+    icon={<Lightbulb className="text-purple-300" />}
+    title="The Importance of DevRel"
+  >
+    Learn why Developer Relations is crucial in today's tech ecosystem in the [The Importance of DevRel](/docs/fundamentals/importance) section. Here, you'll discover the power of network effects, DevRel's impact on business outcomes, and strategies for building high-impact developer communities.
+  </Card>
+
+  <Card
+    icon={<Target className="text-purple-300" />}
+    title="Crafting a DevRel Strategy"
+  > 
+    Discover how to create and implement an effective DevRel strategy in the [Crafting a DevRel Strategy](/docs/fundamentals/devrel-strategy) section. Here, you'll learn about key components such as setting clear objectives, understanding your developer audience, and establishing measurable goals and KPIs for your DevRel efforts.
+  </Card>
+</Cards>
 
 <Callout type="warn">
   The field of Developer Relations is constantly evolving. Stay updated with the latest trends and best practices by regularly revisiting our resources and engaging with the DevRel community.
 </Callout>
+
+---
 
 ## Contributing
 
@@ -81,4 +110,65 @@ We believe in the power of community knowledge. If you'd like to contribute to t
   Remember, successful DevRel is about creating value for developers and fostering a thriving ecosystem. As you explore devrel.directory, keep this core principle in mind.
 </Callout>
 
-Happy exploring, and welcome to the world of Developer Relations!
+### Ways to Contribute
+
+There are many ways to contribute to the **devrel.directory**. Here are some key areas where your help is most welcome:
+
+<Callout type="warn">
+    When adding new content, please respect and properly cite your sources. Plagiarism is strictly prohibited.
+</Callout>
+
+<Cards>
+  <Card
+    icon={<PlusCircle className="text-green-300" />}
+    title="Add New Content"
+  >
+    Share your expertise by contributing new topics or case studies, including best practices, emerging trends, personal experiences, and successful DevRel initiatives.
+
+
+  </Card>
+
+  <Card
+    icon={<Edit className="text-blue-300" />}
+    title="Improve Existing Content"
+  >
+    Help enhance or update current information by expanding on existing topics, adding new insights, updating outdated information, and improving clarity and readability.
+  </Card>
+
+  <Card
+    icon={<CheckSquare className="text-purple-300" />}
+    title="Proofread and Edit"
+  >
+    Assist in refining the overall quality of the content by correcting grammatical errors, improving sentence structure, ensuring consistency in tone and style, and checking for factual accuracy.
+  </Card>
+
+  <Card
+    icon={<Lightbulb className="text-yellow-300" />}
+    title="Suggest Improvements"
+  >
+    Share your ideas for new features or enhancements, such as new sections or categories, improved navigation or user experience, and additional resources or tools.
+  </Card>
+
+  <Card
+    icon={<Bug className="text-red-300" />}
+    title="Fix Bugs"
+  >
+    Help improve the technical aspects of the **devrel.directory**. Current issues include fixing the changelog and adding proper X (Twitter) cards for link previews.
+
+    You can find open issues on our [GitHub Issues page](https://github.com/fabianhug/devrel-directory/issues).
+  </Card>
+
+  <Card
+    icon={<Image className="text-indigo-300" />}
+    title="Visuals & Videos"
+  >
+    Enhance the learning experience by contributing infographics explaining DevRel concepts, diagrams illustrating DevRel processes, and short video tutorials or explanations.
+  </Card>
+
+  <Card
+    icon={<PenTool className="text-orange-300" />}
+    title="Blog Posts"
+  >
+    Contribute insightful blog posts that educate and inform the community. Topics could include your personal DevRel journey, insights from recent events or conferences, analysis of trends or strategies, and tutorials on specific DevRel skills or tools.
+  </Card>
+</Cards>
