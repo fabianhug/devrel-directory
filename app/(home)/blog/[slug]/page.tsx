@@ -7,7 +7,7 @@ import { blog } from "@/app/source";
 import { createMetadata } from "@/utils/metadata";
 import { buttonVariants } from "@/components/ui/button";
 import { Control } from "@/app/(home)/blog/[slug]/page.client";
-
+import Image from "next/image";
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
 }): Promise<React.ReactElement> {
@@ -49,6 +49,15 @@ export default async function Page(props: {
         <div className="flex flex-col gap-4 border-l p-4 text-sm lg:w-[250px]">
           <div>
             <p className="mb-1 text-fd-muted-foreground">Written by</p>
+            {page.data.authorImage && (
+              <Image
+                src={page.data.authorImage}
+                alt={page.data.author}
+                width={80}
+                height={80}
+                className="rounded-full"
+              />
+            )}
             <p className="font-medium">
               {page.data.author.startsWith("[") &&
               page.data.author.endsWith(")") ? (
