@@ -1,4 +1,4 @@
-# 🚀  Directory
+# 🚀 devrel.directory
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 ![Framework](https://img.shields.io/badge/Framework-Fumadocs-blue)
