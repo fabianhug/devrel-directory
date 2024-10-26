@@ -19,8 +19,19 @@ export default async function Page({
 
   const MDX = page.data.body;
 
+  const path = `content/docs/${page.file.path}`;
+
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage
+      toc={page.data.toc}
+      full={page.data.full}
+      editOnGithub={{
+        repo: "devrel-directory",
+        owner: "fabianhug",
+        sha: "main",
+        path,
+      }}
+    >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
