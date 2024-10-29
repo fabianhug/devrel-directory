@@ -15,6 +15,14 @@ const config = {
         protocol: "https",
         hostname: "github.com",
       },
+      {
+        protocol: "https",
+        hostname: "blog.bguiz.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+      },
     ],
   },
 };
