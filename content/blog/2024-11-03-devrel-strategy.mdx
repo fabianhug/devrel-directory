@@ -7,7 +7,7 @@ date: 2024-11-03
 ---
 
 import { Card, Cards } from '@/components/card';
-import { Target, Edit, Code, Lightbulb, ChartLine } from 'lucide-react';
+import { Target, Edit, Code, Lightbulb, ChartLine, Handshake, UserCog, Building2,Zap, Globe, GraduationCap } from 'lucide-react';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
@@ -20,8 +20,10 @@ import Objective from '@/public/images/blog/2024-11-03-devrel-strategy/objective
 import ValueProposition from '@/public/images/blog/2024-11-03-devrel-strategy/value-proposition.png';
 import DeveloperSegmentationCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-segmentation-canvas.png';
 import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
+import DeveloperJourneyStages from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-stages';
+import DeveloperJourneyMap from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-map.png';
 
-![Cover BG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
+![CoverBG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
 
 ## So, DevRel Strategy?
 
@@ -448,27 +450,27 @@ These strategic objectives provide direction for your DevRel program. Later in t
 Great. We now know what we're doing and why we're doing it. Now we need to understand who we're doing it for...
 One of the most common pitfalls in DevRel is saying you're "targeting developers" without further specification. This approach is too broad to be effective. Your developer audience is diverse across multiple dimensions:
 <Cards>
-   <Card title="Skill Level & Authority" icon="👩‍💻">
+   <Card title="Skill Level & Authority" icon={<UserCog className="text-blue-300" />}>
       From junior developers to technical leads and architects, developers have varying levels of experience and decision-making authority that affect how they interact with your product.
    </Card>
 
-   <Card title="Tech Stack" icon="⚡">
+   <Card title="Tech Stack" icon={<Zap className="text-green-300" />}>
       The technologies developers use shape their needs - from programming languages like Python and JavaScript, to frameworks, platforms and infrastructure preferences.
    </Card>
 
-   <Card title="Geography & Language" icon="🌎">
+   <Card title="Geography & Language" icon={<Globe className="text-red-300" />}>
       Location matters - developers work across different regional hubs, primary languages, and local tech communities that influence how they engage.
    </Card>
 
-   <Card title="Company Profile" icon="🏢">
+   <Card title="Company Profile" icon={<Building2 className="text-orange-300" />}>
       Whether at startups or enterprises, developers operate in different contexts with varying team sizes, structures and industry-specific requirements.
    </Card>
 
-   <Card title="Career Stage" icon="📈">
+   <Card title="Career Stage" icon={<GraduationCap className="text-yellow-300" />}>
       Career stage impacts needs and goals - from students and new graduates to career changers and experienced professionals seeking growth.
    </Card>
 
-   <Card title="Use Cases" icon="🎯">
+   <Card title="Use Cases" icon={<Target className="text-purple-300" />}>
       Developers build for different purposes - internal tools, customer-facing applications, or system integration projects each with unique requirements.
    </Card>
 </Cards>
@@ -604,7 +606,7 @@ Remember: Your audience understanding should directly inform your content strate
 
 ---
 
-### Key Takeaways
+#### Key Takeaways
 
 Understanding your developer audience is more than just market research - it's the cornerstone of an effective DevRel strategy. 
 We've covered how through proper segmentation, persona development, and positioning, you are able to create a clear picture that informs every aspect of your program.
@@ -612,15 +614,15 @@ We've covered how through proper segmentation, persona development, and position
 Let's recap the key takeaways:
 
 <Cards>
-   <Card title="Strategic Focus" icon="🎯">
+   <Card title="Strategic Focus" icon={<Target className="text-purple-300" />}>
       Knowing exactly who you're serving helps prioritize initiatives and allocate resources effectively - no more shooting in the dark with generic "developer" targeting.
    </Card>
 
-   <Card title="Better Engagement" icon="🤝">
+   <Card title="Better Engagement" icon={<Handshake className="text-blue-300" />}>
       Detailed personas enable you to create more relevant content, design more effective programs, and build more meaningful relationships with your developer community.
    </Card>
 
-   <Card title="Measurable Impact" icon="📊">
+   <Card title="Measurable Impact" icon={<ChartLine className="text-green-300" />}>
       Clear audience understanding helps define success metrics that actually matter to both your developers and your business objectives.
    </Card>
 </Cards>
@@ -629,16 +631,209 @@ Let's recap the key takeaways:
 Remember: Your understanding of your developer audience isn't static. Markets evolve, technologies change, and developer needs shift. Regular reassessment of your segments and personas ensures your DevRel strategy stays relevant and effective.
 </Callout>
 
+Cool! We've covered a lot of ground. I know some of this is a lot to take in and it might be overwhelming, but don't worry, the puzzle will soon start to come together.
 With a solid understanding of who our developers are, we can now move on to mapping their journey - from first discovery to becoming active community members and advocates.
-
 
 ---
 
-## Chapter Three: [**Developer Journey Map**](#3-developer-journey-map)
-read:
-https://www.devrel.agency/developerjourney
-https://medium.com/codex/developer-relations-the-developer-journey-map-36bd4619f5f3
-https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb
+![Developer Journey Map](/images/blog/2024-11-03-devrel-strategy/developer-journey.jpg)
+## Chapter Three: Developer Journey Map
+
+Now that we understand who our developers are, let's map out their journey. A Developer Journey Map isn't just another fancy marketing tool - it's your blueprint for understanding how developers move from first discovering your product to becoming active users and advocates.
+
+<Callout>
+A well-crafted journey map helps you identify where developers get stuck, what resources they need, and when they need them. Without one, you're essentially building a maze and hoping developers find their way through.
+</Callout>
+
+### Beyond the Traditional Funnel
+
+Forget the traditional marketing funnel - developer journeys are rarely linear. A developer might jump straight from discovery to implementation, or spend months in evaluation before making a decision. Your job is to support all these paths.
+
+### The Five Stages of the Developer Journey
+
+<DeveloperJourneyStages />
+
+<Callout type="warn">
+A developer may complete the first three stages in a single day if you provide a friction-free experience. Conversely, the adoption cycle could take a year if they haven't found the right use case.
+**The type of developer product matters** - an API typically has a faster journey time than implementing complex DeFi protocols or zero-knowledge proof systems.
+</Callout>
+
+Let's break down the key stages most developers move through. Remember - these aren't rigid boxes, but rather common patterns we see:
+
+| Stage | Goal | Key Questions |
+|-------|------|---------------|
+| **Discover** | Find potential solutions | • How do I solve my problem?<br/>• What options are available?<br/>• Who else is using this? |
+| **Evaluate** | Validate the solution fit | • Will this meet my needs?<br/>• What's the cost/benefit?<br/>• How does it compare to alternatives? |
+| **Learn** | Gain practical knowledge | • How do I get started?<br/>• Where's the documentation?<br/>• What resources are available? |
+| **Build** | Create working solutions | • How do I implement this?<br/>• What are the best practices?<br/>• Where can I get help? |
+| **Scale** | Expand and optimize usage | • How do I grow with this?<br/>• What are the limits?<br/>• How do I optimize costs? |
+
+👀 It's very interesting to see how the 'classic customer journey' map differs from the developer journey map.
+I highly recommend reading [Mapping the Customer Journey for Developer Products](https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb) by Haley Massa if you want to learn more.
+
+### Making it Real: Touchpoints That Matter
+
+Every interaction a developer has with your product, documentation, or community is a touchpoint. Some you control, others you don't. Understanding both is crucial:
+
+<Cards>
+   <Card title="Owned Touchpoints" icon={<Building2 className="text-blue-300" />}>
+      Properties and content that your company controls directly:<br/>
+      • Developer portal & documentation<br/>
+      • SDKs and sample code<br/>
+      • Support channels<br/>
+      • Social media presence
+   </Card>
+
+   <Card title="External Touchpoints" icon={<Globe className="text-green-300" />}>
+      Properties outside your direct control:<br/>
+      • Developer-focused media<br/>
+      • Third-party communities<br/>
+      • Industry forums<br/>
+      • Technical blogs
+   </Card>
+</Cards>
+
+Now that we know what touchpoints are important, let's map out the critical touchpoints for each stage of the developer journey.
+
+---
+
+### Mapping Developer Touchpoints
+
+For each stage of the journey, consider these key touchpoints. 
+The following bit will be a bit 'dry' and text heavy, but I promise it's worth it. 
+Bookmark this chapter (click on the heading to get a link), come back to it and use it as a reference when planning your touchpoints.
+
+The DevRel Book has a great chapter on this topic, I recommend reading it.
+<ImageZoom  
+   alt="Developer Journey Map" 
+   width={400}
+   height={400}
+   src={DeveloperJourneyMap}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+### Discover Stage
+The discovery stage is where developers first encounter your product, often while actively searching for solutions to their problems. Your presence needs to be visible and compelling across multiple channels.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Search & SEO** | Optimize technical content and documentation for relevant keywords |
+| **Social Media** | Maintain active presence on Twitter/X, LinkedIn and other platforms where developers gather |
+| **Word-of-Mouth** | Foster organic advocacy through excellent developer experience |
+| **Conference Presence** | Share knowledge and showcase solutions at industry events |
+### Evaluate Stage
+During evaluation, developers assess if your solution fits their technical requirements, budget, and long-term needs. Transparency and comprehensive information are crucial.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Documentation Quality** | Clear, well-structured docs that demonstrate product capabilities |
+| **Getting Started Resources** | Quick-start guides and tutorials that show immediate value |
+| **Pricing Transparency** | Clear pricing models with relevant technical limitations |
+| **Community Health** | Active community showing product maturity and support |
+
+### Learn Stage
+The learning stage is critical - developers need resources that help them understand and implement your solution effectively.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Interactive Learning** | Hands-on tutorials and sandboxed environments |
+| **API Documentation** | Comprehensive API references with real-world examples |
+| **Code Examples** | Production-ready sample code in multiple languages |
+| **Developer Support** | Responsive support channels for learning-related questions |
+
+### Build Stage
+During the build phase, developers need reliable tools and support to implement your solution into their projects.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Developer Tools** | Well-maintained SDKs and integration tools |
+| **Technical Support** | Quick resolution of implementation challenges |
+| **Stack Overflow** | Active presence answering technical questions |
+| **Developer Community** | Peer support channels for implementation help |
+
+### Scale Stage
+As developers scale their usage, they need resources focused on optimization and enterprise-grade implementation.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Success Stories** | Detailed case studies showing successful implementations |
+| **Best Practices** | In-depth guides for optimal usage and architecture |
+| **Performance** | Documentation on scaling, optimization, and limits |
+| **Enterprise Support** | Dedicated support channels for high-value implementations |
+
+---
+
+### Identifying and Removing Friction
+
+Cool, we've mapped out the journey and the touchpoints. Now we need to identify and remove friction points.
+In my experience, this is one of the most important parts of the journey map. If you can identify and remove friction points, you'll be able to move developers through the journey much faster and with a better experience.
+
+You can grab the Product Manager hat again 🎩 - but this time you also need some detective skills 🕵️‍♂️.
+
+Follow these steps to identify and remove friction points:
+<Steps>
+   <Step>
+      #### Ask Your Community
+      • Conduct regular surveys<br/>
+      • Host feedback sessions<br/>
+      • Monitor support tickets<br/>
+      • Track community discussions
+   </Step>
+   <Step>
+      #### Perform Developer Experience Audits
+      • Review onboarding process<br/>
+      • Test documentation completeness<br/>
+      • Evaluate tool usability<br/>
+      • Assess support responsiveness
+   </Step>
+   <Step>
+      #### Measure Journey Data
+      • Time to first API call<br/>
+      • Documentation bounce rates<br/>
+      • Support ticket resolution time<br/>
+      • Community engagement metrics
+   </Step>
+</Steps>
+
+### Key Success Metrics in the Developer Journey
+
+We will cover tracking metrics in more detail later, but for now, make sure to track metrics like these (again, these are examples, you need to adjust them to your specific situation):
+
+| Metric Type | Examples |
+|-------------|----------|
+| **Speed Metrics** | • Time to first successful API call<br/>• Documentation search to solution time<br/>• Support ticket resolution speed |
+| **Engagement Metrics** | • Developer portal visits<br/>• Documentation usage<br/>• Community participation<br/>• Support ticket volume |
+| **Success Metrics** | • Successful implementations<br/>• API adoption rate<br/>• Developer satisfaction scores<br/>• Community growth |
+
+<Callout>
+Remember: Your Developer Journey Map is a living document. Review and update it regularly based on developer feedback, product evolution, and changing market conditions. The goal is continuous optimization of the developer experience.
+</Callout>
+
+### Putting It All Together
+
+Now that we've mapped out the journey, let's recap what makes a successful Developer Journey Map:
+
+<Cards>
+   <Card title="Flexibility" icon={<Target className="text-purple-300" />}>
+      Your map should accommodate different paths and speeds - from the weekend hacker to the enterprise architect evaluating your solution.
+   </Card>
+
+   <Card title="Actionability" icon={<ChartLine className="text-green-300" />}>
+      Each stage should have clear ownership, metrics, and resources allocated to support developers effectively.
+   </Card>
+
+   <Card title="Evolution" icon={<Zap className="text-blue-300" />}>
+      As your product and community mature, your journey map should evolve to reflect new patterns and needs.
+   </Card>
+</Cards>
+
+<Callout>
+Pro tip: Start with a simple journey map and iterate based on real developer feedback. It's better to have a basic map that you actually use than a complex one that sits in a drawer.
+</Callout>
+
+With our journey map in place, we can now move on to planning the timeline and milestones for implementing our DevRel strategy.
+
 ---
 
 ## Chapter Four: [**Timeline & Milestones**](#4-timeline--milestones)
@@ -802,16 +997,20 @@ https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-
 -- launch a discourse platform
 - nourish your superstars
 
-
+--- 
 
 ## Sources & Credits
 
-https://www.leaddevrel.com/p/how-to-craft-a-great-developer-relations
-https://www.tessakriesel.com/devrel-strategy-breakdown/
-https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
+- https://www.leaddevrel.com/p/how-to-craft-a-great-developer-relations
+- https://www.tessakriesel.com/devrel-strategy-breakdown/
+- https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
+- https://www.devrel.agency/developerjourney
+- https://medium.com/codex/developer-relations-the-developer-journey-map-36bd4619f5f3
+- https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb
 
 Images:
 
 - Cover BG by [Daniel Falcão](https://unsplash.com/@danielsfalcao) on [Unsplash](https://unsplash.com/photos/macro-photography-of-lights-Pt27b3dRdVA)
 - Value Proposition by [DevRel Book](https://www.devrelbook.com/)
 - Developer Audience by [Muhammad Raufan Yusup](https://unsplash.com/@muhraufan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-facing-laptop-inside-room-rYRE6ju-2K8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Developer Journey by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/time-lapse-photography-sky-fPN1w7bIuNU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
