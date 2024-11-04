@@ -9,11 +9,14 @@ date: 2024-11-03
 import { Card, Cards } from '@/components/card';
 import { Target, Edit, Code, Lightbulb } from 'lucide-react';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import PieChart from '@/components/piechart';
+
 import OrgChart from '@/public/images/blog/2024-11-03-devrel-strategy/center-of-developer-relations-in-organizations.png';
 import PrimaryFocus from '@/public/images/blog/2024-11-03-devrel-strategy/primary-focus-of-developer-advocacy-in-companies.png';
 import DeveloperCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas-example.png';
 import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
-import PieChart from '@/components/piechart';
 
 <ImageZoom  
 alt="DevRel Strategy Banner" 
@@ -113,116 +116,167 @@ The objective is the foundation of any DevRel strategy. Without clear objectives
 
 Before defining objectives, it's crucial to understand where DevRel sits within your organization. Based on my survey of 30 DevRel professionals in crypto and web3, the organizational placement varies significantly:
 
-<div className="flex flex-col md:flex-row items-center gap-8">
-  <div className="w-full md:w-1/2">
-    <ImageZoom  
-      alt="Center of Developer Relations in Organizations" 
-      width={400}
-      height={400}
-      src={OrgChart}
-      className="!my-0 rounded-xl bg-fd-background"
-      priority
-    />
-    
+export const chartDataDevRelCenter= [
+  { key: "Marketing", val: 32.1 },
+  { key: "Engineering", val: 32.1 },
+  { key: "Product Management", val: 14.3 },
+  { key: "Own Department", val: 10.7 },
+  { key: "Customer Support", val: 7.1 },
+  { key: "Growth", val: 3.6 },
+];
 
-    <PieChart 
-      title="Center of Developer Relations in Organizations"
-      description="Where do you primarily see Developer Relations centered in your organization?" 
-    />
+<PieChart 
+   title="Center of Developer Relations in Organizations"
+   description="Where do you primarily see Developer Relations centered in your organization?" 
+   chartData={chartDataDevRelCenter}
+/>
 
-    <p className="text-center italic mt-2">Center of Developer Relations in Organizations</p>
-  </div>
-  <div className="w-full md:w-1/2">
-    <p>The survey results show:</p>
-    <ul className="list-disc pl-6">
-      <li>32.1% in Marketing</li>
-      <li>32.1% in Engineering</li>
-      <li>14.3% in Product Management</li>
-      <li>10.7% as Own Department</li>
-      <li>7.1% in Customer Support</li>
-      <li>3.6% in Growth</li>
-    </ul>
-  </div>
-</div>
+<p className="text-center italic mt-2">Center of Developer Relations in Organizations</p>
 
+The survey results show an even split between *Marketing* and *Engineering* departments as the primary homes for DevRel teams, followed by *Product Management*. Some organizations have established DevRel as its own independent department, while smaller percentages operate within *Customer Support* and *Growth*. 
+
+<Callout>
 This distribution highlights that there's no one-size-fits-all approach - DevRel can thrive in different organizational structures depending on company needs and culture.
+</Callout>
+
+--- 
 
 #### 1.2 Primary Focus Areas
 
-Our research also revealed the primary focus areas of Developer Relations teams:
+Okay, so we know where DevRel sits in the org. Now, what are they doing? If you're someone who's been around DevRel for a while, you'll know that the focus areas vary significantly. Many times the people you're talking to will tell you they do "everything" and it's hard to get them to focus on one thing.
+This is what you want to avoid. Make sure to focus on what's important for your product, protocol or company.
 
-<ImageZoom  
-alt="Primary Focus of Developer Advocacy in Companies" 
-width={400}
-height={400}
-src={PrimaryFocus}
-className="!my-0 rounded-xl bg-fd-background"
-priority
+My research revealed the primary focus areas of Developer Relations teams and you can tell its very diverse:
+
+export const chartDataDevRelFocus = [
+  { key: "Community", val: 20 },
+  { key: "Content", val: 16.7 },
+  { key: "Developer Experience", val: 16.7 },
+  { key: "Product", val: 16.7 },
+  { key: "Education", val: 13.3 },
+  { key: "Evangelism", val: 6.7 },
+  { key: "Open-source", val: 3.3 },
+  { key: "Other", val: 6.7 },
+];
+
+<PieChart 
+   title="Primary Focus of Developer Advocacy in Companies"
+   description="Which type of Developer Advocacy does your company primarily focus on?" 
+   chartData={chartDataDevRelFocus}
 />
-*Primary Focus of Developer Advocacy in Companies*
 
-| Focus Area | Percentage | Description |
-| --- | --- | --- |
-| Community | 20% | Building and nurturing developer communities |
-| Content | 16.7% | Creating technical documentation, tutorials, and educational materials |
-| Developer Experience | 16.7% | Improving the overall developer journey |
-| Product | 16.7% | Focusing on product adoption and feedback |
-| Education | 13.3% | Training and enabling developers |
-| Evangelism | 6.7% | Promoting platform/product adoption |
-| Open-source | 3.3% | Contributing to and managing open-source initiatives |
-| Events | 0% | Surprisingly, no companies reported events as their primary focus |
-| Other | 6.7% | Holistic approaches combining multiple areas |
+<Accordions >
+   <Accordion title="Focus Area Explanation (with Description)">
+      | Focus Area | Percentage | Description |
+      | --- | --- | --- |
+      | Community | 20% | Building and nurturing developer communities |
+      | Content | 16.7% | Creating technical documentation, tutorials, and educational materials |
+      | Developer Experience | 16.7% | Improving the overall developer journey |
+      | Product | 16.7% | Focusing on product adoption and feedback |
+      | Education | 13.3% | Training and enabling developers |
+      | Evangelism | 6.7% | Promoting platform/product adoption |
+      | Open-source | 3.3% | Contributing to and managing open-source initiatives |
+      | Other | 6.7% | Holistic approaches combining multiple areas |
 
-Notably, under the 'Other' category, respondents emphasized the importance of taking a holistic approach. They stressed that all areas are highly important and that focusing solely on one aspect neglects the multifaceted nature of Developer Relations.
+      Notably, under the 'Other' category, respondents emphasized the importance of taking a holistic approach. They stressed that all areas are highly important and that focusing solely on one aspect neglects the multifaceted nature of Developer Relations.
+   </Accordion>
+</Accordions>
+
+Okay, but how do you know what to focus on? 
+This is where you need to do your research. It's important to understand your audience, your product, your company and your goals.
+You need to speak to both, internal stakeholders and external developers. 
+
+- If you're one of the founding members of the company and there is no product yet, you need to focus on education and community.
+- If you're a bit further down the line, you can start to focus on evangelism and product.
+- And if you're a mature company with a well established product, you can focus on community and content, content, content.
+
+Usually this is one of the first steps in a 30-60-90 day plan, but we'll cover that in more detail later. 
+
+Now we first need to define our objectives.
+
+--- 
 
 #### 1.3 Setting Clear Objectives
 
-Your DevRel objectives should align with your company's overall goals while serving the developer community. Here are key questions to consider when defining objectives:
+Now that we've covered how to understand where DevRel sits in the org and what the primary focus areas are, we can define our objectives.
+Your DevRel objectives should align with your company's overall goals while serving the developer community. 
+They should be SMART: specific, measurable, achievable, relevant and time-bound. 
+
+Let's sing a [song](https://www.youtube.com/watch?v=HG3UwIDAEb8):
+
+<Steps>
+   <Step>
+      ### S is for *Specific*
+      Your objective should be specific and clear. It should not be vague or general.
+   </Step>
+   <Step>
+      ### M is for *Measurable*
+      Your objective should be measurable. You should be able to track and measure your progress towards the objective.
+   </Step>
+   <Step>
+      ### A is for *Achievable*
+      Your objective should be achievable. You should be able to achieve the objective with the resources and capabilities available to you.
+   </Step>
+   <Step>
+      ### R is for *Relevant*
+      Your objective should be relevant. It should align with your company's overall goals and the needs of the developer community.
+   </Step>
+   <Step>
+      ### T is for *Time-bound*
+      Your objective should have a deadline. You should know when you want to achieve the objective by.
+   </Step>
+</Steps>
+
+👉 *You can read more about it Brendans post about OKRs and SMART goals [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr). Thanks Brendan!*
+
+---
+
+Okay, now we know what **SMART** objectives are, let's dive into how to define them.
+Here are key questions to consider when defining objectives:
 
 1. **Company Alignment**
    - What are your company's current priorities?
-   - How can DevRel support these broader business goals?
+   - How can DevRel support these broader business goals? 
    - What specific challenges can DevRel help solve?
+   - Which organizational metrics should DevRel's KRs roll up into?
 
 2. **Developer Value**
    - What value will your program bring to developers?
    - What problems are you solving for your developer community?
    - How will you measure developer success?
+   - What mix of lead vs lag metrics will you use?
 
 3. **Program Purpose**
    - What is the primary purpose of your developer program?
    - What specific outcomes do you want to achieve?
    - How will you measure program success?
+   - Which DevRel sub-functions will own which metrics?
+
+---
 
 #### 1.4 Example Objectives
 
-Based on industry best practices, effective DevRel objectives typically include:
+Based on the OKRA framework, here are example DevRel objectives with SMART key results. Please note that these are just examples and you should adjust them to your specific situation. It doesn't make sense to work on SDK adoption if your SDK is just a simple wrapper around an API. 
 
-1. **Ecosystem Growth**
-   - Build and scale programs to grow the developer ecosystem
-   - Create sustainable community growth strategies
-   - Establish developer advocacy programs
+Wait, I need to zoom in a little for this one 🔎:
+<div className="text-2xl font-bold text-center my-6 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+  Focus on IMPACTFUL activities first, polish the rest later.
+</div>
 
-2. **Internal Advocacy**
-   - Build and maintain deep understanding of developer needs
-   - Communicate developer sentiment internally
-   - Influence product decisions based on developer feedback
+Okay, cool. You get the point. Now back to the examples:
 
-3. **Developer Success**
-   - Educate and support developers to drive success
-   - Create comprehensive learning resources
-   - Reduce friction in the developer journey
-
-4. **Platform Evolution**
-   - Grow and evolve platforms to increase developer value
-   - Drive platform adoption through strategic initiatives
-   - Gather and implement developer feedback
+| Objective | Key Results |
+|-----------|-------------|
+| **Ecosystem Growth** | • Increase developer community members from 1,000 to 5,000 by Q4 2024<br/>• Grow monthly active developers from 100 to 500 by Q3 2024<br/>• Launch developer advocacy program with 10 advocates by Q2 2024 |
+| **Internal Advocacy** | • Establish monthly product feedback sessions with 80% engineering team attendance<br/>• Create developer sentiment dashboard tracking NPS with baseline of 30<br/>• Submit 20 validated developer-driven feature requests to product team per quarter |
+| **Developer Success** | • Reduce average time to first API call from 2 hours to 30 minutes<br/>• Increase documentation satisfaction score from 7.2 to 8.5 out of 10<br/>• Achieve 90% resolution rate for developer support tickets within 24 hours |
+| **Platform Evolution** | • Drive API adoption from 100k to 500k monthly calls<br/>• Launch 3 new SDKs with 50+ stars each on GitHub<br/>• Achieve 80% developer satisfaction rating for new platform features |
 
 <Callout>
-Remember: Your objectives should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound) and directly tied to both business outcomes and developer success.
+Remember: Your objectives should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound) and directly tied to both business outcomes and developer success. Use the [OKRA Framework](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr) to define clear metrics, actions, and timelines for each objective.
 </Callout>
 
-By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders.
+By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders. The key is to balance lead metrics (measuring work output) and lag metrics (measuring outcomes) based on your team composition and organizational structure.
 
 ---
 
