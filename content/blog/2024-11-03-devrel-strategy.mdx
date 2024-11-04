@@ -1,0 +1,485 @@
+---
+title: DevRel Strategy - A Comprehensive Guide
+description: Creating and implementing effective Developer Relations strategies
+author: "[Fabian Hug](https://x.com/intent/user?screen_name=0xfabs))"
+authorImage: "https://github.com/fabianhug.png"
+date: 2024-11-03
+---
+
+import { Card, Cards } from '@/components/card';
+import { Target, Edit, Code, Lightbulb } from 'lucide-react';
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import OrgChart from '@/public/images/blog/2024-11-03-devrel-strategy/center-of-developer-relations-in-organizations.png';
+import PrimaryFocus from '@/public/images/blog/2024-11-03-devrel-strategy/primary-focus-of-developer-advocacy-in-companies.png';
+import DeveloperCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas-example.png';
+import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
+import PieChart from '@/components/piechart';
+
+<ImageZoom  
+alt="DevRel Strategy Banner" 
+width={800}
+height={200}
+src={Banner}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+
+## So, DevRel Strategy?
+
+This is a comprehensive guide to creating and implementing effective Developer Relations strategies.
+We've been covering DevRel Strategy in our [Fundamentals](docs/fundamentals/devrel-strategy) section. This post will also use the OKR(A) framework to measure success. You can read more about it [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr).
+
+<Callout>
+  A well-crafted DevRel strategy is the foundation for building strong relationships between your company and the developer community, driving adoption, and fostering innovation.
+</Callout>
+
+Having a well defined strategy, ways to measure it's impact and iterate on it is key to success.
+
+Without a plan in place, you're just shooting in the dark. We don't want that.
+
+---
+
+## What is a 'DevRel Strategy'?
+
+There is no one definition of what a DevRel Strategy is.
+Instead, it's a collection of activities, initiatives and goals that align with the overall objectives of the Developer Relations team.
+
+A DevRel Strategy is:
+
+<Cards>
+  <Card
+    icon={<Target className="text-purple-300" />}
+    title="A Strategic Plan"
+  >
+    A comprehensive plan outlining how your company will engage with, support, and grow its developer community - from community building to content creation, aligned with business objectives.
+  </Card>
+
+  <Card
+    icon={<Edit className="text-blue-300" />}
+    title="A Living Document"
+  >
+    Your strategy evolves as your community grows. Regular reporting and adaptation are crucial, using metrics and community feedback to continuously refine your approach.
+  </Card>
+
+  <Card
+    icon={<Code className="text-green-300" />}
+    title="A Clear Roadmap"
+  >
+    Maps out specific programs like developer advocacy, hackathons, technical workshops, open-source contributions, and recognition programs to achieve your DevRel objectives.
+  </Card>
+
+  <Card
+    icon={<Lightbulb className="text-yellow-300" />}
+    title="A Success Framework"
+  >
+    Provides structure through clear objectives, audience understanding, journey mapping, community approach, content strategy, feedback loops, and measurable KPIs.
+  </Card>
+</Cards>
+
+Great, now we know what a DevRel Strategy is we can start to think about how to create one.
+
+---
+
+## Key components of a DevRel Strategy
+
+This post will cover the following key components, click on each to jump to the section. 
+I highly recommend reading them in order to get a good understanding of the DevRel Strategy process.
+
+
+1. [**Objective**](#1-objective)
+2. [**Audience & Needs**](#2-audience-needs)
+3. [**Timeline & Milestones**](#3-timeline--milestones)
+4. [**Feedback Loops**](#4-feedback-loops)
+5. [**Measuring Success & Reporting**](#5-measuring-success--reporting)
+6. [**Developer Journey Map**](#6-developer-journey-map)
+7. [**Community-Centric Approaches**](#7-community-centric-approaches)
+8. [**Content and Education Strategy**](#8-content-and-education-strategy)
+9. [**Hiring**](#9-hiring)
+10. [**Tools and Tech**](#10-tools-and-tech)
+
+
+---
+
+### 1. Objective
+
+The objective is the foundation of any DevRel strategy. Without clear objectives, you cannot effectively:
+- Move forward with coherent initiatives
+- Know what you're working towards
+- Hire the right people
+- Allocate appropriate budget
+- Measure success
+
+#### 1.1 Understanding Where DevRel Sits
+
+Before defining objectives, it's crucial to understand where DevRel sits within your organization. Based on my survey of 30 DevRel professionals in crypto and web3, the organizational placement varies significantly:
+
+<div className="flex flex-col md:flex-row items-center gap-8">
+  <div className="w-full md:w-1/2">
+    <ImageZoom  
+      alt="Center of Developer Relations in Organizations" 
+      width={400}
+      height={400}
+      src={OrgChart}
+      className="!my-0 rounded-xl bg-fd-background"
+      priority
+    />
+    
+
+    <PieChart 
+      title="Center of Developer Relations in Organizations"
+      description="Where do you primarily see Developer Relations centered in your organization?" 
+    />
+
+    <p className="text-center italic mt-2">Center of Developer Relations in Organizations</p>
+  </div>
+  <div className="w-full md:w-1/2">
+    <p>The survey results show:</p>
+    <ul className="list-disc pl-6">
+      <li>32.1% in Marketing</li>
+      <li>32.1% in Engineering</li>
+      <li>14.3% in Product Management</li>
+      <li>10.7% as Own Department</li>
+      <li>7.1% in Customer Support</li>
+      <li>3.6% in Growth</li>
+    </ul>
+  </div>
+</div>
+
+This distribution highlights that there's no one-size-fits-all approach - DevRel can thrive in different organizational structures depending on company needs and culture.
+
+#### 1.2 Primary Focus Areas
+
+Our research also revealed the primary focus areas of Developer Relations teams:
+
+<ImageZoom  
+alt="Primary Focus of Developer Advocacy in Companies" 
+width={400}
+height={400}
+src={PrimaryFocus}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+*Primary Focus of Developer Advocacy in Companies*
+
+| Focus Area | Percentage | Description |
+| --- | --- | --- |
+| Community | 20% | Building and nurturing developer communities |
+| Content | 16.7% | Creating technical documentation, tutorials, and educational materials |
+| Developer Experience | 16.7% | Improving the overall developer journey |
+| Product | 16.7% | Focusing on product adoption and feedback |
+| Education | 13.3% | Training and enabling developers |
+| Evangelism | 6.7% | Promoting platform/product adoption |
+| Open-source | 3.3% | Contributing to and managing open-source initiatives |
+| Events | 0% | Surprisingly, no companies reported events as their primary focus |
+| Other | 6.7% | Holistic approaches combining multiple areas |
+
+Notably, under the 'Other' category, respondents emphasized the importance of taking a holistic approach. They stressed that all areas are highly important and that focusing solely on one aspect neglects the multifaceted nature of Developer Relations.
+
+#### 1.3 Setting Clear Objectives
+
+Your DevRel objectives should align with your company's overall goals while serving the developer community. Here are key questions to consider when defining objectives:
+
+1. **Company Alignment**
+   - What are your company's current priorities?
+   - How can DevRel support these broader business goals?
+   - What specific challenges can DevRel help solve?
+
+2. **Developer Value**
+   - What value will your program bring to developers?
+   - What problems are you solving for your developer community?
+   - How will you measure developer success?
+
+3. **Program Purpose**
+   - What is the primary purpose of your developer program?
+   - What specific outcomes do you want to achieve?
+   - How will you measure program success?
+
+#### 1.4 Example Objectives
+
+Based on industry best practices, effective DevRel objectives typically include:
+
+1. **Ecosystem Growth**
+   - Build and scale programs to grow the developer ecosystem
+   - Create sustainable community growth strategies
+   - Establish developer advocacy programs
+
+2. **Internal Advocacy**
+   - Build and maintain deep understanding of developer needs
+   - Communicate developer sentiment internally
+   - Influence product decisions based on developer feedback
+
+3. **Developer Success**
+   - Educate and support developers to drive success
+   - Create comprehensive learning resources
+   - Reduce friction in the developer journey
+
+4. **Platform Evolution**
+   - Grow and evolve platforms to increase developer value
+   - Drive platform adoption through strategic initiatives
+   - Gather and implement developer feedback
+
+<Callout>
+Remember: Your objectives should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound) and directly tied to both business outcomes and developer success.
+</Callout>
+
+By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders.
+
+---
+
+### 2. Understanding Your Developer Audience
+
+<Callout>
+"There is no simple single definition for 'Developer.' Rather, it refers to millions of people with differing skill levels and authority, who use different technology stacks and programming languages." - DevRel Book
+</Callout>
+
+One of the most common pitfalls in DevRel is saying you're "targeting developers" without further specification. This approach is too broad to be effective. Your developer audience is diverse across multiple dimensions:
+
+- Skill levels and authority
+- Technology stacks and programming languages
+- Geographic regions and languages
+- Company types and sizes
+- Career stages
+- Use cases and needs
+
+#### 2.1 Developer Segmentation Framework
+
+To effectively understand and target your developer audience, you need a structured approach to segmentation. The framework consists of four key filters:
+
+1. **Technical (Product Focus)**
+   - Which programming languages do they use?
+   - What technology stack do they work with?
+   - What platforms do they develop for?
+   - What technical requirements must they meet?
+
+2. **User (Developer Focus)**
+   - What is their experience level?
+   - What is their decision-making authority?
+   - What are their primary responsibilities?
+   - What are their technical preferences?
+
+3. **Organization (Customer Focus)**
+   - What type of company do they work for?
+   - What industry are they in?
+   - What is their company's size and stage?
+   - What are their use cases?
+
+4. **Market (Industry/Geography Focus)**
+   - Which geographic regions are they in?
+   - What languages do they speak?
+   - What industry regulations affect them?
+   - What market trends influence their work?
+
+#### 2.2 Validation Criteria
+
+When defining your segments, each criterion must pass these tests:
+
+1. Is the segment relevant to our business?
+2. Is it a large enough segment?
+3. Is it a valuable enough segment?
+4. Can we target this segment with our current resources?
+
+<Callout type="warning">
+"Segmentation is not a one-time exercise. To start, it's most important to focus on your current situation over the next 6 to 12 months. However, what's important today may change in the future." - Caroline Lewko & James Parton, DevRel Book
+</Callout>
+
+#### 2.3 Creating Developer Personas
+
+As Tessa Kriesel notes, "Personas are a way to personalize your targets and humanize them. Depending on your segments, you should define 2-4 personas."
+
+<ImageZoom  
+alt="Developer Persona Canvas Example" 
+width={400}
+height={400}
+src={DeveloperCanvas}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+*Developer Persona Canvas Example*
+
+Each persona should include:
+
+| Category | Details |
+|----------|---------|
+| **Background Information** | • Role and responsibilities<br/>• Years of experience<br/>• Primary technologies used<br/>• Career goals |
+| **Technical Profile** | • Preferred programming languages<br/>• Development environment<br/>• Technical decision-making authority<br/>• Tool preferences |
+| **Behavioral Patterns** | • How they learn new technologies<br/>• Where they seek information<br/>• Community participation habits<br/>• Decision-making process |
+| **Pain Points and Needs** | • Current challenges<br/>• Technical limitations<br/>• Resource constraints<br/>• Learning preferences |
+
+
+(download the blank template [here](/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas.png). Thanks to [DevRel Book](https://www.devrelbook.com/))
+
+#### 2.4 Developer Positioning
+
+Once you understand your audience, you need to position your product or platform effectively. Answer these key questions:
+
+1. **Value Proposition**
+   - What type of product are you offering?
+   - What specific problems does it solve?
+   - How does it make a developer's life easier?
+
+2. **Differentiation**
+   - Why should developers choose your solution?
+   - What makes your offering unique?
+   - How does it compare to alternatives?
+
+3. **Success Criteria**
+   - What does success look like for the developer?
+   - How can you help them achieve their goals?
+   - What metrics matter to them?
+
+<Callout>
+Remember: Your audience understanding should directly inform your content strategy, community approach, and success metrics. Regular reassessment is crucial as developer needs and market conditions evolve.
+</Callout>
+
+https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
+
+https://www.tessakriesel.com/devrel-strategy-breakdown/
+
+---
+
+### 3. [**Timeline & Milestones**](#3-timeline--milestones)
+read:
+https://dx.tips/first-90
+https://www.tessakriesel.com/devrel-strategy-breakdown/
+
+### 4. [**Feedback Loops**](#4-feedback-loops)
+read:
+https://draft.dev/learn/devrel-harnessing-the-power-of-community-feedback-for-product-development
+https://glaforge.dev/talks/2020/08/06/the-developer-advocacy-feedback-loop/
+
+### 5. [**Measuring Success & Reporting**](#5-measuring-success--reporting)
+    - OKR(A) framework
+        - If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. Do not hesitate to pivot.
+https://www.swyx.io/measuring-devrel
+https://jmeiss.me/posts/talk-about-devrel-metrics/
+https://www.atlassian.com/agile/agile-at-scale/okr
+https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
+https://maida.kim/how-to-measure-the-value-of-developer-relations/
+https://servingdevelopers.com/2019/02/17/budgeting-for-developer-evangelism/
+
+### 6. [**Developer Journey Map**](#6-developer-journey-map)
+read:
+https://www.devrel.agency/developerjourney
+https://medium.com/codex/developer-relations-the-developer-journey-map-36bd4619f5f3
+https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb
+
+### 7. [**Community-Centric Approaches**](#7-community-centric-approaches)
+    - A 'developer champions' program recognizing and rewarding active community contributors. You want to keep your superstars.
+
+  https://draft.dev/learn/the-network-effect-in-devrel-how-community-centric-models-boost-software-adoption
+
+### 8. [**Content and Education Strategy**](#8-content-and-education-strategy)
+read:
+https://developerrelations.com/developer-experience/approaching-developer-education
+https://developerrelations.com/developer-experience/breaking-down-barriers-to-hello-world
+https://www.devrelx.com/post/content-for-developers-what-and-how
+
+### 9. [**Hiring**](#9-hiring)
+read:
+https://www.learnwithjason.dev/blog/get-hired-devrel/
+https://developerrelations.com/how-to-get-a-job-in-devrel
+https://www.linkedin.com/pulse/hiring-within-developer-relations-how-successfully-define-owen-parker-jgirc/ (define roles properly)
+
+### 10. [**Tools and Tech**](#10-tools-and-tech)
+read:
+Content Creation & Management:
+Documentation & Knowledge Base:
+Community Platforms & Forums:
+Event Management & Engagement:
+Feedback & Issue Tracking:
+Social Media & Content Distribution:
+Automation & Integration Tools:
+Analytics, Monitoring & Feedback Tools:
+CRM & Relationship Management:
+Learning & Upskilling Platforms:
+https://developerrelations.com/dev-rel/a-tour-of-developer-relations-tools
+https://github.com/devrelcollective/awesome-devrel
+
+
+
+## Questions from the community
+
+- Building engaged developer communities
+- How do you find people that are smart devs, but excited to sell as well
+
+- choosing metrics (set up ones expected to be be different from operational ones)
+- hiring (roles, and in what order, and what seniority levels)
+- where does devrel sit within the org structure (how to pick a function/ reporting line)
+- securing budget (and how to convince that devrel activities are important enough)
+
+Also, if I may speak on behalf of DevRel Uni (cc @bianca_buzea) :
+- 30-60-90 day plan
+
+---
+
+## Zero to one: DevRel in 365 days.
+
+example: 
+- "Creating an LLM-as-a-Judge That Drives Business Results (51 minute read)" https://hamel.dev/blog/posts/llm-judge/
+### Prerequisites
+
+- No DevRel team
+- No DevRel budget
+- No DevRel plan
+- An empty sheet of paper
+
+### Milestones
+*
+Possible key milestones:
+
+- 1. Content and Education Hub
+    - A comprehensive documentation portal covering all the topics a developer would need to know about the product with clear learning paths.
+    - A regular content calendar (2-3 quality posts per week) with a mix of tutorials, how-to guides, reference material and more:
+        - Deep-dive tutorials
+        - How-to guides
+        - Case studies of successful implementations
+        - Technical best practises and architecture guides
+- 2. Active Developer Community
+    - A thriving Discord or similar community platform with: 
+        - Regular technical offics hours
+        - Active peer-to-peer support channels
+        - Direct access to the technical team for advanced questions
+    - A 'developer champions' program recognizing and rewarding active community contributors. You want to keep your superstars.
+- 3. Feedback & Product Development
+    - Established feedback loops between developers and the product team.
+    - Monthly developer advisory sessions and ways to harvest actionable (!) feedback.
+    - A public roadmap influenced by community input. (This is a great way to get developers excited about your product. Make them a part of the process.)
+    - Regular beta testing programs for new features (For your superstars)
+- 4. Measurable Impact 
+    - A working OKR(A) framework in place to measure success.
+        - Including factors like 'lagging' and 'leading' metrics to understand the impact of your efforts. You want to rigorously work towards keeping the metrics in the green.
+        If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. Do not hesitate to pivot.
+    - Clear KPIs showing:
+        - Growth in monthly active developers
+        - Increased documentation usage and satisfaction
+            - Have tracking metrics in place to measure bounce rates, time spent on page, number of SDK uses, etc.
+                - If you see a lot of bounce rates, you need to ask yourself why and adjust your docs. (heat maps will help you here)
+        - Higher developer retention
+            - Have tracking metrics in place to measure churn rate, number of churned users, etc. (You could even track where the contributors went via their GH profiles.)
+        - Improved time-to-hello-world metrics
+        - Community engagement metrics
+            - Number of comments, number of reactions, number of posts, etc.
+- 5. Industry presence 
+    - Regular contributions to industry publications
+    - Regular speaking engagements
+    - Hosting or sponsoring developer events 
+
+The key to achieving this vision will be maintaining a balance between educational content creation, community building, and gathering actionable feedback for our product team. 
+Everything will be measured against clear OKRs to ensure we're delivering value both to our developer community and to our company.
+
+### Hiring
+
+https://developerrelations.com/wp-content/uploads/2023/05/hoopy-devrel-job-titles-report-may2023.pdf
+https://a16z.com/the-hiring-process
+https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-people-cbfdf93b1c5c (36 Ways To Hire, Develop, and Retain Great People)
+
+
+
+-- launch a discourse platform#
+
+
+
+## Sources
+
+https://www.leaddevrel.com/p/how-to-craft-a-great-developer-relations
+https://www.tessakriesel.com/devrel-strategy-breakdown/
