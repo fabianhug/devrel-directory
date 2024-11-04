@@ -7,7 +7,7 @@ date: 2024-11-03
 ---
 
 import { Card, Cards } from '@/components/card';
-import { Target, Edit, Code, Lightbulb } from 'lucide-react';
+import { Target, Edit, Code, Lightbulb, ChartLine } from 'lucide-react';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
@@ -16,6 +16,8 @@ import PieChart from '@/components/piechart';
 import OrgChart from '@/public/images/blog/2024-11-03-devrel-strategy/center-of-developer-relations-in-organizations.png';
 import PrimaryFocus from '@/public/images/blog/2024-11-03-devrel-strategy/primary-focus-of-developer-advocacy-in-companies.png';
 import DeveloperCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas-example.png';
+import Objective from '@/public/images/blog/2024-11-03-devrel-strategy/objective.jpg';
+import ValueProposition from '@/public/images/blog/2024-11-03-devrel-strategy/value-proposition.png';
 import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
 
 <ImageZoom  
@@ -89,32 +91,25 @@ This post will cover the following key components, click on each to jump to the 
 I highly recommend reading them in order to get a good understanding of the DevRel Strategy process.
 
 
-1. [**Objective**](#1-objective)
-2. [**Audience & Needs**](#2-audience-needs)
-3. [**Timeline & Milestones**](#3-timeline--milestones)
-4. [**Feedback Loops**](#4-feedback-loops)
-5. [**Measuring Success & Reporting**](#5-measuring-success--reporting)
-6. [**Developer Journey Map**](#6-developer-journey-map)
-7. [**Community-Centric Approaches**](#7-community-centric-approaches)
-8. [**Content and Education Strategy**](#8-content-and-education-strategy)
-9. [**Hiring**](#9-hiring)
-10. [**Tools and Tech**](#10-tools-and-tech)
+1. [**The Beginning**](#the-beginning-where-are-we)
+2. [**The Objective**](#1-the-objective)
+3. [**Audience & Needs**](#2-audience-needs)
+4. [**Timeline & Milestones**](#3-timeline--milestones)
+5. [**Feedback Loops**](#4-feedback-loops)
+6. [**Measuring Success & Reporting**](#5-measuring-success--reporting)
+7. [**Developer Journey Map**](#6-developer-journey-map)
+8. [**Community-Centric Approaches**](#7-community-centric-approaches)
+9. [**Content and Education Strategy**](#8-content-and-education-strategy)
+10. [**Hiring**](#9-hiring)
+11. [**Tools and Tech**](#10-tools-and-tech)
 
 
 ---
+## The Beginning: Where are we?
 
-### 1. Objective
+### Understanding Where DevRel Sits
 
-The objective is the foundation of any DevRel strategy. Without clear objectives, you cannot effectively:
-- Move forward with coherent initiatives
-- Know what you're working towards
-- Hire the right people
-- Allocate appropriate budget
-- Measure success
-
-#### 1.1 Understanding Where DevRel Sits
-
-Before defining objectives, it's crucial to understand where DevRel sits within your organization. Based on my survey of 30 DevRel professionals in crypto and web3, the organizational placement varies significantly:
+Before defining objectives, it's crucial to understand where DevRel sits within your organization. Based on my survey of 30 companies and protocols acting in crypto, web3 and AI, the organizational placement varies significantly:
 
 export const chartDataDevRelCenter= [
   { key: "Marketing", val: 32.1 },
@@ -139,9 +134,30 @@ The survey results show an even split between *Marketing* and *Engineering* depa
 This distribution highlights that there's no one-size-fits-all approach - DevRel can thrive in different organizational structures depending on company needs and culture.
 </Callout>
 
+But how do you know where to put your DevRel team?\
+Here are some questions that can help you decide:
+
+- **Do you have a product that needs to be adopted by developers?**\
+Maybe you should put DevRel in Engineering to get the developers to use your product and give them the best possible onboarding and enablement experience. Engineers are the ones who build the product after all. And the
+
+- **Do you have a community that needs to be built and nurtured?**\
+Maybe you should put DevRel in Marketing and work on content, community and events.
+
+- **Do you have a need for education and enablement of developers?**\
+Maybe you should put DevRel in Product Management to create the best possible onboarding and enablement experience.
+
+- **Do you have a need for evangelism and promotion of your product, protocol or company?**\
+Maybe you should put them in Marketing to promote it.
+
+- **Do you have a need for technical support and customer success?**\
+Maybe you should put them in Customer Support to provide the best possible support to your developers. 
+
+Remember: This is just a starting point to help you understand where DevRel can sit in the org.
+We will cover some of these questions in more detail later. 
+
 --- 
 
-#### 1.2 Primary Focus Areas
+### Primary Focus Areas
 
 Okay, so we know where DevRel sits in the org. Now, what are they doing? If you're someone who's been around DevRel for a while, you'll know that the focus areas vary significantly. Many times the people you're talking to will tell you they do "everything" and it's hard to get them to focus on one thing.
 This is what you want to avoid. Make sure to focus on what's important for your product, protocol or company.
@@ -194,40 +210,189 @@ Usually this is one of the first steps in a 30-60-90 day plan, but we'll cover t
 
 Now we first need to define our objectives.
 
---- 
+---
 
-#### 1.3 Setting Clear Objectives
+## Chapter One: The Objective
+
+The objective is the foundation of any DevRel strategy. Without clear objectives, you cannot effectively:
+- Move forward with coherent initiatives
+- Know what you're working towards
+- Hire the right people
+- Allocate appropriate budget
+- Measure success
+
+Your objectives should be specific, measurable, and aligned with both business goals and developer needs. 
+In the following sections we will cover how to define your objectives and how to structure them. Let's start with the strategic side of things:
+
+### Setting Strategic Direction
+
+Set sail! You know where to go, right? Oh you don't? Well...
+
+The strategic direction of your DevRel strategy is crucial. It's obvious, right?
+Your DevRel objectives need to address at least the following three key areas. Depending on your specific situation you may need to add others, 
+but these are a good starting point and should always be considered because they are essential to your success, growth and impact.
+
+| Area | Objectives |
+|------|------------|
+| Business Impact | • Revenue growth through increased platform adoption<br/>• Market expansion into new developer segments<br/>• Reduced support costs through self-serve resources |
+| Developer Success | • Faster time-to-value for new developers<br/>• Higher satisfaction and productivity<br/>• Stronger community engagement and collaboration |
+| Platform Evolution | • Product improvements driven by developer feedback<br/>• Enhanced developer experience and tooling<br/>• New use cases and implementations |
+
+Now that we know at least where to go, let's talk about how to get there, which route to take and how long it will take:
+
+### Planning Horizons
+
+Structure your objectives across multiple timeframes. When working on your objectives, you should always consider the impact to later stages.
+Try to avoid setting objectives that are too short-term, as this can lead to a **lack of long-term vision**. You don't want to end up with a mess of initiatives that don't align with each other.
+But also avoid setting objectives that are too long-term; on the other hand this can lead to a **lack of focus and impact**.
+
+Ah, and btw: **Don't be afraid to pivot!**. If there is one thing I've learned in my career, it's that you need to be flexible and adapt to the situation if something isn't working. If you're not, you'll not move forward. 
+You'll lose momentum. You need to be laser focused and can't afford to be distracted by trying to fix what isn't working in the first place.
+
+Let's take a look at some examples. Take these with a grain of salt, they are just meant to give you an idea of how you can structure your objectives. It's important to note that the timeframe can vary significantly depending on your specific situation:
+
+| Timeframe | Objectives |
+|-----------|------------|
+| **Short-term (0-3 months)** | • Establish baseline metrics and KPIs<br/>• Launch MVP documentation and essential guides<br/>• Set up basic community channels and support<br/>• Create initial "time-to-hello-world" content |
+| **Medium-term (3-6 months)** | • Scale developer adoption with targeted programs<br/>• Expand technical content and learning resources<br/>• Build feedback loops with product teams<br/>• Launch developer champions program |
+| **Long-term (6-12 months)** | • Create sustainable developer ecosystem<br/>• Drive platform innovation through community feedback<br/>• Establish thought leadership in specific verticals<br/>• Scale successful programs based on metrics |
+
+<Callout type="warn">
+In rapidly evolving spaces like crypto, web3, and AI, planning beyond 12 months can be counterproductive. Focus on shorter cycles with frequent reassessment and adjustment of objectives.
+</Callout>
+
+### Critical Success Factors
+
+To achieve these objectives, focus on:
+
+#### 1. **Clear Value Proposition**
+
+Your value proposition is the foundation of your DevRel strategy. It's what makes developers want to use your platform, engage with your content, and ultimately become advocates for your product. Without a compelling value prop, you're just another voice in the crowd - and trust me, that crowd is getting louder every day.
+Let's break down how to craft a value proposition that actually resonates with developers (and no, "we're the best platform ever" doesn't count). Here's what you need to focus on:
+
+<ImageZoom  
+alt="Value Proposition" 
+width={400}
+height={400}
+src={ValueProposition}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+*Value Proposition based on the DevRel Book*
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Articulate Unique Benefits** | • Identify and communicate specific pain points your solution addresses<br/>• Highlight time-saving and efficiency gains<br/>• Demonstrate how your platform/product enhances developer workflow<br/>• Show clear examples of successful implementations<br/>• Provide concrete "before and after" scenarios |
+| **Demonstrate ROI** | • Calculate and present cost savings metrics<br/>• Showcase development time reduction<br/>• Highlight resource optimization benefits<br/>• Present case studies with quantifiable results<br/>• Track and report on key performance indicators |
+| **Define Success Metrics** | • Set clear adoption metrics and goals<br/>• Establish developer satisfaction benchmarks<br/>• Define engagement KPIs (e.g., active users, API calls)<br/>• Create timeline-based objectives<br/>• Implement feedback loops for continuous improvement |
+
+<Callout>
+Remember: Your value proposition should be data-driven and focused on tangible outcomes. As the DevRelBook states: "Data beats fluff" - back up your claims with real metrics and success stories.
+</Callout>
+
+#### 2. **Strong Foundations**
+
+Strong foundations are like the bedrock of your DevRel strategy. Without solid documentation, reliable support, and quality educational resources, even the best value proposition will crumble. 
+Think of it as building a house - you wouldn't start with the roof, would you? Let's break down what makes for truly robust DevRel foundations.
+Here's a detailed look at the key components that will keep your developer relations program standing tall:
+
+<PieChart
+  title="Developer Tools & Services Distribution"
+  description="What companies offer to developers based on survey data"
+  chartData={[
+    { key: "Documentation", val: 76.7 },
+    { key: "Code Samples", val: 70.0 },
+    { key: "APIs", val: 56.7 },
+    { key: "SDKs", val: 53.3 },
+    { key: "Platforms/BaaS", val: 46.7 },
+    { key: "Libraries/Frameworks", val: 43.3 },
+    { key: "IDEs", val: 13.3 },
+    { key: "Other", val: 10.0 }
+  ]}
+/>
+
+Based on my research, documentation and code samples are the clear winners here - making up over 70% of what companies offer to developers. 
+What's the first thing we all do when checking out a new tool? We hit the docs! APIs and SDKs follow closely behind, showing how companies are really focusing on making their tools developer-friendly.
+But it's not just about having them, it's about having them in the right format and making them easily accessible. More on that later.
+
+Here are the key activities you should focus on to build strong foundations:
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Documentation & Tools** | • Create comprehensive API reference docs<br/>• Build developer SDKs and libraries<br/>• Provide code samples and starter templates<br/>• Maintain interactive API playground<br/>• Implement documentation versioning |
+| **Support Infrastructure** | • Set up developer forums and communities<br/>• Establish ticketing/issue tracking system<br/>• Create knowledge base and FAQs<br/>• Provide direct support channels<br/>• Monitor support response times |
+| **Educational Resources** | • Develop interactive tutorials and guides<br/>• Create video content and webinars<br/>• Write technical blog posts and articles<br/>• Design hands-on workshops<br/>• Build learning paths for different skill levels |
+
+####  3. **Community Investment**
+
+The community is the heart of any DevRel program. It's where developers come to learn, share, and collaborate. 
+This is also one of the hardest things to get right, but when done well, it can be a powerful driver for growth and success.
+Often times you'll hear 'yeah, we just need to build a community' - but it's not that simple. 
+You need to invest in it, you need to nurture it, you need to have a plan for it - and you need to have TIME for it. So carve out time to engage with your community.
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Community Building** | • Foster peer-to-peer learning opportunities<br/>• Create mentorship programs<br/>• Host community events and meetups<br/>• Facilitate knowledge sharing sessions<br/>• Build online discussion spaces |
+| **Recognition Programs** | • Implement contributor rewards system<br/>• Highlight community success stories<br/>• Create developer advocacy programs<br/>• Provide speaking opportunities<br/>• Offer exclusive access to beta features |
+| **Collaboration Tools** | • Set up community forums<br/>• Enable project collaboration spaces<br/>• Create networking opportunities<br/>• Organize hackathons<br/>• Facilitate code review sessions |
+
+####  4. **Continuous Improvement**
+
+DevRel is all about continuous improvement - you can't just set it and forget it. You need to constantly gather feedback, measure your impact, and adapt your approach based on what you learn.
+This is where having good tracking and measurement systems in place becomes crucial. Let's break down the key areas. We will cover this in more detail later.
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Feedback Loops** | • Conduct regular developer surveys<br/>• Host feedback sessions and interviews<br/>• Monitor community discussions<br/>• Track support tickets and issues<br/>• Analyze documentation usage patterns |
+| **Metrics & Analytics** | • Track developer adoption metrics<br/>• Measure documentation effectiveness<br/>• Monitor community engagement<br/>• Analyze support response times<br/>• Review developer satisfaction scores |
+| **Program Optimization** | • Iterate on documentation based on feedback<br/>• Refine community programs<br/>• Adjust support processes<br/>• Update educational content<br/>• Enhance developer tools |
+
+
+---
+
+
+### Setting Clear Objectives
 
 Now that we've covered how to understand where DevRel sits in the org and what the primary focus areas are, we can define our objectives.
 Your DevRel objectives should align with your company's overall goals while serving the developer community. 
-They should be SMART: specific, measurable, achievable, relevant and time-bound. 
 
-Let's sing a [song](https://www.youtube.com/watch?v=HG3UwIDAEb8):
+When setting objectives, we can leverage both strategic and tactical frameworks. At a strategic level, OKRs help us set ambitious goals, while SMART criteria ensure our tactical execution is well-defined.
+
+<Cards>
+   <Card title="Objectives" icon={<Target className="text-purple-300" />}>
+      Set ambitious, inspirational goals that align with your company's mission and the developer community's needs.
+   </Card>
+   <Card title="Key Results" icon={<ChartLine className="text-purple-300" />}>
+      Define measurable outcomes that will indicate progress toward your objectives.
+   </Card>
+</Cards>
+
+For tactical execution, let's break down the SMART framework:
 
 <Steps>
    <Step>
-      ### S is for *Specific*
+      #### S is for *Specific*
       Your objective should be specific and clear. It should not be vague or general.
    </Step>
    <Step>
-      ### M is for *Measurable*
+      #### M is for *Measurable*
       Your objective should be measurable. You should be able to track and measure your progress towards the objective.
    </Step>
    <Step>
-      ### A is for *Achievable*
+      #### A is for *Achievable*
       Your objective should be achievable. You should be able to achieve the objective with the resources and capabilities available to you.
    </Step>
    <Step>
-      ### R is for *Relevant*
+      #### R is for *Relevant*
       Your objective should be relevant. It should align with your company's overall goals and the needs of the developer community.
    </Step>
    <Step>
-      ### T is for *Time-bound*
+      #### T is for *Time-bound*
       Your objective should have a deadline. You should know when you want to achieve the objective by.
    </Step>
 </Steps>
 
-👉 *You can read more about it Brendans post about OKRs and SMART goals [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr). Thanks Brendan!*
+👉 *For a deeper dive into goal-setting frameworks and how to implement them in your DevRel strategy, check out Brendan's excellent post about OKRs and SMART goals [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr). Thanks Brendan!*
 
 ---
 
@@ -254,7 +419,7 @@ Here are key questions to consider when defining objectives:
 
 ---
 
-#### 1.4 Example Objectives
+### 1.4 Example Objectives
 
 Based on the OKRA framework, here are example DevRel objectives with SMART key results. Please note that these are just examples and you should adjust them to your specific situation. It doesn't make sense to work on SDK adoption if your SDK is just a simple wrapper around an API. 
 
@@ -280,7 +445,7 @@ By setting clear objectives that align with both company goals and developer nee
 
 ---
 
-### 2. Understanding Your Developer Audience
+## 2. Understanding Your Developer Audience
 
 <Callout>
 "There is no simple single definition for 'Developer.' Rather, it refers to millions of people with differing skill levels and authority, who use different technology stacks and programming languages." - DevRel Book
@@ -355,7 +520,7 @@ Each persona should include:
 | Category | Details |
 |----------|---------|
 | **Background Information** | • Role and responsibilities<br/>• Years of experience<br/>• Primary technologies used<br/>• Career goals |
-| **Technical Profile** | • Preferred programming languages<br/>• Development environment<br/>• Technical decision-making authority<br/>• Tool preferences |
+| **Technical Profile** | • Preferred programming languages<br/>• Development environment<br/> Technical decision-making authority<br/>• Tool preferences |
 | **Behavioral Patterns** | • How they learn new technologies<br/>• Where they seek information<br/>• Community participation habits<br/>• Decision-making process |
 | **Pain Points and Needs** | • Current challenges<br/>• Technical limitations<br/>• Resource constraints<br/>• Learning preferences |
 
@@ -529,7 +694,8 @@ https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-
 
 
 
--- launch a discourse platform#
+-- launch a discourse platform
+- nourish your superstars
 
 
 

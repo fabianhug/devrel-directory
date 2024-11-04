@@ -61,7 +61,7 @@ function PieChart(props: {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px] pb-0 [&_.recharts-pie-label-text]:fill-foreground [&_.recharts-pie-label-text]:translate-y-2"
+          className="mx-auto aspect-square max-h-[300px] pb-0 [&_.recharts-pie-label-text]:fill-foreground [&_.recharts-pie-label-text]:translate-y-2"
         >
           <RechartsPieChart>
             <ChartTooltip content={<ChartTooltipContent nameKey="key" />} />
@@ -70,6 +70,7 @@ function PieChart(props: {
               dataKey="val"
               label={({ value }) => `${value}%`}
               nameKey="key"
+              outerRadius={80}
             />
             <ChartLegend content={<ChartLegendContent nameKey="key" />} />
           </RechartsPieChart>
