@@ -18,6 +18,7 @@ import PrimaryFocus from '@/public/images/blog/2024-11-03-devrel-strategy/primar
 import DeveloperCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas-example.png';
 import Objective from '@/public/images/blog/2024-11-03-devrel-strategy/objective.jpg';
 import ValueProposition from '@/public/images/blog/2024-11-03-devrel-strategy/value-proposition.png';
+import DeveloperSegmentationCanvas from '@/public/images/blog/2024-11-03-devrel-strategy/developer-segmentation-canvas.png';
 import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
 
 ![Cover BG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
@@ -444,59 +445,108 @@ These strategic objectives provide direction for your DevRel program. Later in t
 ![Developer Audience](/images/blog/2024-11-03-devrel-strategy/developer-audience.jpg)
 ## Chapter Two: Understanding Your Developer Audience
 
+Great. We now know what we're doing and why we're doing it. Now we need to understand who we're doing it for...
+One of the most common pitfalls in DevRel is saying you're "targeting developers" without further specification. This approach is too broad to be effective. Your developer audience is diverse across multiple dimensions:
+<Cards>
+   <Card title="Skill Level & Authority" icon="👩‍💻">
+      From junior developers to technical leads and architects, developers have varying levels of experience and decision-making authority that affect how they interact with your product.
+   </Card>
+
+   <Card title="Tech Stack" icon="⚡">
+      The technologies developers use shape their needs - from programming languages like Python and JavaScript, to frameworks, platforms and infrastructure preferences.
+   </Card>
+
+   <Card title="Geography & Language" icon="🌎">
+      Location matters - developers work across different regional hubs, primary languages, and local tech communities that influence how they engage.
+   </Card>
+
+   <Card title="Company Profile" icon="🏢">
+      Whether at startups or enterprises, developers operate in different contexts with varying team sizes, structures and industry-specific requirements.
+   </Card>
+
+   <Card title="Career Stage" icon="📈">
+      Career stage impacts needs and goals - from students and new graduates to career changers and experienced professionals seeking growth.
+   </Card>
+
+   <Card title="Use Cases" icon="🎯">
+      Developers build for different purposes - internal tools, customer-facing applications, or system integration projects each with unique requirements.
+   </Card>
+</Cards>
+
 <Callout>
 "There is no simple single definition for 'Developer.' Rather, it refers to millions of people with differing skill levels and authority, who use different technology stacks and programming languages." - DevRel Book
 </Callout>
 
-One of the most common pitfalls in DevRel is saying you're "targeting developers" without further specification. This approach is too broad to be effective. Your developer audience is diverse across multiple dimensions:
-
-- Skill levels and authority
-- Technology stacks and programming languages
-- Geographic regions and languages
-- Company types and sizes
-- Career stages
-- Use cases and needs
-
 #### Developer Segmentation Framework
 
-To effectively understand and target your developer audience, you need a structured approach to segmentation. The framework consists of four key filters:
+To effectively understand and target your developer audience, you need a structured approach to segmentation. The framework consists of four key filters.
+Each filter will help you understand your audience from different perspectives. And remember, you don't have to use all filters for each segment.
 
-1. **Technical (Product Focus)**
-   - Which programming languages do they use?
-   - What technology stack do they work with?
-   - What platforms do they develop for?
-   - What technical requirements must they meet?
+| Focus Area | Key Questions |
+|------------|---------------|
+| **Technical (Product Focus)** | • Which programming languages do they use?<br/>• What technology stack do they work with?<br/>• What platforms do they develop for?<br/>• What technical requirements must they meet? |
+| **User (Developer Focus)** | • What is their experience level?<br/>• What is their decision-making authority?<br/>• What are their primary responsibilities?<br/>• What are their technical preferences? |
+| **Organization (Customer Focus)** | • What type of company do they work for?<br/>• What industry are they in?<br/>• What is their company's size and stage?<br/>• What are their use cases? |
+| **Market (Industry/Geography Focus)** | • Which geographic regions are they in?<br/>• What languages do they speak?<br/>• What industry regulations affect them?<br/>• What market trends influence their work? |
 
-2. **User (Developer Focus)**
-   - What is their experience level?
-   - What is their decision-making authority?
-   - What are their primary responsibilities?
-   - What are their technical preferences?
+#### Applying the Framework
 
-3. **Organization (Customer Focus)**
-   - What type of company do they work for?
-   - What industry are they in?
-   - What is their company's size and stage?
-   - What are their use cases?
+Great. Now we know how to segment our audience. But where do we get the information from?\
+This requires adopting a data-driven, product-focused mindset to gather insights from multiple sources.
 
-4. **Market (Industry/Geography Focus)**
-   - Which geographic regions are they in?
-   - What languages do they speak?
-   - What industry regulations affect them?
-   - What market trends influence their work?
+Put your Product Manager hat on and start asking questions 🎩
+
+| Source Type | Examples |
+|-------------|----------|
+| **Qualitative Data** | • Community feedback and discussions<br/>• Industry peer insights<br/>• Technical press coverage<br/>• Product team input |
+| **Quantitative Data** | • CRM data analysis<br/>• Product usage analytics<br/>• Stack Overflow surveys<br/>• SlashData reports |
+
+
+For each segment identified in your canvas, you'll want to build a comprehensive understanding of their needs, behaviors, and constraints. 
+Consider these key questions to develop a complete picture:
+
+
+- What motivates them in their work?
+- What tools and resources do they currently use?
+- What are their skill gaps and learning needs?
+- How do they evaluate and make technical decisions?
+- What demands compete for their time and attention?
+- What constraints affect their work (budget, infrastructure, culture)?
+- Where do they typically seek information and community?
+
+<Callout>
+Remember: Your segmentation should be specific enough to be actionable but broad enough to represent a viable market opportunity. Don't create segments so narrow that they become impractical to target.
+</Callout>
+
+Feel free to use this Developer Segmentation Canvas to help you understand your audience:
+
+<ImageZoom  
+   alt="Developer Segmentation Canvas" 
+   width={400}
+   height={400}
+   src={DeveloperSegmentationCanvas}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+---
 
 #### Validation Criteria
 
-When defining your segments, each criterion must pass these tests:
+After you've identified your segments, you'll want to challenge and validate their viability by asking these questions.
 
 1. Is the segment relevant to our business?
 2. Is it a large enough segment?
 3. Is it a valuable enough segment?
 4. Can we target this segment with our current resources?
 
-<Callout type="warning">
+<Callout type="warn">
 "Segmentation is not a one-time exercise. To start, it's most important to focus on your current situation over the next 6 to 12 months. However, what's important today may change in the future." - Caroline Lewko & James Parton, DevRel Book
 </Callout>
+
+Once you've validated your segments, you can start to create personas.
+
+---
 
 #### Creating Developer Personas
 
@@ -511,6 +561,7 @@ className="!my-0 rounded-xl bg-fd-background"
 priority
 />
 *Developer Persona Canvas Example*
+(download the blank template [here](/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas.png). Thanks to [DevRel Book](https://www.devrelbook.com/))
 
 Each persona should include:
 
@@ -521,8 +572,6 @@ Each persona should include:
 | **Behavioral Patterns** | • How they learn new technologies<br/>• Where they seek information<br/>• Community participation habits<br/>• Decision-making process |
 | **Pain Points and Needs** | • Current challenges<br/>• Technical limitations<br/>• Resource constraints<br/>• Learning preferences |
 
-
-(download the blank template [here](/images/blog/2024-11-03-devrel-strategy/developer-persona-canvas.png). Thanks to [DevRel Book](https://www.devrelbook.com/))
 
 #### Developer Positioning
 
@@ -546,10 +595,6 @@ Once you understand your audience, you need to position your product or platform
 <Callout>
 Remember: Your audience understanding should directly inform your content strategy, community approach, and success metrics. Regular reassessment is crucial as developer needs and market conditions evolve.
 </Callout>
-
-https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
-
-https://www.tessakriesel.com/devrel-strategy-breakdown/
 
 ---
 
@@ -725,6 +770,7 @@ https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-
 
 https://www.leaddevrel.com/p/how-to-craft-a-great-developer-relations
 https://www.tessakriesel.com/devrel-strategy-breakdown/
+https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
 
 Images:
 
