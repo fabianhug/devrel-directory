@@ -23,6 +23,8 @@ import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banne
 import DeveloperJourneyStages from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-stages';
 import DeveloperJourneyMap from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-map.png';
 import KimMaidaKeystoneFramework from '@/public/images/blog/2024-11-03-devrel-strategy/keystone-devrel-metrics-kim-maida.png';
+import NorthStar from '@/public/images/blog/2024-11-03-devrel-strategy/north-star.jpg';
+
 
 ![CoverBG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
 
@@ -1312,6 +1314,7 @@ I am sure you will find your own way to the best possible feedback system for yo
 
 ![Metrics](/images/blog/2024-11-03-devrel-strategy/metrics-header.jpg)
 ## Chapter Six: [**Measuring Success & Reporting**](#6-measuring-success--reporting)
+
 <Callout type="info">
 "If you're not measuring your DevRel program, how do you know where you were, where you are, and be able to plan where you're going to go?" - Jeremy Meiss, [Let's Talk About DevRel Metrics](https://jmeiss.me/posts/talk-about-devrel-metrics/)
 </Callout>
@@ -1320,6 +1323,19 @@ I am sure you will find your own way to the best possible feedback system for yo
 ### Understanding DevRel Metrics
 
 Let's face it - metrics have been a contentious topic in DevRel for years. While some argue that DevRel impact is too qualitative to measure, the reality is that showing concrete value is more important than ever.
+
+Through my research and studies in DevRel metrics, I've found that measuring success in Developer Relations presents unique challenges. While traditional business metrics like sales figures or Marketing Qualified Leads (MQLs) are straightforward, DevRel often has longer-term, qualitative impacts that aren't easily captured by conventional metrics.
+
+My studies have identified two primary categories of metrics:
+
+| Metric Type | Description | Examples |
+|------------|-------------|-----------|
+| **Qualitative** | Data points that cannot be defined numerically | • Feedback form comments<br/>• Social media interactions<br/>• Direct community feedback |
+| **Quantitative** | Data points that can be defined numerically | • Monthly active users<br/>• Content quality scores<br/>• Distribution metrics |
+
+<Callout>
+From my experience, established metrics tend to be quantitative since numeric data is more digestible for other functions and leaders, thereby garnering more trust.
+</Callout>
 
 <Cards>
   <Card title="Why Metrics Matter" icon={<Target className="text-blue-300" />}>
@@ -1337,10 +1353,73 @@ Let's face it - metrics have been a contentious topic in DevRel for years. While
   </Card>
 </Cards>
 
+
+### Evaluating Metric Effectiveness
+
+My research has revealed clear patterns in what makes metrics effective or potentially detrimental:
+
+#### Content-Specific Metrics
+
+<Cards>
+  <Card title="Content Quality" icon={<Eye className="text-green-300" />}>
+    - Average time on page
+    - Bounce rates
+    - Video watch duration
+    - Completion rates
+    - User satisfaction scores
+  </Card>
+
+  <Card title="Content Distribution" icon={<TrendingUp className="text-yellow-300" />}>
+    - Topic coverage percentages
+    - Theme distribution
+    - Persona targeting metrics
+    - Channel effectiveness
+    - Geographic reach
+  </Card>
+</Cards>
+
+#### Favorable Metrics
+Metrics that provide a more definitive depiction of the DevRel team's reach, engagement, and influence are deemed 'favorable'. These metrics are essential for tracking community growth, measuring the impact of content and educational resources, and assessing overall brand visibility within the developer ecosystem.
+
+When selecting metrics, it's important to focus on those that provide meaningful insights into your DevRel efforts.\ 
+Here are key metrics across different aspects of Developer Relations:
+
+| Category | Metrics |
+|----------|---------|
+| Community Growth | • Total community members<br/>• Total active community members<br/>• Total community contributions (forum posts, code)<br/>• Total newsletter subscribers<br/>• Total YouTube and social media followers |
+| Content Impact | • Total content pieces created (blogs, videos, tutorials)<br/>• Engagement metrics (views, likes, shares, comments)<br/>• Content quality metrics (time spent, bounce rate)<br/>• Total workshop completions<br/>• Total conference/meetup appearances<br/>• SEO Domain Authority |
+| Product Adoption | • Total launch day users and positive mentions<br/>• Total prioritized user issues from DevRel<br/>• Total monthly users of integrations/tooling<br/>• Value metric and % retention at ideal frequency<br/>• Developer exceptions tracking |
+
+These metrics help demonstrate the tangible impact of DevRel initiatives while providing actionable insights for program improvement. When tracked consistently, they create a comprehensive picture of your DevRel program's effectiveness and its contribution to broader business objectives.
+
+#### Detrimental Metrics
+
+Detrimental metrics in DevRel emphasize easily quantifiable aspects over actual value provided to the developer community. 
+These metrics can mislead teams by prioritizing surface-level measurements over meaningful engagement:
+
+| Metric | Why It's Detrimental |
+|--------|---------------------|
+| GitHub stars on demos | While easy to track, stars alone don't reflect the demo's actual usefulness or quality for developers |
+| Traffic from UTM tags | Raw visitor counts provide little insight into the depth or value of engagement |
+| Conference badge scans | Simply tracking interactions fails to measure the meaningful impact of conversations |
+| Page view analytics | As noted by Matt Broberg, "confusing pageviews with community health" can lead to detached leadership that hinders genuine community building |
+
+---
+
 ### Key Metrics Frameworks
 
 #### The North Star Metric
-Most companies settle on Monthly Active Developers (MAD) as their DevRel north star metric. Supporting metrics that feed into MAD include:
+
+<ImageZoom  
+   alt="North Star" 
+   width={400}
+   height={400}
+   src={NorthStar}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+A North Star metric serves as the primary measure of success for DevRel initiatives, providing a clear focus for the team's efforts. While specific metrics vary by company and product, they should reflect meaningful developer engagement and align with business objectives. Here are key supporting metrics that often contribute to a DevRel North Star:
 
 <Cards>
   <Card title="Community Metrics" icon={<Users className="text-purple-300" />}>
@@ -1457,9 +1536,23 @@ Remember: Your OKRs should be SMART (Specific, Measurable, Achievable, Relevant,
 
 By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders. The key is to balance lead metrics (measuring work output) and lag metrics (measuring outcomes) based on your team composition and organizational structure.
 
+### Educational Impact Assessment
+
+Based on my research with, quoting Fontão et al. (2021), successful DevRel programs should measure educational impact through:
+
+| Category | Key Metrics |
+|----------|-------------|
+| **Event Promotion & Reach** | • Value proposition effectiveness<br/>• Community engagement rates<br/>• Social media impact |
+| **Structured Learning** | • Advanced learning completion rates<br/>• Workshop effectiveness<br/>• Hackathon outcomes |
+| **Community Discussion** | • Online group engagement<br/>• Content distribution success<br/>• Developer feedback quality |
+| **Developer Recognition** | • Contribution acknowledgment<br/>• Community leadership<br/>• Developer progression |
+
+
 ### Practical Implementation
 
-<Callout type="warning">
+Great, we've covered a LOT of theory. It's time to use it in practice.
+
+<Callout type="warn">
 Start small with 2-3 key metrics that align with your current goals. You can expand measurement over time as your program matures.
 </Callout>
 
@@ -1472,7 +1565,11 @@ Here's how to get started:
 5. Iterate based on what you discover
 
 Remember: The goal isn't perfect measurement, but rather showing clear progress toward business goals while maintaining authentic developer relationships.
-If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. Do not hesitate to pivot.
+If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. **Do not hesitate to pivot.**
+
+I will create a dedicated blog post on this topic soon.
+
+*Please get [in touch](https://x.com/0xfabs) with me if you would like to chat about this or read my Thesis on this topic.*
 
 ---
 
@@ -1626,4 +1723,4 @@ Images:
 - Timeline & Milestones Photo by [Tony Reid](https://unsplash.com/@togna_bologna?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-person-standing-in-a-dark-tunnel-with-bright-lights-PGdMhonLLZk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - Feedback Loop Photo by [Visax](https://unsplash.com/@visaxslr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/background-pattern-BYmWSPYzONQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - Metrics Photo by [Maxim Berg](https://unsplash.com/@maxberg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-very-large-group-of-trees-that-are-very-colorful-kE8-rUKjtQU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-  
+- North Star Photo by [Dana Andreea Gheorghe](https://unsplash.com/@dana_andreea?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-night-sky-with-stars-and-a-bright-red-tent-in-the-foreground-8MsbxJnlvm0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)  
