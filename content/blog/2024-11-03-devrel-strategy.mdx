@@ -7,7 +7,7 @@ date: 2024-11-03
 ---
 
 import { Card, Cards } from '@/components/card';
-import { Target, Edit, Code, Lightbulb, ChartLine, Handshake, UserCog, Building2, Zap, Globe, GraduationCap, Eye, BarChart, MessageCircle, Users, Scale, Search, TrendingUp } from 'lucide-react';
+import { Target, Edit, Code, Lightbulb, ChartLine, Handshake, UserCog, Building2, Zap, Globe, GraduationCap, Eye, BarChart, MessageCircle, Users, Scale, Search, TrendingUp, AlertTriangle, FileText, Box } from 'lucide-react';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
@@ -22,6 +22,7 @@ import DeveloperSegmentationCanvas from '@/public/images/blog/2024-11-03-devrel-
 import Banner from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-banner.svg';
 import DeveloperJourneyStages from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-stages';
 import DeveloperJourneyMap from '@/public/images/blog/2024-11-03-devrel-strategy/developer-journey-map.png';
+import KimMaidaKeystoneFramework from '@/public/images/blog/2024-11-03-devrel-strategy/keystone-devrel-metrics-kim-maida.png';
 
 ![CoverBG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
 
@@ -1309,12 +1310,134 @@ I am sure you will find your own way to the best possible feedback system for yo
 
 ---
 
+![Metrics](/images/blog/2024-11-03-devrel-strategy/metrics-header.jpg)
 ## Chapter Six: [**Measuring Success & Reporting**](#6-measuring-success--reporting)
+<Callout type="info">
+"If you're not measuring your DevRel program, how do you know where you were, where you are, and be able to plan where you're going to go?" - Jeremy Meiss, [Let's Talk About DevRel Metrics](https://jmeiss.me/posts/talk-about-devrel-metrics/)
+</Callout>
 
-### Example OKRs
 
-Based on the OKRA framework, here are examples of DevRel objectives with SMART key results. Please note that these are just examples, and you should adjust them to your specific situation. It doesn't make sense to work on SDK adoption if your SDK is just a simple wrapper around an API.
-Wait, I need to zoom in a little for this one :
+### Understanding DevRel Metrics
+
+Let's face it - metrics have been a contentious topic in DevRel for years. While some argue that DevRel impact is too qualitative to measure, the reality is that showing concrete value is more important than ever.
+
+<Cards>
+  <Card title="Why Metrics Matter" icon={<Target className="text-blue-300" />}>
+    - Communicate value to leadership
+    - Guide program direction and improvements
+    - Validate resource investments
+    - Enable data-driven decisions
+  </Card>
+  
+  <Card title="Common Challenges" icon={<AlertTriangle className="text-red-300" />}>
+    - Metrics can feel reductive for relationship work
+    - Long feedback loops make attribution difficult
+    - Multiple teams influence key metrics
+    - Qualitative impacts are hard to quantify
+  </Card>
+</Cards>
+
+### Key Metrics Frameworks
+
+#### The North Star Metric
+Most companies settle on Monthly Active Developers (MAD) as their DevRel north star metric. Supporting metrics that feed into MAD include:
+
+<Cards>
+  <Card title="Community Metrics" icon={<Users className="text-purple-300" />}>
+    - Number of active members
+    - Topic engagement
+    - Contributor growth
+    - Event attendance
+  </Card>
+
+  <Card title="Content Metrics" icon={<FileText className="text-green-300" />}>
+    - Documentation usage
+    - Tutorial completions  
+    - Newsletter subscribers
+    - Video engagement
+  </Card>
+
+  <Card title="Product Metrics" icon={<Box className="text-blue-300" />}>
+    - Feature adoption
+    - Time to Hello World
+    - Integration usage
+    - Developer satisfaction
+  </Card>
+</Cards>
+
+---
+
+#### Kim Maida's Keystone Framework
+
+<ImageZoom  
+   alt="Kim Maida's Keystone Framework" 
+   width={400}
+   height={400}
+   src={KimMaidaKeystoneFramework}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+[This framework](https://maida.kim/how-to-measure-the-value-of-developer-relations/) ties metrics directly to business value through four key areas.
+It provides a structured way to measure and communicate DevRel value. Let's break down each area:
+
+<Accordions>
+  <Accordion title="Reach">
+    Top of funnel metrics that show initial awareness and interest:
+    - Social media engagement
+    - Website traffic from DevRel activities 
+    - Event/talk attendance
+    - Content views and downloads
+  </Accordion>
+
+  <Accordion title="Awareness">
+    Metrics showing deeper engagement with resources:
+    - Documentation usage patterns
+    - Tutorial completions
+    - Sample code downloads
+    - Resource library usage
+  </Accordion>
+
+  <Accordion title="Engagement">
+    Direct interaction metrics:
+    - GitHub interactions
+    - Community participation
+    - Support ticket engagement
+    - Feature requests/feedback
+  </Accordion>
+
+  <Accordion title="DevRel Qualified Leads">
+    Conversion and advocacy metrics:
+    - Active platform usage
+    - API/SDK adoption
+    - Community advocacy
+    - Enterprise conversions
+  </Accordion>
+</Accordions>
+
+<Callout>
+The key is tracking the developer's journey through these stages - from initial reach through to becoming an active platform advocate. Each stage builds upon the previous ones to create compounding value.
+</Callout>
+
+To implement this framework effectively:
+
+1. Define your keystone metric (e.g. registered developers)
+2. Assign relative values to each stage
+3. Track progression through the funnel
+4. Calculate combined business impact
+5. Adjust and refine over time
+
+Remember that developers may cycle through these stages multiple times as they deepen their engagement with your platform. The framework helps capture this cumulative value creation.
+
+
+---
+
+#### Example OKRs
+
+Based on the **OKRA framework**, here are examples with **SMART** key results. Please note that these are just examples, and you should adjust them to your specific situation. It doesn't make sense to work on SDK adoption if your SDK is just a simple wrapper around an API.
+
+Wait, I need to zoom in a little for this one 🔎
+
 <div className="text-2xl font-bold text-center my-6 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
   Focus on IMPACTFUL activities first, polish the rest later.
 </div>
@@ -1334,23 +1457,24 @@ Remember: Your OKRs should be SMART (Specific, Measurable, Achievable, Relevant,
 
 By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders. The key is to balance lead metrics (measuring work output) and lag metrics (measuring outcomes) based on your team composition and organizational structure.
 
+### Practical Implementation
 
-    - OKR(A) framework
-        - If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. Do not hesitate to pivot.
+<Callout type="warning">
+Start small with 2-3 key metrics that align with your current goals. You can expand measurement over time as your program matures.
+</Callout>
 
+Here's how to get started:
 
-https://fiveandahalfstars.ninja/blog/2023/2023-06-01-a-comprehensive-devrel-metrics-guide-part1
-https://fiveandahalfstars.ninja/blog/2023/2023-06-05-a-comprehensive-devrel-metrics-guide-part2
-https://fiveandahalfstars.ninja/blog/2023/2023-06-15-a-comprehensive-devrel-metrics-guide-part3.html#_the_solid_framework_kim_maidas_keystone_framework
+1. Identify your company's key business objectives
+2. Define metrics that show DevRel's contribution
+3. Set up measurement systems and baselines
+4. Report regularly on progress and learnings
+5. Iterate based on what you discover
 
+Remember: The goal isn't perfect measurement, but rather showing clear progress toward business goals while maintaining authentic developer relationships.
+If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. Do not hesitate to pivot.
 
-https://www.swyx.io/measuring-devrel
-https://jmeiss.me/posts/talk-about-devrel-metrics/
-https://www.atlassian.com/agile/agile-at-scale/okr
-https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
-https://maida.kim/how-to-measure-the-value-of-developer-relations/
-https://servingdevelopers.com/2019/02/17/budgeting-for-developer-evangelism/
-
+---
 
 ## Chapter Seven: [**Community-Centric Approaches**](#7-community-centric-approaches)
     - A 'developer champions' program recognizing and rewarding active community contributors. You want to keep your superstars.
@@ -1483,6 +1607,15 @@ https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-
 - https://glaforge.dev/talks/2020/08/06/the-developer-advocacy-feedback-loop/
 - https://daily.dev/blog/optimizing-developer-feedback-loops-guide-2024
 - https://filestage.io/blog/feedback-loops/
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-01-a-comprehensive-devrel-metrics-guide-part1
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-05-a-comprehensive-devrel-metrics-guide-part2
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-15-a-comprehensive-devrel-metrics-guide-part3.html#_the_solid_framework_kim_maidas_keystone_framework
+- https://www.swyx.io/measuring-devrel
+- https://jmeiss.me/posts/talk-about-devrel-metrics/
+- https://www.atlassian.com/agile/agile-at-scale/okr
+- https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
+- https://maida.kim/how-to-measure-the-value-of-developer-relations/
+- https://servingdevelopers.com/2019/02/17/budgeting-for-developer-evangelism/
 
 Images:
 
@@ -1492,4 +1625,5 @@ Images:
 - Developer Journey by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/time-lapse-photography-sky-fPN1w7bIuNU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - Timeline & Milestones Photo by [Tony Reid](https://unsplash.com/@togna_bologna?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-person-standing-in-a-dark-tunnel-with-bright-lights-PGdMhonLLZk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - Feedback Loop Photo by [Visax](https://unsplash.com/@visaxslr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/background-pattern-BYmWSPYzONQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-      
+- Metrics Photo by [Maxim Berg](https://unsplash.com/@maxberg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-very-large-group-of-trees-that-are-very-colorful-kE8-rUKjtQU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+  
