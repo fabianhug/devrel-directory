@@ -12,7 +12,8 @@ import {
   Building2, ChartLine, CheckSquare, Code, Edit, Eye, FileText, FilePlus,
   Footprints, Globe, GraduationCap, Hammer, Handshake, Heart, Lightbulb,
   LineChart, MessageCircle, Scale, Search, Share, Shield, Sprout, Star,
-  Target, TrendingUp, Trophy, UserCog, UserPlus, Users, Zap
+  Target, TrendingUp, Trophy, UserCog, UserPlus, Users, Zap,
+  Megaphone, Workflow
 } from 'lucide-react';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
@@ -31,6 +32,8 @@ import DeveloperJourneyMap from '@/public/images/blog/2024-11-03-devrel-strategy
 import KimMaidaKeystoneFramework from '@/public/images/blog/2024-11-03-devrel-strategy/keystone-devrel-metrics-kim-maida.png';
 import NorthStar from '@/public/images/blog/2024-11-03-devrel-strategy/north-star.jpg';
 import Diataxis from '@/public/images/blog/2024-11-03-devrel-strategy/diataxis.jpg';
+import DevRelPillarActivities from '@/public/images/blog/2024-11-03-devrel-strategy/devrel-pillar-activities.png';
+import HiringActivityRadar from '@/public/images/blog/2024-11-03-devrel-strategy/hiring-activity-radar.png';
 
 ![CoverBG](/images/blog/2024-11-03-devrel-strategy/cover-bg.jpg)
 
@@ -1983,12 +1986,302 @@ Let's recap the key takeaways:
 7. Build a sustainable content creation process with the right team mix
 
 ---
+![Hiring](/images/blog/2024-11-03-devrel-strategy/hiring-header.jpg)
 
 ## Chapter Nine: [**Hiring**](#9-hiring)
-read:
-https://www.learnwithjason.dev/blog/get-hired-devrel/
-https://developerrelations.com/how-to-get-a-job-in-devrel
-https://www.linkedin.com/pulse/hiring-within-developer-relations-how-successfully-define-owen-parker-jgirc/ (define roles properly)
+
+DevRel roles require a unique blend of technical expertise, communication skills, and community-building abilities. Understanding the different roles and their requirements is crucial for both hiring managers and candidates.
+Let's explore the different roles, responsibilities and skills needed for each before we dive into the hiring process:
+
+### The pillars of DevRel
+
+Overall, DevRel consists of four pillars where each role contributes to the overall success of the program. 
+Grouping them together helps to find a way to group similar activities together.
+
+| Pillar | Key Responsibilities |
+|--------|---------------------|
+| **Developer Marketing** | • Understanding target developer segments<br/>• Creating compelling value propositions<br/>• Providing tools and resources<br/>• Guiding developers through adoption funnel<br/>• Measuring marketing effectiveness |
+| **Developer Enablement** | • Creating comprehensive documentation<br/>• Building educational resources<br/>• Providing technical support<br/>• Optimizing developer experience<br/>• Ensuring developer success |
+| **Developer Advocacy** | • Building developer awareness<br/>• Establishing technical credibility<br/>• Bridging company and developer needs<br/>• Gathering community feedback<br/>• Representing developer interests |
+| **Developer Community** | • Fostering collaborative environments<br/>• Supporting shared goals and growth<br/>• Enabling peer-to-peer learning<br/>• Creating engagement opportunities<br/>• Building sustainable communities |
+
+These four pillars provide a framework for organizing DevRel activities and understanding how different roles contribute to overall program success. Each pillar represents key functions that, when working together, create a comprehensive developer relations strategy.
+
+<Callout>
+The pillars aren't silos - they often overlap and reinforce each other. A strong DevRel program needs to balance activities across all four areas while maintaining focus on both business objectives and developer needs.
+</Callout>
+
+### DevRel activities in each pillar
+
+While these pillars provide a useful framework, it's important to recognize that DevRel activities often transcend these boundaries. 
+For instance, a technical blog post might primarily serve as advocacy, but could simultaneously support marketing initiatives and provide educational value. 
+The key is understanding that while activities may span multiple pillars, their primary classification often aligns with the strategic intent behind their creation. 
+This overlap actually strengthens the overall DevRel program, as initiatives can serve multiple objectives while maintaining clear strategic focus. 
+
+Below is a comprehensive overview of how different activities typically align with each pillar:
+
+<ImageZoom  
+   alt="DevRel Pillars Activities" 
+   width={600}
+   height={600}
+   src={DevRelPillarActivities}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+### Activity Focus Areas
+
+The radar charts below illustrate different focus areas within DevRel roles, showing how activities and responsibilities can vary based on team objectives:
+
+<ImageZoom  
+   alt="DevRel Hiring Activity Radar" 
+   width={600}
+   height={600}
+   src={HiringActivityRadar}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+<Accordions>
+  <Accordion title="Adoption Focus">
+    Emphasizes developer enablement and advocacy to drive product adoption. These roles focus heavily on creating educational content, providing technical support, and helping developers successfully implement solutions.
+  </Accordion>
+
+  <Accordion title="Sales Enablement Focus">
+    Balanced across pillars but with emphasis on marketing and enablement. These roles support sales teams by creating technical content, providing developer perspective, and helping bridge technical gaps.
+  </Accordion>
+
+  <Accordion title="Developer Enablement Focus">
+    Heavily weighted toward enablement activities. These roles concentrate on documentation, SDKs, tools, and resources that make developers successful with the product.
+  </Accordion>
+
+  <Accordion title="Product Input Focus">
+    Emphasizes gathering and channeling developer feedback to product teams. These roles act as the voice of the developer within the organization, helping shape product direction.
+  </Accordion>
+
+  <Accordion title="Ecosystem Focus">
+    Balanced across advocacy and community building. These roles work to build and nurture developer ecosystems through partnerships, integrations, and community programs.
+  </Accordion>
+
+  <Accordion title="Contributor Community Focus">
+    Heavily weighted toward community building and enablement. These roles focus on growing and supporting open source or product contributor communities.
+  </Accordion>
+
+  <Accordion title="Employer Branding Focus">
+    Emphasizes advocacy and marketing to attract developer talent. These roles help position the organization as a great place for developers to work.
+  </Accordion>
+</Accordions>
+
+
+One important side note I think is worth mentioning:\
+It's important to note that understanding these different focus areas is crucial for both hiring managers and candidates. 
+It helps ensure role expectations align with organizational needs and individual strengths. Seriously, take the time to understand these areas and make sure you're hiring for the right fit.
+If you already have BD people handling outreach, you don’t want to hire a ‘Developer Advocate’ just to send them to conferences. Instead, consider hiring a Developer Relations Engineer who could focus on more technical enablement work that aligns better with your team’s needs.
+
+
+*The images are from the [DevRel Job Titles and Career Progression Report](https://developerrelations.com/wp-content/uploads/2023/05/hoopy-devrel-job-titles-report-may2023.pdf)* (read it!)
+
+---
+
+### Understanding DevRel Roles
+
+Oh, this is a fun one. Try to ask anyone working in DevRel what they do and you will get a different answer every time.\
+Some of them even say they're a 'DevRel', but they really are a 'Developer Advocate'. 
+
+And some are are this:
+<video src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTdxcTJ5dHRvMTZ4NGY4ODBsczllMmM5ZzE5MHZ6bjIwdXl5YTdraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GVzDhKdpiPUIZJlh7M/giphy.mp4" autoPlay loop muted playsInline />
+
+Let's continue...\
+Based on my own experience and academic research, DevRel roles typically fall into these categories. 
+We will go into more detail in a bit.
+
+<Cards>
+  <Card title="Developer Advocate" icon={<Code className="text-blue-300" />}>
+    - Deep technical understanding
+    - Communication skills
+    - Problem-solving ability
+    - Community engagement
+    - Product feedback gathering
+  </Card>
+  
+  <Card title="Developer Evangelist" icon={<Megaphone className="text-green-300" />}>
+    - Public speaking
+    - Technical writing
+    - Event management
+    - Social media presence
+    - Feature promotion
+  </Card>
+  
+  <Card title="Developer Experience Engineer" icon={<Workflow className="text-purple-300" />}>
+    - UX/DX design skills
+    - API/SDK design
+    - Documentation expertise
+    - Onboarding optimization
+    - Technical writing
+  </Card>
+  
+  <Card title="Developer Marketing Specialist" icon={<Target className="text-red-300" />}>
+    - Marketing strategy
+    - Content creation
+    - Event sponsorship
+    - Campaign management
+    - Analytics skills
+  </Card>
+
+  <Card title="Developer Relations Engineer" icon={<Code className="text-yellow-300" />}>
+    - Technical expertise
+    - Automation and integration
+    - Developer tooling
+    - Developer experience
+  </Card>
+
+  <Card title="Developer Relations Manager" icon={<Users className="text-orange-300" />}>
+    - Leadership and mentorship
+    - Strategy and planning
+    - Team management
+    - Cross-functional collaboration
+  </Card>
+</Cards>
+
+*(Note there are more DevRel related roles out there, like 'Community Manager', 'Developer Educator', 'Solutions Engineer', etc.)*
+
+---
+
+### Core Skills
+
+When you're hiring for a DevRel role, you want to make sure the candidate has the core skills that are most important for the role.
+It highly depends on the stage of the company, too. In the beginning you might want to hire a more generalist who can do a bit of everything and has founder experience.
+The more mature the company gets, the more you want to hire specialists who can focus on a few key areas.
+
+| Skill Category | Key Components |
+|----------------|----------------|
+| Technical Foundation | • Coding experience<br/>• API knowledge<br/>• Development workflows<br/>• Technical writing |
+| Communication Skills | • Public speaking<br/>• Technical writing<br/>• Community management<br/>• Social media presence |
+| Business Skills | • Strategic thinking<br/>• Metrics understanding<br/>• Stakeholder management<br/>• Project planning |
+| Soft Skills | • Empathy<br/>• Active listening<br/>• Problem-solving<br/>• Time management |
+
+---
+### Defining Role Requirements
+
+We know about the different nuances of the different roles - now we need to have clear role definitions when looking for candidates.
+It helps align expectations, enables targeted candidate searches, and ensures effective evaluation.
+
+The process of defining role requirements typically involves three key phases. 
+- First, conduct a thorough needs assessment by working closely with stakeholders to identify key responsibilities, define success metrics, and ensure alignment with the company's current stage. 
+- Next, create a detailed role specification that outlines technical requirements, required experience level, primary focus areas, and how the role will integrate with existing teams. 
+- Finally, establish clear success metrics by defining relevant KPIs, setting expectations, establishing evaluation criteria, **and planning a growth path for the role**. 
+
+This should help you find candidates who can truly drive value for your DevRel initiatives.
+
+<div className="text-2xl font-bold text-center my-6 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+🚨 PSA: Please DO NOT use AI to write your JDs... it's so frustrating to read them, because it shows you don't care about the individual needs of the role internally.
+</div>
+
+---
+
+### Building an Effective Hiring Process
+
+The hiring process for DevRel roles should be thorough and well-structured, while aligning with your existing HR practices.\
+Here's a suggested framework that you can adapt to your needs:
+
+#### Assessment Areas
+
+When evaluating candidates, pick some of these key areas:
+
+- **Technical Proficiency**
+  - Understanding of your tech stack
+  - Previous development experience
+  - API/SDK knowledge
+  - System design understanding
+  - Documentation capabilities
+
+- **Communication Skills**
+  - Written communication (blog posts, documentation)
+  - Verbal communication (presentations, videos)
+  - Teaching ability (workshops, tutorials)
+  - Social media presence
+  - Community engagement history
+
+- **Strategic Thinking**
+  - Program planning experience
+  - Metrics and KPI understanding
+  - Resource prioritization
+  - Problem-solving approach
+  - Business acumen
+
+#### Interview Process Structure
+
+The following is a suggested and tested structure - adapt it to align with your hiring practices and team needs.\
+Note: It doesn't make sense to ask a DevRel marketing focussed person hardcore tech questions while it totally makes sense to ask a DevRel Engineer about their side projects and prior Engineering experience. You get the point.
+
+1. **Initial Screening**
+   - Resume review focusing on relevant experience
+   - Portfolio assessment (content, talks, community work)
+   - Brief technical background check
+   - Cultural alignment preliminary assessment
+
+2. **Technical Evaluation**
+   - Code review or small technical project
+   - API design discussion
+   - Documentation writing sample
+   - Technical presentation
+   - System architecture understanding
+
+3. **Communication Assessment**
+   - Mock presentation or workshop
+   - Writing exercise
+   - Community scenario roleplay
+   - Stakeholder communication simulation
+
+4. **Team Fit**
+   - Cross-functional team interviews
+   - Culture and values alignment
+   - Collaboration style assessment
+   - Working style discussion
+
+#### Evaluation Framework
+
+Having just the right questions is not enough. 
+You need to make sure to also be able to evaluate the candidates properly - in the best case without help of AI (yet), as the individual journey and experience is so important.
+
+Use these points as inspiration:
+<Cards>
+  <Card title="Role-Specific Skills" icon={<Target className="text-blue-300" />}>
+    - Technical depth appropriate for role
+    - Communication abilities matching needs
+    - Experience in key responsibility areas
+    - Tools and platform knowledge
+  </Card>
+  
+  <Card title="Growth Potential" icon={<TrendingUp className="text-green-300" />}>
+    - Learning ability and adaptability
+    - Leadership capabilities
+    - Strategic thinking
+    - Initiative and proactivity
+  </Card>
+  
+  <Card title="Cultural Impact" icon={<Users className="text-purple-300" />}>
+    - Values alignment
+    - Team collaboration style
+    - Communication approach
+    - Community building mindset
+  </Card>
+</Cards>
+
+Remember that hiring processes should be consistent across candidates, documented and transparent, flexible enough to accommodate different backgrounds, and regularly reviewed and improved based on outcomes. (don't forget the retro, folks)
+
+#### Post-Hire Integration
+
+Last but not least, don't forget to get the new hire up to speed **asap**.
+In my experience, the best way to do so is by having clear 30-60-90 day objectives, team and stakeholder introductions, product and technical training, a streamlined community introduction strategy, and early wins identification.
+
+**Unpopular Opinion:**\
+Some don't want to hear this, but if you note it's a bad hire, try to let them go asap. (Try to fix things first, obviously)
+It's a lose-lose situation if you don't. Eventually you'll be both unhappy. Plus: it's a waste of time and money.
+
+
+---
+
 
 ## Chapter Ten: [**Tools and Tech**](#10-tools-and-tech)
 read:
@@ -2117,6 +2410,10 @@ https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-
 - https://developerrelations.com/developer-experience/approaching-developer-education
 - https://developerrelations.com/developer-experience/breaking-down-barriers-to-hello-world
 - https://www.devrelx.com/post/content-for-developers-what-and-how
+- https://www.learnwithjason.dev/blog/get-hired-devrel/
+- https://developerrelations.com/how-to-get-a-job-in-devrel
+- https://www.linkedin.com/pulse/hiring-within-developer-relations-how-successfully-define-owen-parker-jgirc/
+- https://developerrelations.com/announcements/looking-at-devrel-job-titles
 
 Images:
 
@@ -2129,4 +2426,5 @@ Images:
 - Metrics Photo by [Maxim Berg](https://unsplash.com/@maxberg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-very-large-group-of-trees-that-are-very-colorful-kE8-rUKjtQU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - North Star Photo by [Dana Andreea Gheorghe](https://unsplash.com/@dana_andreea?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-night-sky-with-stars-and-a-bright-red-tent-in-the-foreground-8MsbxJnlvm0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)  
 - Content and Education Strategy Photo by [Robin Neufeld](https://unsplash.com/@robinne?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-group-of-people-standing-next-to-each-other-HOrhCnQsxnQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Hiring Photo by [Google DeepMind](https://unsplash.com/@googledeepmind?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-group-of-different-colored-objects-_aU_AxlS04E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
   
