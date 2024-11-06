@@ -1,0 +1,2389 @@
+---
+title: DevRel Strategy - A Comprehensive Guide
+description: Creating and implementing effective Developer Relations strategies
+author: "[Fabian Hug](https://x.com/intent/user?screen_name=0xfabs)"
+authorImage: "https://github.com/fabianhug.png"
+date: 2024-11-06
+---
+
+import { Card, Cards } from '@/components/card';
+import { 
+  Activity, AlertTriangle, ArrowUpRight, BarChart, BookMarked, BookOpen, Box,
+  Building2, ChartLine, CheckSquare, Code, Edit, Eye, FileText, FilePlus,
+  Footprints, Globe, GraduationCap, Hammer, Handshake, Heart, Lightbulb,
+  LineChart, MessageCircle, Scale, Search, Share, Shield, Sprout, Star,
+  Target, TrendingUp, Trophy, UserCog, UserPlus, Users, Zap,
+  Megaphone, Workflow
+} from 'lucide-react';
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import PieChart from '@/components/piechart';
+
+import OrgChart from '@/public/images/blog/2024-11-06-devrel-strategy/center-of-developer-relations-in-organizations.png';
+import PrimaryFocus from '@/public/images/blog/2024-11-06-devrel-strategy/primary-focus-of-developer-advocacy-in-companies.png';
+import DeveloperCanvas from '@/public/images/blog/2024-11-06-devrel-strategy/developer-persona-canvas-example.png';
+import Objective from '@/public/images/blog/2024-11-06-devrel-strategy/objective.jpg';
+import ValueProposition from '@/public/images/blog/2024-11-06-devrel-strategy/value-proposition.png';
+import DeveloperSegmentationCanvas from '@/public/images/blog/2024-11-06-devrel-strategy/developer-segmentation-canvas.png';
+import Banner from '@/public/images/blog/2024-11-06-devrel-strategy/devrel-banner.svg';
+import DeveloperJourneyStages from '@/public/images/blog/2024-11-06-devrel-strategy/developer-journey-stages';
+import DeveloperJourneyMap from '@/public/images/blog/2024-11-06-devrel-strategy/developer-journey-map.png';
+import KimMaidaKeystoneFramework from '@/public/images/blog/2024-11-06-devrel-strategy/keystone-devrel-metrics-kim-maida.png';
+import NorthStar from '@/public/images/blog/2024-11-06-devrel-strategy/north-star.jpg';
+import Diataxis from '@/public/images/blog/2024-11-06-devrel-strategy/diataxis.jpg';
+import DevRelPillarActivities from '@/public/images/blog/2024-11-06-devrel-strategy/devrel-pillar-activities.png';
+import HiringActivityRadar from '@/public/images/blog/2024-11-06-devrel-strategy/hiring-activity-radar.png';
+
+![CoverBG](/images/blog/2024-11-06-devrel-strategy/cover-bg.jpg)
+
+## So, DevRel Strategy?
+
+So, you want to build a DevRel strategy? Great choice! This comprehensive guide will walk you through everything you need to know about creating and implementing effective Developer Relations strategies. And I mean everything - from understanding where DevRel sits in your org to measuring its impact and scaling your community.
+We've been covering DevRel Strategy in our [Fundamentals](/docs/fundamentals/devrel-strategy) section already, but this post goes way deeper. We'll use frameworks like OKR(A) to measure success (more on that [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr)) and real-world examples to show you what works (and what doesn't).
+
+A well-crafted DevRel strategy isn't just a nice-to-have - it's the foundation for building **strong** relationships between your company and the developer community, driving adoption, and fostering innovation.
+
+Here's the thing: without a solid strategy, you're just throwing things at the wall and hoping something sticks. We've all been there, but that's not what we want. What we want is a clear, actionable plan that helps you build meaningful relationships with developers while delivering real value to your organization.
+
+Grab a coffee (or tea, I don't judge), and let's dive in. We've got a lot to cover and it will take some time.
+
+---
+
+## What is a 'DevRel Strategy'?
+
+There is no one definition of what a DevRel Strategy is.
+Instead, it's a collection of activities, initiatives and goals that align with the overall objectives of the Developer Relations team.
+
+A DevRel Strategy is:
+
+<Cards>
+  <Card
+    icon={<Target className="text-purple-300" />}
+    title="A Strategic Plan"
+  >
+    A comprehensive plan outlining how your company will engage with, support, and grow its developer community - from community building to content creation, aligned with business objectives.
+  </Card>
+
+  <Card
+    icon={<Edit className="text-blue-300" />}
+    title="A Living Document"
+  >
+    Your strategy evolves as your community grows. Regular reporting and adaptation are crucial, using metrics and community feedback to continuously refine your approach.
+  </Card>
+
+  <Card
+    icon={<Code className="text-green-300" />}
+    title="A Clear Roadmap"
+  >
+    Maps out specific programs like developer advocacy, hackathons, technical workshops, open-source contributions, and recognition programs to achieve your DevRel objectives.
+  </Card>
+
+  <Card
+    icon={<Lightbulb className="text-yellow-300" />}
+    title="A Success Framework"
+  >
+    Provides structure through clear objectives, audience understanding, journey mapping, community approach, content strategy, feedback loops, and measurable KPIs.
+  </Card>
+</Cards>
+
+Great, now we know what a DevRel Strategy is we can start to think about how to create one.
+
+---
+
+## Key components of a DevRel Strategy
+
+This post will cover the following key components, click on each to jump to the section. 
+I highly recommend reading them in order to get a good understanding of the DevRel Strategy process.
+
+
+1. [**The Beginning**](#the-beginning-where-are-we)
+2. [**The Objective**](#1-the-objective)
+3. [**Audience & Needs**](#2-audience-needs)
+4. [**Timeline & Milestones**](#3-timeline--milestones)
+5. [**Feedback Loops**](#4-feedback-loops)
+6. [**Measuring Success & Reporting**](#5-measuring-success--reporting)
+7. [**Developer Journey Map**](#6-developer-journey-map)
+8. [**Community-Centric Approaches**](#7-community-centric-approaches)
+9. [**Content and Education Strategy**](#8-content-and-education-strategy)
+10. [**Hiring**](#9-hiring)
+11. [**Tools and Tech**](#10-tools-and-tech)
+
+
+---
+## The Beginning: Where are we?
+
+### Understanding Where DevRel Sits
+
+Before defining objectives, it's crucial to understand where DevRel sits within your organization. Based on my survey of 30 companies and protocols acting in crypto, web3 and AI, the organizational placement varies significantly:
+
+export const chartDataDevRelCenter= [
+  { key: "Marketing", val: 32.1 },
+  { key: "Engineering", val: 32.1 },
+  { key: "Product Management", val: 14.3 },
+  { key: "Own Department", val: 10.7 },
+  { key: "Customer Support", val: 7.1 },
+  { key: "Growth", val: 3.6 },
+];
+
+<PieChart 
+   title="Center of Developer Relations in Organizations"
+   description="Where do you primarily see Developer Relations centered in your organization?" 
+   chartData={chartDataDevRelCenter}
+/>
+
+<p className="text-center italic mt-2">Center of Developer Relations in Organizations</p>
+
+The survey results show an even split between *Marketing* and *Engineering* departments as the primary homes for DevRel teams, followed by *Product Management*. Some organizations have established DevRel as its own independent department, while smaller percentages operate within *Customer Support* and *Growth*. 
+
+<Callout>
+This distribution highlights that there's no one-size-fits-all approach - DevRel can thrive in different organizational structures depending on company needs and culture.
+</Callout>
+
+But how do you know where to put your DevRel team?\
+Here are some questions that can help you decide:
+
+- **Do you have a product that needs to be adopted by developers?**\
+Maybe you should put DevRel in Engineering to get the developers to use your product and give them the best possible onboarding and enablement experience. Engineers are the ones who build the product after all. And the
+
+- **Do you have a community that needs to be built and nurtured?**\
+Maybe you should put DevRel in Marketing and work on content, community and events.
+
+- **Do you have a need for education and enablement of developers?**\
+Maybe you should put DevRel in Product Management to create the best possible onboarding and enablement experience.
+
+- **Do you have a need for evangelism and promotion of your product, protocol or company?**\
+Maybe you should put them in Marketing to promote it.
+
+- **Do you have a need for technical support and customer success?**\
+Maybe you should put them in Customer Support to provide the best possible support to your developers. 
+
+Remember: This is just a starting point to help you understand where DevRel can sit in the org.
+We will cover some of these questions in more detail later. 
+
+--- 
+
+### Primary Focus Areas
+
+Okay, so we know where DevRel sits in the org. Now, what are they doing? If you're someone who's been around DevRel for a while, you'll know that the focus areas vary significantly. Many times the people you're talking to will tell you they do "everything" and it's hard to get them to focus on one thing.
+This is what you want to avoid. Make sure to focus on what's important for your product, protocol or company.
+
+My research revealed the primary focus areas of Developer Relations teams and you can tell its very diverse:
+
+export const chartDataDevRelFocus = [
+  { key: "Community", val: 20 },
+  { key: "Content", val: 16.7 },
+  { key: "Developer Experience", val: 16.7 },
+  { key: "Product", val: 16.7 },
+  { key: "Education", val: 13.3 },
+  { key: "Evangelism", val: 6.7 },
+  { key: "Open-source", val: 3.3 },
+  { key: "Other", val: 6.7 },
+];
+
+<PieChart 
+   title="Primary Focus of Developer Advocacy in Companies"
+   description="Which type of Developer Advocacy does your company primarily focus on?" 
+   chartData={chartDataDevRelFocus}
+/>
+
+<Accordions >
+   <Accordion title="Focus Area Explanation (with Description)">
+      | Focus Area | Percentage | Description |
+      | --- | --- | --- |
+      | Community | 20% | Building and nurturing developer communities |
+      | Content | 16.7% | Creating technical documentation, tutorials, and educational materials |
+      | Developer Experience | 16.7% | Improving the overall developer journey |
+      | Product | 16.7% | Focusing on product adoption and feedback |
+      | Education | 13.3% | Training and enabling developers |
+      | Evangelism | 6.7% | Promoting platform/product adoption |
+      | Open-source | 3.3% | Contributing to and managing open-source initiatives |
+      | Other | 6.7% | Holistic approaches combining multiple areas |
+
+      Notably, under the 'Other' category, respondents emphasized the importance of taking a holistic approach. They stressed that all areas are highly important and that focusing solely on one aspect neglects the multifaceted nature of Developer Relations.
+   </Accordion>
+</Accordions>
+
+Okay, but how do you know what to focus on? 
+This is where you need to do your research. It's important to understand your audience, your product, your company and your goals.
+You need to speak to both, internal stakeholders and external developers. 
+
+- If you're one of the founding members of the company and there is no product yet, you need to focus on education and community.
+- If you're a bit further down the line, you can start to focus on evangelism and product.
+- And if you're a mature company with a well established product, you can focus on community and content, content, content.
+
+Usually this is one of the first steps in a 30-60-90 day plan, but we'll cover that in more detail later. 
+
+Now we first need to define our objectives.
+
+---
+
+## Chapter One: The Objective
+
+The objective is the foundation of any DevRel strategy. Without clear objectives, you cannot effectively:
+- Move forward with coherent initiatives
+- Know what you're working towards
+- Hire the right people
+- Allocate appropriate budget
+- Measure success
+
+Your objectives should be specific, measurable, and aligned with both business goals and developer needs. 
+In the following sections we will cover how to define your objectives and how to structure them. Let's start with the strategic side of things:
+
+### Setting Strategic Direction
+
+Set sail! You know where to go, right? Oh you don't? Well...
+
+The strategic direction of your DevRel strategy is crucial. It's obvious, right?
+Your DevRel objectives need to address at least the following three key areas. Depending on your specific situation you may need to add others, 
+but these are a good starting point and should always be considered because they are essential to your success, growth and impact.
+
+| Area | Objectives |
+|------|------------|
+| Business Impact | • Revenue growth through increased platform adoption<br/>• Market expansion into new developer segments<br/>• Reduced support costs through self-serve resources |
+| Developer Success | • Faster time-to-value for new developers<br/>• Higher satisfaction and productivity<br/>• Stronger community engagement and collaboration |
+| Platform Evolution | • Product improvements driven by developer feedback<br/>• Enhanced developer experience and tooling<br/>• New use cases and implementations |
+
+Now that we know at least where to go, let's talk about how to get there, which route to take and how long it will take:
+
+### Planning Horizons
+
+Structure your objectives across multiple timeframes. When working on your objectives, you should always consider the impact to later stages.
+Try to avoid setting objectives that are too short-term, as this can lead to a **lack of long-term vision**. You don't want to end up with a mess of initiatives that don't align with each other.
+But also avoid setting objectives that are too long-term; on the other hand this can lead to a **lack of focus and impact**.
+
+Ah, and btw: **Don't be afraid to pivot!**. If there is one thing I've learned in my career, it's that you need to be flexible and adapt to the situation if something isn't working. If you're not, you'll not move forward. 
+You'll lose momentum. You need to be laser focused and can't afford to be distracted by trying to fix what isn't working in the first place.
+
+Let's take a look at some examples. Take these with a grain of salt, they are just meant to give you an idea of how you can structure your objectives. It's important to note that the timeframe can vary significantly depending on your specific situation:
+
+| Timeframe | Objectives |
+|-----------|------------|
+| **Short-term (0-3 months)** | • Establish baseline metrics and KPIs<br/>• Launch MVP documentation and essential guides<br/>• Set up basic community channels and support<br/>• Create initial "time-to-hello-world" content |
+| **Medium-term (3-6 months)** | • Scale developer adoption with targeted programs<br/>• Expand technical content and learning resources<br/>• Build feedback loops with product teams<br/>• Launch developer champions program |
+| **Long-term (6-12 months)** | • Create sustainable developer ecosystem<br/>• Drive platform innovation through community feedback<br/>• Establish thought leadership in specific verticals<br/>• Scale successful programs based on metrics |
+
+<Callout type="warn">
+In rapidly evolving spaces like crypto, web3, and AI, planning beyond 12 months can be counterproductive. Focus on shorter cycles with frequent reassessment and adjustment of objectives.
+</Callout>
+
+### Critical Success Factors
+
+To achieve these objectives, focus on:
+
+#### 1. **Clear Value Proposition**
+
+Your value proposition is the foundation of your DevRel strategy. It's what makes developers want to use your platform, engage with your content, and ultimately become advocates for your product. Without a compelling value prop, you're just another voice in the crowd - and trust me, that crowd is getting louder every day.
+Let's break down how to craft a value proposition that actually resonates with developers (and no, "we're the best platform ever" doesn't count). Here's what you need to focus on:
+
+<ImageZoom  
+alt="Value Proposition" 
+width={400}
+height={400}
+src={ValueProposition}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+*Value Proposition based on the DevRel Book*
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Articulate Unique Benefits** | • Identify and communicate specific pain points your solution addresses<br/>• Highlight time-saving and efficiency gains<br/>• Demonstrate how your platform/product enhances developer workflow<br/>• Show clear examples of successful implementations<br/>• Provide concrete "before and after" scenarios |
+| **Demonstrate ROI** | • Calculate and present cost savings metrics<br/>• Showcase development time reduction<br/>• Highlight resource optimization benefits<br/>• Present case studies with quantifiable results<br/>• Track and report on key performance indicators |
+| **Define Success Metrics** | • Set clear adoption metrics and goals<br/>• Establish developer satisfaction benchmarks<br/>• Define engagement KPIs (e.g., active users, API calls)<br/>• Create timeline-based objectives<br/>• Implement feedback loops for continuous improvement |
+
+<Callout>
+Remember: Your value proposition should be data-driven and focused on tangible outcomes. As the DevRelBook states: "Data beats fluff" - back up your claims with real metrics and success stories.
+</Callout>
+
+#### 2. **Strong Foundations**
+
+Strong foundations are like the bedrock of your DevRel strategy. Without solid documentation, reliable support, and quality educational resources, even the best value proposition will crumble. 
+Think of it as building a house - you wouldn't start with the roof, would you? Let's break down what makes for truly robust DevRel foundations.
+Here's a detailed look at the key components that will keep your developer relations program standing tall:
+
+<PieChart
+  title="Developer Tools & Services Distribution"
+  description="What companies offer to developers based on survey data"
+  chartData={[
+    { key: "Documentation", val: 76.7 },
+    { key: "Code Samples", val: 70.0 },
+    { key: "APIs", val: 56.7 },
+    { key: "SDKs", val: 53.3 },
+    { key: "Platforms/BaaS", val: 46.7 },
+    { key: "Libraries/Frameworks", val: 43.3 },
+    { key: "IDEs", val: 13.3 },
+    { key: "Other", val: 10.0 }
+  ]}
+/>
+
+Based on my research, documentation and code samples are the clear winners here - making up over 70% of what companies offer to developers. 
+What's the first thing we all do when checking out a new tool? We hit the docs! APIs and SDKs follow closely behind, showing how companies are really focusing on making their tools developer-friendly.
+But it's not just about having them, it's about having them in the right format and making them easily accessible. More on that later.
+
+Here are the key activities you should focus on to build strong foundations:
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Documentation & Tools** | • Create comprehensive API reference docs<br/>• Build developer SDKs and libraries<br/>• Provide code samples and starter templates<br/>• Maintain interactive API playground<br/>• Implement documentation versioning |
+| **Support Infrastructure** | • Set up developer forums and communities<br/>• Establish ticketing/issue tracking system<br/>• Create knowledge base and FAQs<br/>• Provide direct support channels<br/>• Monitor support response times |
+| **Educational Resources** | • Develop interactive tutorials and guides<br/>• Create video content and webinars<br/>• Write technical blog posts and articles<br/>• Design hands-on workshops<br/>• Build learning paths for different skill levels |
+
+####  3. **Community Investment**
+
+The community is the heart of any DevRel program. It's where developers come to learn, share, and collaborate. 
+This is also one of the hardest things to get right, but when done well, it can be a powerful driver for growth and success.
+Often times you'll hear 'yeah, we just need to build a community' - but it's not that simple. 
+You need to invest in it, you need to nurture it, you need to have a plan for it - and you need to have TIME for it. So carve out time to engage with your community.
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Community Building** | • Foster peer-to-peer learning opportunities<br/>• Create mentorship programs<br/>• Host community events and meetups<br/>• Facilitate knowledge sharing sessions<br/>• Build online discussion spaces |
+| **Recognition Programs** | • Implement contributor rewards system<br/>• Highlight community success stories<br/>• Create developer advocacy programs<br/>• Provide speaking opportunities<br/>• Offer exclusive access to beta features |
+| **Collaboration Tools** | • Set up community forums<br/>• Enable project collaboration spaces<br/>• Create networking opportunities<br/>• Organize hackathons<br/>• Facilitate code review sessions |
+
+####  4. **Continuous Improvement**
+
+DevRel is all about continuous improvement - you can't just set it and forget it. You need to constantly gather feedback, measure your impact, and adapt your approach based on what you learn.
+This is where having good tracking and measurement systems in place becomes crucial. Let's break down the key areas. We will cover this in more detail later.
+
+| Focus Area | Key Activities |
+|------------|---------------|
+| **Feedback Loops** | • Conduct regular developer surveys<br/>• Host feedback sessions and interviews<br/>• Monitor community discussions<br/>• Track support tickets and issues<br/>• Analyze documentation usage patterns |
+| **Metrics & Analytics** | • Track developer adoption metrics<br/>• Measure documentation effectiveness<br/>• Monitor community engagement<br/>• Analyze support response times<br/>• Review developer satisfaction scores |
+| **Program Optimization** | • Iterate on documentation based on feedback<br/>• Refine community programs<br/>• Adjust support processes<br/>• Update educational content<br/>• Enhance developer tools |
+
+
+---
+
+
+### Setting Clear Objectives
+
+Now that we've covered how to understand where DevRel sits in the org and what the primary focus areas are, we can define our objectives.
+Your DevRel objectives should align with your **company's overall goals** while serving the **developer community**. 
+
+When setting objectives, we can leverage both strategic and tactical frameworks. At a strategic level, **OKRs** help us set ambitious goals, while **SMART** criteria ensure our tactical execution is well-defined.
+
+<Cards>
+   <Card title="Objectives" icon={<Target className="text-purple-300" />}>
+      Set ambitious, inspirational goals that align with your company's mission and the developer community's needs.
+   </Card>
+   <Card title="Key Results" icon={<ChartLine className="text-purple-300" />}>
+      Define measurable outcomes that will indicate progress toward your objectives.
+   </Card>
+</Cards>
+
+For tactical execution, let's break down the SMART framework:\
+*Let's sing a [song](https://www.youtube.com/watch?v=HG3UwIDAEb8)*
+
+<Steps>
+   <Step>
+      #### S is for *Specific*
+      Your objective should be specific and clear. It should not be vague or general.
+   </Step>
+   <Step>
+      #### M is for *Measurable*
+      Your objective should be measurable. You should be able to track and measure your progress towards the objective.
+   </Step>
+   <Step>
+      #### A is for *Achievable*
+      Your objective should be achievable. You should be able to achieve the objective with the resources and capabilities available to you.
+   </Step>
+   <Step>
+      #### R is for *Relevant*
+      Your objective should be relevant. It should align with your company's overall goals and the needs of the developer community.
+   </Step>
+   <Step>
+      #### T is for *Time-bound*
+      Your objective should have a deadline. You should know when you want to achieve the objective by.
+   </Step>
+</Steps>
+
+👉 *For a deeper dive into goal-setting frameworks and how to implement them in your DevRel strategy, check out Brendan's excellent post about OKRs, Actions and SMART goals [here](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr). Thanks Brendan!*
+
+---
+
+### Defining Your Objectives
+
+With our understanding of SMART objectives and the OKRA framework, let's explore the key strategic questions that will help shape your specific objectives. These questions ensure your objectives are both impactful and achievable:
+
+1. **Company Alignment**
+   - How does this objective support the company's current strategic priorities?
+   - What specific business metrics will this objective impact?
+   - Which stakeholders need to be involved or consulted?
+   - How does this align with other departmental goals?
+
+2. **Developer Impact**
+   - What tangible benefits will developers gain?
+   - How will this improve their workflow or productivity?
+   - What pain points are we specifically addressing?
+   - How can we validate the impact through both qualitative and quantitative metrics?
+
+3. **Resource Planning**
+   - What team capabilities are needed to achieve this objective?
+   - What tools or infrastructure must be in place?
+   - What timeline is realistic given current resources?
+   - What dependencies need to be considered?
+
+<Callout>
+Pro tip: Start with 2-3 core objectives rather than trying to tackle everything at once. You can always expand your focus as your program matures and you demonstrate success.
+</Callout>
+
+---
+
+### Example Objectives
+
+Let's look at some example strategic objectives for a Developer Relations program. Remember that your specific objectives should align with your company's stage, resources, and goals.
+Focus on IMPACTFUL objectives first, expand scope later.
+
+
+Here are some example strategic objectives across different focus areas:
+
+| Strategic Area | Example Objectives |
+|----------------|-------------------|
+| **Developer Experience** | • Create a seamless onboarding experience that gets developers to their first success quickly<br/>• Build comprehensive, well-organized documentation and learning resources<br/>• Establish reliable support channels and response processes |
+| **Community Building** | • Foster an active, engaged developer community where peers help peers<br/>• Create opportunities for developers to showcase their work and expertise<br/>• Develop programs that recognize and reward community contributors |
+| **Product Feedback** | • Build strong feedback loops between developers and product teams<br/>• Ensure developer needs influence product roadmap decisions<br/>• Create channels for early testing and validation of new features |
+| **Education & Enablement** | • Develop clear learning paths for different developer segments<br/>• Create content that helps developers solve real-world problems<br/>• Enable developers to become product experts and advocates |
+
+<Callout>
+Remember: Your objectives should align with both business goals and developer needs. Start with 2-3 core objectives rather than trying to tackle everything at once. You can expand your focus as your program matures.
+</Callout>
+
+These strategic objectives provide direction for your DevRel program. Later in this article, we'll cover how to measure progress against these objectives using the OKRA framework and specific metrics.
+
+---
+
+![Developer Audience](/images/blog/2024-11-06-devrel-strategy/developer-audience.jpg)
+## Chapter Two: Understanding Your Developer Audience
+
+Great. We now know what we're doing and why we're doing it. Now we need to understand who we're doing it for...
+One of the most common pitfalls in DevRel is saying you're "targeting developers" without further specification. This approach is too broad to be effective. Your developer audience is diverse across multiple dimensions:
+<Cards>
+   <Card title="Skill Level & Authority" icon={<UserCog className="text-blue-300" />}>
+      From junior developers to technical leads and architects, developers have varying levels of experience and decision-making authority that affect how they interact with your product.
+   </Card>
+
+   <Card title="Tech Stack" icon={<Zap className="text-green-300" />}>
+      The technologies developers use shape their needs - from programming languages like Python and JavaScript, to frameworks, platforms and infrastructure preferences.
+   </Card>
+
+   <Card title="Geography & Language" icon={<Globe className="text-red-300" />}>
+      Location matters - developers work across different regional hubs, primary languages, and local tech communities that influence how they engage.
+   </Card>
+
+   <Card title="Company Profile" icon={<Building2 className="text-orange-300" />}>
+      Whether at startups or enterprises, developers operate in different contexts with varying team sizes, structures and industry-specific requirements.
+   </Card>
+
+   <Card title="Career Stage" icon={<GraduationCap className="text-yellow-300" />}>
+      Career stage impacts needs and goals - from students and new graduates to career changers and experienced professionals seeking growth.
+   </Card>
+
+   <Card title="Use Cases" icon={<Target className="text-purple-300" />}>
+      Developers build for different purposes - internal tools, customer-facing applications, or system integration projects each with unique requirements.
+   </Card>
+</Cards>
+
+<Callout>
+"There is no simple single definition for 'Developer.' Rather, it refers to millions of people with differing skill levels and authority, who use different technology stacks and programming languages." - DevRel Book
+</Callout>
+
+#### Developer Segmentation Framework
+
+To effectively understand and target your developer audience, you need a structured approach to segmentation. The framework consists of four key filters.
+Each filter will help you understand your audience from different perspectives. And remember, you don't have to use all filters for each segment.
+
+| Focus Area | Key Questions |
+|------------|---------------|
+| **Technical (Product Focus)** | • Which programming languages do they use?<br/>• What technology stack do they work with?<br/>• What platforms do they develop for?<br/>• What technical requirements must they meet? |
+| **User (Developer Focus)** | • What is their experience level?<br/>• What is their decision-making authority?<br/>• What are their primary responsibilities?<br/>• What are their technical preferences? |
+| **Organization (Customer Focus)** | • What type of company do they work for?<br/>• What industry are they in?<br/>• What is their company's size and stage?<br/>• What are their use cases? |
+| **Market (Industry/Geography Focus)** | • Which geographic regions are they in?<br/>• What languages do they speak?<br/>• What industry regulations affect them?<br/>• What market trends influence their work? |
+
+#### Applying the Framework
+
+Great. Now we know how to segment our audience. But where do we get the information from?\
+This requires adopting a data-driven, product-focused mindset to gather insights from multiple sources.
+
+Put your Product Manager hat on and start asking questions 🎩
+
+| Source Type | Examples |
+|-------------|----------|
+| **Qualitative Data** | • Community feedback and discussions<br/>• Industry peer insights<br/>• Technical press coverage<br/>• Product team input |
+| **Quantitative Data** | • CRM data analysis<br/>• Product usage analytics<br/>• Stack Overflow surveys<br/>• SlashData reports |
+
+
+For each segment identified in your canvas, you'll want to build a comprehensive understanding of their needs, behaviors, and constraints. 
+Consider these key questions to develop a complete picture:
+
+
+- What motivates them in their work?
+- What tools and resources do they currently use?
+- What are their skill gaps and learning needs?
+- How do they evaluate and make technical decisions?
+- What demands compete for their time and attention?
+- What constraints affect their work (budget, infrastructure, culture)?
+- Where do they typically seek information and community?
+
+<Callout>
+Remember: Your segmentation should be specific enough to be actionable but broad enough to represent a viable market opportunity. Don't create segments so narrow that they become impractical to target.
+</Callout>
+
+Feel free to use this Developer Segmentation Canvas to help you understand your audience:
+
+<ImageZoom  
+   alt="Developer Segmentation Canvas" 
+   width={400}
+   height={400}
+   src={DeveloperSegmentationCanvas}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+---
+
+#### Validation Criteria
+
+After you've identified your segments, you'll want to challenge and validate their viability by asking these questions.
+
+1. Is the segment relevant to our business?
+2. Is it a large enough segment?
+3. Is it a valuable enough segment?
+4. Can we target this segment with our current resources?
+
+<Callout type="warn">
+"Segmentation is not a one-time exercise. To start, it's most important to focus on your current situation over the next 6 to 12 months. However, what's important today may change in the future." - Caroline Lewko & James Parton, DevRel Book
+</Callout>
+
+Once you've validated your segments, you can start to create personas.
+
+---
+
+#### Creating Developer Personas
+
+Now that we've identified and validated our segments, it's time to bring them to life through personas. 
+Developer personas help us move beyond abstract segments to create realistic representations of our target developers. 
+They're not just demographic data points - they're stories that help us understand the humans behind the code. 
+They help your entire team align on who you're building for and ensure your strategy resonates with real developer needs.
+
+> Personas are a way to personalize your targets and humanize them. Depending on your segments, you should define 2-4 personas.
+>Tessa Kriesel
+
+<ImageZoom  
+alt="Developer Persona Canvas Example" 
+width={400}
+height={400}
+src={DeveloperCanvas}
+className="!my-0 rounded-xl bg-fd-background"
+priority
+/>
+*Developer Persona Canvas Example*
+(download the blank template [here](/images/blog/2024-11-06-devrel-strategy/developer-persona-canvas.png). Thanks to [DevRel Book](https://www.devrelbook.com/))
+
+Each persona should include:
+
+| Category | Details |
+|----------|---------|
+| **Background Information** | • Role and responsibilities<br/>• Years of experience<br/>• Primary technologies used<br/>• Career goals |
+| **Technical Profile** | • Preferred programming languages<br/>• Development environment<br/>• Technical decision-making authority<br/>• Tool preferences |
+| **Behavioral Patterns** | • How they learn new technologies<br/>• Where they seek information<br/>• Community participation habits<br/>• Decision-making process |
+| **Pain Points and Needs** | • Current challenges<br/>• Technical limitations<br/>• Resource constraints<br/>• Learning preferences |
+
+
+#### Developer Positioning
+
+Once you understand your audience, you need to position your product or platform effectively. Answer these key questions:
+
+1. **Value Proposition**
+   - What type of product are you offering?
+   - What specific problems does it solve?
+   - How does it make a developer's life easier?
+
+2. **Differentiation**
+   - Why should developers choose your solution?
+   - What makes your offering unique?
+   - How does it compare to alternatives?
+
+3. **Success Criteria**
+   - What does success look like for the developer?
+   - How can you help them achieve their goals?
+   - What metrics matter to them?
+
+<Callout>
+Remember: Your audience understanding should directly inform your content strategy, community approach, and success metrics. Regular reassessment is crucial as developer needs and market conditions evolve.
+</Callout>
+
+---
+
+#### Key Takeaways
+
+Understanding your developer audience is more than just market research - it's the cornerstone of an effective DevRel strategy. 
+We've covered how through proper segmentation, persona development, and positioning, you are able to create a clear picture that informs every aspect of your program.
+
+Let's recap the key takeaways:
+
+<Cards>
+   <Card title="Strategic Focus" icon={<Target className="text-purple-300" />}>
+      Knowing exactly who you're serving helps prioritize initiatives and allocate resources effectively - no more shooting in the dark with generic "developer" targeting.
+   </Card>
+
+   <Card title="Better Engagement" icon={<Handshake className="text-blue-300" />}>
+      Detailed personas enable you to create more relevant content, design more effective programs, and build more meaningful relationships with your developer community.
+   </Card>
+
+   <Card title="Measurable Impact" icon={<ChartLine className="text-green-300" />}>
+      Clear audience understanding helps define success metrics that actually matter to both your developers and your business objectives.
+   </Card>
+</Cards>
+
+<Callout>
+Remember: Your understanding of your developer audience isn't static. Markets evolve, technologies change, and developer needs shift. Regular reassessment of your segments and personas ensures your DevRel strategy stays relevant and effective.
+</Callout>
+
+Cool! We've covered a lot of ground. I know some of this is a lot to take in and it might be overwhelming, but don't worry, the puzzle will soon start to come together.
+With a solid understanding of who our developers are, we can now move on to mapping their journey - from first discovery to becoming active community members and advocates.
+
+---
+
+![Developer Journey Map](/images/blog/2024-11-06-devrel-strategy/developer-journey.jpg)
+## Chapter Three: Developer Journey Map
+
+Now that we understand who our developers are, let's map out their journey. A Developer Journey Map isn't just another fancy marketing tool - it's your blueprint for understanding how developers move from first discovering your product to becoming active users and advocates.
+
+<Callout>
+A well-crafted journey map helps you identify where developers get stuck, what resources they need, and when they need them. Without one, you're essentially building a maze and hoping developers find their way through.
+</Callout>
+
+### Beyond the Traditional Funnel
+
+Forget the traditional marketing funnel - developer journeys are rarely linear. A developer might jump straight from discovery to implementation, or spend months in evaluation before making a decision. Your job is to support all these paths.
+
+### The Five Stages of the Developer Journey
+
+<DeveloperJourneyStages />
+
+<Callout type="warn">
+A developer may complete the first three stages in a single day if you provide a friction-free experience. Conversely, the adoption cycle could take a year if they haven't found the right use case.
+**The type of developer product matters** - an API typically has a faster journey time than implementing complex DeFi protocols or zero-knowledge proof systems.
+</Callout>
+
+Let's break down the key stages most developers move through. Remember - these aren't rigid boxes, but rather common patterns we see:
+
+| Stage | Goal | Key Questions |
+|-------|------|---------------|
+| **Discover** | Find potential solutions | • How do I solve my problem?<br/>• What options are available?<br/>• Who else is using this? |
+| **Evaluate** | Validate the solution fit | • Will this meet my needs?<br/>• What's the cost/benefit?<br/>• How does it compare to alternatives? |
+| **Learn** | Gain practical knowledge | • How do I get started?<br/>• Where's the documentation?<br/>• What resources are available? |
+| **Build** | Create working solutions | • How do I implement this?<br/>• What are the best practices?<br/>• Where can I get help? |
+| **Scale** | Expand and optimize usage | • How do I grow with this?<br/>• What are the limits?<br/>• How do I optimize costs? |
+
+👀 It's very interesting to see how the 'classic customer journey' map differs from the developer journey map.
+I highly recommend reading [Mapping the Customer Journey for Developer Products](https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb) by Haley Massa if you want to learn more.
+
+### Making it Real: Touchpoints That Matter
+
+Every interaction a developer has with your product, documentation, or community is a touchpoint. Some you control, others you don't. Understanding both is crucial:
+
+<Cards>
+   <Card title="Owned Touchpoints" icon={<Building2 className="text-blue-300" />}>
+      Properties and content that your company controls directly:<br/>
+      • Developer portal & documentation<br/>
+      • SDKs and sample code<br/>
+      • Support channels<br/>
+      • Social media presence
+   </Card>
+
+   <Card title="External Touchpoints" icon={<Globe className="text-green-300" />}>
+      Properties outside your direct control:<br/>
+      • Developer-focused media<br/>
+      • Third-party communities<br/>
+      • Industry forums<br/>
+      • Technical blogs
+   </Card>
+</Cards>
+
+Now that we know what touchpoints are important, let's map out the critical touchpoints for each stage of the developer journey.
+
+---
+
+### Mapping Developer Touchpoints
+
+For each stage of the journey, consider these key touchpoints. 
+The following bit will be a bit 'dry' and text heavy, but I promise it's worth it. 
+Bookmark this chapter (click on the heading to get a link), come back to it and use it as a reference when planning your touchpoints.
+
+The DevRel Book has a great chapter on this topic, I recommend reading it.
+<ImageZoom  
+   alt="Developer Journey Map" 
+   width={400}
+   height={400}
+   src={DeveloperJourneyMap}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+Let's go through each stage and identify the key touchpoints:
+
+### Discover Stage
+
+<DeveloperJourneyStages stage="discover" />
+
+The discovery stage is where developers first encounter your product, often while actively searching for solutions to their problems. Your presence needs to be visible and compelling across multiple channels.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Search & SEO** | Optimize technical content and documentation for relevant keywords |
+| **Social Media** | Maintain active presence on Twitter/X, LinkedIn and other platforms where developers gather |
+| **Word-of-Mouth** | Foster organic advocacy through excellent developer experience |
+| **Conference Presence** | Share knowledge and showcase solutions at industry events |
+
+### Evaluate Stage
+
+<DeveloperJourneyStages stage="evaluate" />
+During evaluation, developers assess if your solution fits their technical requirements, budget, and long-term needs. Transparency and comprehensive information are crucial.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Documentation Quality** | Clear, well-structured docs that demonstrate product capabilities |
+| **Getting Started Resources** | Quick-start guides and tutorials that show immediate value |
+| **Pricing Transparency** | Clear pricing models with relevant technical limitations |
+| **Community Health** | Active community showing product maturity and support |
+
+### Learn Stage
+
+<DeveloperJourneyStages stage="learn" />
+
+The learning stage is critical - developers need resources that help them understand and implement your solution effectively.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Interactive Learning** | Hands-on tutorials and sandboxed environments |
+| **API Documentation** | Comprehensive API references with real-world examples |
+| **Code Examples** | Production-ready sample code in multiple languages |
+| **Developer Support** | Responsive support channels for learning-related questions |
+
+### Build Stage
+
+<DeveloperJourneyStages stage="build" />
+
+During the build phase, developers need reliable tools and support to implement your solution into their projects.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Developer Tools** | Well-maintained SDKs and integration tools |
+| **Technical Support** | Quick resolution of implementation challenges |
+| **Stack Overflow** | Active presence answering technical questions |
+| **Developer Community** | Peer support channels for implementation help |
+
+### Scale Stage
+
+<DeveloperJourneyStages stage="scale" />
+
+As developers scale their usage, they need resources focused on optimization and enterprise-grade implementation.
+
+| Touchpoint | Description |
+|------------|-------------|
+| **Success Stories** | Detailed case studies showing successful implementations |
+| **Best Practices** | In-depth guides for optimal usage and architecture |
+| **Performance** | Documentation on scaling, optimization, and limits |
+| **Enterprise Support** | Dedicated support channels for high-value implementations |
+
+---
+
+### Identifying and Removing Friction
+
+Cool, we've mapped out the journey and the touchpoints. Now we need to identify and remove friction points.
+In my experience, this is one of the most important parts of the journey map. If you can identify and remove friction points, you'll be able to move developers through the journey much faster and with a better experience.
+
+You can grab the Product Manager hat again 🎩 - but this time you also need some detective skills 🕵️‍♂️.
+
+Follow these steps to identify and remove friction points:
+<Steps>
+   <Step>
+      #### Ask Your Community
+      • Conduct regular surveys<br/>
+      • Host feedback sessions<br/>
+      • Monitor support tickets<br/>
+      • Track community discussions
+   </Step>
+   <Step>
+      #### Perform Developer Experience Audits
+      • Review onboarding process<br/>
+      • Test documentation completeness<br/>
+      • Evaluate tool usability<br/>
+      • Assess support responsiveness
+   </Step>
+   <Step>
+      #### Measure Journey Data
+      • Time to first API call<br/>
+      • Documentation bounce rates<br/>
+      • Support ticket resolution time<br/>
+      • Community engagement metrics
+   </Step>
+</Steps>
+
+### Key Success Metrics in the Developer Journey
+
+We will cover tracking metrics in more detail later, but for now, make sure to track metrics like these (again, these are examples, you need to adjust them to your specific situation):
+
+| Metric Type | Examples |
+|-------------|----------|
+| **Speed Metrics** | • Time to first successful API call<br/>• Documentation search to solution time<br/>• Support ticket resolution speed |
+| **Engagement Metrics** | • Developer portal visits<br/>• Documentation usage<br/>• Community participation<br/>• Support ticket volume |
+| **Success Metrics** | • Successful implementations<br/>• API adoption rate<br/>• Developer satisfaction scores<br/>• Community growth |
+
+<Callout>
+Remember: Your Developer Journey Map is a living document. Review and update it regularly based on developer feedback, product evolution, and changing market conditions. The goal is continuous optimization of the developer experience.
+</Callout>
+
+### Putting It All Together
+
+Now that we've mapped out the journey, let's recap what makes a successful Developer Journey Map:
+
+<Cards>
+   <Card title="Flexibility" icon={<Target className="text-purple-300" />}>
+      Your map should accommodate different paths and speeds - from the weekend hacker to the enterprise architect evaluating your solution.
+   </Card>
+
+   <Card title="Actionability" icon={<ChartLine className="text-green-300" />}>
+      Each stage should have clear ownership, metrics, and resources allocated to support developers effectively.
+   </Card>
+
+   <Card title="Evolution" icon={<Zap className="text-blue-300" />}>
+      As your product and community mature, your journey map should evolve to reflect new patterns and needs.
+   </Card>
+</Cards>
+
+<Callout>
+Pro tip: Start with a simple journey map and iterate based on real developer feedback. It's better to have a basic map that you actually use than a complex one that sits in a drawer.
+</Callout>
+
+With our journey map in place, we can now move on to planning the timeline and milestones for implementing our DevRel strategy.
+
+---
+
+![Timeline](/images/blog/2024-11-06-devrel-strategy/timeline-milestones.jpg)
+## Chapter Four: Timeline & Milestones
+
+Alright, we've mapped our developer journey - now let's talk about how to actually implement all of this. Having a clear timeline with defined milestones is crucial for any DevRel strategy, especially when you're just getting started.
+
+<Callout>
+Remember how we talked about planning horizons earlier? This is where the rubber meets the road. Your timeline needs to be specific enough to drive action, but flexible enough to adapt to changing conditions.
+</Callout>
+
+### The 30-60-90 Day Framework
+
+The first 90 days in DevRel are critical - whether you're starting a new role or launching a new initiative. This period sets the foundation for your long-term success and impact.
+When creating your 30-60-90 day plan, remember that shorter is better. Rather than getting lost in lengthy, AI-generated plans, focus on concise, actionable items that will move the needle. Follow the **KISS principle** (Keep It Simple, Stupid) by being clear and specific about what you want to achieve.
+Think of this plan as a flexible guideline rather than a rigid rulebook. Your goal is to maintain **focus on what matters** while being able to adapt as you learn more about your developers' needs and company dynamics.
+
+
+<Cards>
+   <Card title="First 30 Days" icon={<Target className="text-purple-300" />}>
+      Focus on learning and understanding - your product, your developers, and your company's ecosystem:
+      - Learn the technology stack
+      - Map the developer ecosystem
+      - Connect with key community builders
+   </Card>
+   <Card title="Days 31-60" icon={<ChartLine className="text-green-300" />}>
+      Start implementing initial programs and gathering early feedback.
+      - Understand developer needs and pain points
+      - Collect actionable feedback through direct conversations
+      - Identify patterns and common challenges
+   </Card>
+   <Card title="Days 61-90" icon={<Zap className="text-blue-300" />}>
+      Scale what works, adjust what doesn't, and start showing measurable impact.
+      - Implement solutions for key pain points
+      - Improve developer tooling
+      - Establish tight feedback loops with the community
+   </Card>
+</Cards>
+
+--- 
+
+### Detailed Timeline Breakdown
+
+Let's get specific about what you should focus on in each phase. 
+Again, it's important to remember that this is a flexible guideline. 
+Everything you can find here is to spark your imagination. The best way to come up with your own plan is to grab a piece of paper, a pen, a coffee/tea and a good long think.
+
+But for now, let's dive into the details:
+
+| Timeframe | Focus Areas | Key Activities | Stakeholders |
+|-----------|-------------|----------------|--------------|
+| **Days 1-30** | Product & People | • Deep dive into product documentation<br/>• Set up analytics tracking<br/>• Map internal stakeholders<br/>• Audit existing resources | • Engineering leads<br/>• Product managers<br/>• Support team<br/>• Documentation team |
+| **Days 31-60** | Programs & Process | • Launch initial content program<br/>• Establish feedback loops<br/>• Create measurement framework<br/>• Start community initiatives | • Marketing team<br/>• Community members<br/>• Developer advocates<br/>• Content creators |
+| **Days 61-90** | Impact & Scale | • Present initial metrics<br/>• Scale successful programs<br/>• Optimize resource allocation<br/>• Plan next quarter | • Executive team<br/>• Key stakeholders<br/>• Community leaders<br/>• Partner teams |
+
+--- 
+
+### First 30 Days: Building Your Foundation
+
+This is your learning phase. Don't rush to implement everything at once. Instead, focus on:
+
+| Focus Area | Activities | Important |
+|------------|------------|-----------|
+| **Product Mastery** | • Complete your own product onboarding<br/>• Build something real with your product<br/>• Document friction points<br/>• Understand technical limitations | • Focus on hands-on experience<br/>• Document everything<br/>• Test all critical paths |
+| **Stakeholder Mapping** | • Meet key team members<br/>• Understand team dynamics<br/>• Map decision-making processes<br/>• Identify potential champions | • Build relationships early<br/>• Learn reporting structures<br/>• Find your allies |
+| **Resource Audit** | • Review existing documentation<br/>• Analyze current metrics<br/>• Assess community health<br/>• Identify quick wins | • Don't reinvent the wheel<br/>• Establish baselines<br/>• Look for gaps to fill |
+
+### Days 31-60: Building Momentum
+
+Now that you have a solid foundation, it's time to start implementing:
+
+| Focus Area | Activities | Expected Outcomes |
+|------------|------------|-------------------|
+| **Content Strategy** | • Launch a technical blog series<br/>• Create getting started guides<br/>• Develop sample applications<br/>• Start a developer newsletter | • Increased documentation usage<br/>• Better onboarding metrics<br/>• Higher content engagement |
+| **Community Initiatives** | • Set up community channels<br/>• Start regular office hours<br/>• Launch MVP of developer program<br/>• Begin collecting testimonials | • Growing community size<br/>• Increased peer support<br/>• Higher developer satisfaction |
+| **Measurement Framework** | • Define key metrics<br/>• Set up tracking systems<br/>• Create reporting templates<br/>• Establish baseline numbers | • Clear success metrics<br/>• Data-driven decisions<br/>• Measurable ROI |
+
+### Days 61-90: Showing Impact
+
+The final phase is about demonstrating value and scaling what works:
+
+| Focus Area | Activities | Success Metrics |
+|------------|------------|-----------------|
+| **Programs** | • Scale successful initiatives<br/>• Sunset what isn't working<br/>• Launch new experiments | • Engagement rates<br/>• Developer satisfaction<br/>• Resource efficiency |
+| **Metrics** | • Present first quarterly report<br/>• Share success stories<br/>• Document learnings | • Key metrics vs baseline<br/>• ROI calculations<br/>• Growth trends |
+| **Planning** | • Draft next quarter's plan<br/>• Set new OKRs<br/>• Align stakeholders | • Stakeholder buy-in<br/>• Resource allocation<br/>• Clear next steps |
+
+<Callout type="warn">
+Remember: These timelines are guidelines, not rigid rules. Adjust based on your company's size, resources, and specific needs. What works for a startup might not work for an enterprise, and vice versa.
+</Callout>
+
+--- 
+
+### Beyond 90 Days: The First Year
+
+While the first 90 days are crucial, let's look at what comes next. Again, this is a flexible guideline.\
+Don't be afraid to pivot, but make sure to have a well prepared plan in place **before you do**.
+
+| Quarter | Focus | Key Milestones |
+|---------|-------|----------------|
+| **Q2** | Program Expansion | • Launch developer champions program<br/>• Establish regular content cadence<br/>• Build automated onboarding flows |
+| **Q3** | Community Growth | • Host first community event<br/>• Launch advanced documentation<br/>• Start developer advisory board |
+| **Q4** | Scale & Optimize | • Measure YoY metrics<br/>• Launch enterprise programs<br/>• Plan next year's initiatives |
+
+---
+
+### Building Network Effects
+
+One crucial aspect of your timeline planning is understanding how to create and leverage network effects. As Nader Dabit points out, "the more people building in an ecosystem, the more people build in that ecosystem."
+
+<Callout>
+Think of it like a snowball effect - each successful developer in your ecosystem attracts more developers, creating a self-reinforcing cycle of growth and value.
+</Callout>
+
+### Building Bridges in Your Timeline
+
+When planning your milestones, consider incorporating these bridge-building activities:
+
+<Cards>
+   <Card title="Knowledge Sharing" icon={<GraduationCap className="text-purple-300" />}>
+      • Create learning resources<br/>
+      • Host technical workshops<br/>
+      • Share success stories<br/>
+      • Document best practices
+   </Card>
+   
+   <Card title="Community Support" icon={<Handshake className="text-blue-300" />}>
+      • Mentor new developers<br/>
+      • Answer technical questions<br/>
+      • Provide implementation guidance<br/>
+      • Recognize community contributions
+   </Card>
+   
+   <Card title="Network Building" icon={<Globe className="text-green-300" />}>
+      • Connect developers with opportunities<br/>
+      • Facilitate peer learning<br/>
+      • Create collaboration spaces<br/>
+      • Highlight community achievements
+   </Card>
+</Cards>
+
+### Identifying and Nurturing Superstars
+
+A critical part of your timeline should include identifying and supporting your community superstars. These are the developers who:
+
+| Type | Characteristics | How to Support |
+|------|-----------------|----------------|
+| **Content Creators** | Create tutorials, blogs, videos | • Provide early access<br/>• Share their content<br/>• Offer speaking opportunities |
+| **Technical Leaders** | Build significant projects, mentor others | • Feature case studies<br/>• Include in advisory boards<br/>• Provide direct support |
+| **Community Builders** | Active in forums, help others | • Create ambassador programs<br/>• Offer exclusive access<br/>• Recognize contributions |
+
+<Callout type="warn">
+Remember: Your superstars are crucial for creating network effects. Make supporting them a priority in your timeline, but be genuine in your approach - developers can spot inauthentic engagement from miles away.
+</Callout>
+
+### Resource Allocation Over Time
+
+To support these initiatives effectively, consider this resource allocation framework:
+
+| Phase | Community Investment | Bridge Building | Superstar Support |
+|-------|---------------------|-----------------|-------------------|
+| **Month 1-3** | 20% | 60% | 20% |
+| **Month 4-6** | 30% | 40% | 30% |
+| **Month 7-12** | 40% | 30% | 30% |
+
+This progressive approach helps you build strong foundations while gradually scaling your community impact.
+
+--- 
+
+### Setting Realistic Milestones
+
+Now that we've figured what to do in the first 90 days, we need to set realistic milestones.
+And by realistic, I mean really realistic. Don't shoot for the stars. When you've been around for a while, you certainly have heard someone say 'Let's postpone the retro (again)'.
+You don't want to be that person. You want to be the one that develops, learns and delivers.
+
+So: Your milestones should follow the **SMART framework** we discussed earlier.\
+Here's how you could structure them:
+
+<Cards>
+   <Card title="Technical Milestones" icon={<Code className="text-purple-300" />}>
+      • Documentation coverage targets<br/>
+      • SDK/API adoption metrics<br/>
+      • Developer tooling improvements<br/>
+      • Platform stability goals
+   </Card>
+
+   <Card title="Community Milestones" icon={<UserCog className="text-blue-300" />}>
+      • Active member growth<br/>
+      • Event participation rates<br/>
+      • Champion program metrics<br/>
+      • Support response times
+   </Card>
+
+   <Card title="Business Impact" icon={<ChartLine className="text-green-300" />}>
+      • Developer satisfaction scores<br/>
+      • Platform adoption rates<br/>
+      • Revenue influence metrics<br/>
+      • Resource efficiency goals
+   </Card>
+</Cards>
+
+### Adjusting Your Timeline
+
+Remember that timelines need to be flexible. Here's when to consider adjustments:
+
+<Accordions>
+   <Accordion title="Market Changes">
+      • New competitor launches<br/>
+      • Technology shifts<br/>
+      • Economic conditions<br/>
+      • Industry regulations
+   </Accordion>
+   <Accordion title="Internal Changes">
+      • Product roadmap updates<br/>
+      • Team restructuring<br/>
+      • Resource availability<br/>
+      • Strategic pivots
+   </Accordion>
+   <Accordion title="Community Feedback">
+      • Developer needs evolution<br/>
+      • Usage pattern changes<br/>
+      • Feature requests<br/>
+      • Support trends
+   </Accordion>
+</Accordions>
+
+With a solid timeline in place, you're ready to start implementing your DevRel strategy. 
+
+Next, let's talk about how to build effective feedback loops to ensure you're moving in the right direction.
+
+---
+
+![Feedback Loop](/images/blog/2024-11-06-devrel-strategy/feedback-loop-header.jpg)
+
+## Chapter Five: Feedback Loops
+
+Let's talk about feedback loops - the engine that keeps your DevRel program running smoothly. Think of them as your early warning system and innovation driver rolled into one. Without proper feedback loops, you're essentially flying blind.
+
+<Callout>
+Feedback isn't just about collecting bug reports or feature requests. It's about creating a continuous dialogue between your product team and the developer community that drives meaningful improvements.
+</Callout>
+
+### The Developer Advocacy Feedback Loop
+
+Okay, let's say you're a Developer Advocate (we will cover other roles later). 
+In this case, your role isn't just about external outreach - it's about creating a two-way street between your company and the developer community. Here's how this loop works:
+
+<Cards>
+   <Card title="Outbound Flow" icon={<Target className="text-purple-300" />}>
+      • Share product updates and features<br/>
+      • Create educational content<br/>
+      • Provide technical guidance<br/>
+      • Build community programs
+   </Card>
+   <Card title="Inbound Flow" icon={<ChartLine className="text-green-300" />}>
+      • Gather developer feedback<br/>
+      • Identify pain points<br/>
+      • Collect feature requests<br/>
+      • Track sentiment and adoption
+   </Card>
+</Cards>
+
+
+--- 
+
+### Types of Feedback Loops
+
+Let's break down the different types of feedback loops you should establish:
+
+| Type | Purpose | Examples |
+|------|----------|----------|
+| **Product Feedback** | Improve product features and usability | • Bug reports<br/>• Feature requests<br/>• Usage patterns<br/>• Performance metrics |
+| **Documentation Feedback** | Enhance developer resources | • Doc issues<br/>• Missing examples<br/>• Clarity improvements<br/>• Search analytics |
+| **Community Feedback** | Strengthen community engagement | • Discussion topics<br/>• Support questions<br/>• Event feedback<br/>• Community health |
+| **Developer Experience** | Optimize the developer journey | • Onboarding friction<br/>• Integration challenges<br/>• Tool effectiveness<br/>• Time-to-value |
+
+### Understanding Different Loop Types
+
+When implementing feedback loops, it's important to understand how different types serve different purposes. Let's break these down:
+
+<Cards>
+   <Card title="Creative Feedback" icon={<Edit className="text-purple-300" />}>
+      Focuses on improving technical content and documentation through iterative reviews and updates. Each revision cycle helps refine the developer experience.
+   </Card>
+
+   <Card title="Project Management" icon={<Target className="text-blue-300" />}>
+      Uses retrospectives and wash-ups to continuously improve how developer-focused projects are executed. Learning from each project cycle improves future initiatives.
+   </Card>
+
+   <Card title="User Engagement" icon={<UserCog className="text-green-300" />}>
+      Analyzes how developers interact with your platform, similar to how Netflix uses viewing data to inform content decisions. This helps shape future feature development.
+   </Card>
+
+   <Card title="Customer Experience" icon={<ChartLine className="text-yellow-300" />}>
+      Captures both positive and negative developer feedback to drive platform improvements and identify pain points early.
+   </Card>
+</Cards>
+
+Each type of loop serves a specific purpose in your DevRel strategy:
+
+| Loop Type | Primary Use | Example Application |
+|-----------|-------------|---------------------|
+| **Creative** | Content Improvement | Iterating on documentation based on usage patterns and direct feedback |
+| **Project** | Process Optimization | Using hackathon feedback to improve future event organization |
+| **Engagement** | Feature Development | Tracking which SDK features are most used to guide development priorities |
+| **Experience** | Platform Enhancement | Using support ticket patterns to identify and fix common pain points |
+
+<Callout>
+Pro tip: Don't try to implement all loop types at once. Start with the most critical for your current stage and gradually expand as your program matures.
+</Callout>
+
+### Feedback Loop Characteristics
+
+For feedback loops to be effective, they need certain key characteristics:
+
+<Cards>
+   <Card title="Speed" icon={<Zap className="text-purple-300" />}>
+      Quick turnaround between feedback collection and action. The faster you can respond, the more engaged developers stay.
+   </Card>
+
+   <Card title="Clarity" icon={<Target className="text-blue-300" />}>
+      Clear processes for how feedback is collected, processed, and acted upon. Everyone should understand their role.
+   </Card>
+
+   <Card title="Visibility" icon={<Eye className="text-green-300" />}>
+      Transparent communication about what happens with feedback and how it influences decisions.
+   </Card>
+
+   <Card title="Impact" icon={<ChartLine className="text-yellow-300" />}>
+      Demonstrable results from feedback implementation, showing developers their input matters.
+   </Card>
+</Cards>
+
+### Implementing Effective Loops
+
+Each feedback loop type requires specific implementation strategies:
+
+| Loop Type | Implementation Strategy | Success Indicators |
+|-----------|------------------------|-------------------|
+| **Immediate** | • Real-time error reporting<br/>• Live chat support<br/>• Interactive documentation | • Response time<br/>• Resolution rate<br/>• User satisfaction |
+| **Short-term** | • Weekly community calls<br/>• Sprint feedback sessions<br/>• Quick surveys | • Participation rate<br/>• Action item completion<br/>• Feature adoption |
+| **Long-term** | • Quarterly reviews<br/>• Annual surveys<br/>• Strategic planning | • Trend analysis<br/>• Strategic alignment<br/>• Community growth |
+
+### Optimizing Your Feedback Loops
+
+To ensure your feedback loops remain effective:
+
+<Steps>
+   <Step>
+      #### Regular Review
+      • Audit feedback channels<br/>
+      • Assess response times<br/>
+      • Evaluate impact metrics<br/>
+      • Update processes
+   </Step>
+   <Step>
+      #### Process Refinement
+      • Streamline collection methods<br/>
+      • Automate where possible<br/>
+      • Remove friction points<br/>
+      • Enhance visibility
+   </Step>
+   <Step>
+      #### Impact Analysis
+      • Track implemented changes<br/>
+      • Measure developer satisfaction<br/>
+      • Monitor adoption metrics<br/>
+      • Document success stories
+   </Step>
+</Steps>
+
+<Callout type="warn">
+Remember: The goal isn't just to collect feedback - it's to create a continuous improvement cycle that benefits both developers and your product.
+</Callout>
+
+
+### Feedback Channels
+
+Let's explore the various channels you can use to gather developer feedback effectively, using the developer journey stages as our guide to understand which channels work best at each phase of developer engagement.
+
+<DeveloperJourneyStages className="my-8" />
+Different feedback channels are most effective at different stages of the developer journey:
+
+<Cards>
+   <Card title="Discovery Stage" icon={<Search className="text-blue-300" />}>
+      Focus on passive monitoring to understand how developers find and evaluate your platform:
+      - Documentation feedback widgets
+      - Stack Overflow monitoring
+      - Social media listening
+      - Search analytics
+   </Card>
+   
+   <Card title="Evaluation Stage" icon={<Scale className="text-green-300" />}>
+      Engage directly to understand decision factors and barriers:
+      - Developer surveys
+      - User interviews
+      - Community forums
+      - Getting started feedback
+   </Card>
+   
+   <Card title="Learning Stage" icon={<GraduationCap className="text-purple-300" />}>
+      Provide interactive support to ensure successful adoption:
+      - Office hours
+      - Developer workshops
+      - Technical support channels
+      - Implementation feedback
+   </Card>
+   
+   <Card title="Growth Stage" icon={<TrendingUp className="text-red-300" />}>
+      Track usage patterns and advanced needs:
+      - Usage metrics
+      - Feature adoption rates
+      - Support ticket analysis
+      - Advanced use case feedback
+   </Card>
+</Cards>
+
+Let's cluster these feedback channels into four main categories:
+
+<Cards>
+   <Card title="Passive Channels" icon={<Eye className="text-blue-300" />}>
+      - Documentation feedback widgets
+      - GitHub issues & discussions
+      - Stack Overflow monitoring
+      - Social media listening
+   </Card>
+   <Card title="Active Channels" icon={<MessageCircle className="text-green-300" />}>
+      - Developer surveys
+      - User interviews
+      - Beta testing programs
+      - Community forums
+   </Card>
+   <Card title="Interactive Channels" icon={<Users className="text-purple-300" />}>
+      - Office hours
+      - Developer workshops
+      - Community events
+      - Advisory boards
+   </Card>
+   <Card title="Analytics" icon={<BarChart className="text-red-300" />}>
+      - Usage metrics
+      - Error tracking
+      - Support ticket analysis
+      - Documentation analytics
+   </Card>
+</Cards>
+
+<Callout type="info">
+Pro tip: Don't try to implement all channels at once. Start with 2-3 that align with your current developer journey stage and expand based on needs and resources.
+</Callout>
+
+Remember to match your feedback channels with your developer personas and journey stages. Different developers prefer different engagement methods - a startup developer might prefer quick Discord chats, while an enterprise developer might engage more through formal methods.
+
+I hope this deep dive into feedback loops has given you a solid foundation for implementing them in your DevRel strategy. While we've covered a lot of ground - from different types of loops to implementation strategies and channel optimization - remember that the most effective feedback system is one that's **tailored to your specific situation**. 
+Take these frameworks and examples as a starting point, then adapt them based on your unique developer community and organizational needs. 
+I am sure you will find your own way to the best possible feedback system for your situation.
+
+---
+
+![Metrics](/images/blog/2024-11-06-devrel-strategy/metrics-header.jpg)
+## Chapter Six: [**Measuring Success & Reporting**](#6-measuring-success--reporting)
+
+<Callout type="info">
+"If you're not measuring your DevRel program, how do you know where you were, where you are, and be able to plan where you're going to go?" - Jeremy Meiss, [Let's Talk About DevRel Metrics](https://jmeiss.me/posts/talk-about-devrel-metrics/)
+</Callout>
+
+
+### Understanding DevRel Metrics
+
+Let's face it - metrics have been a contentious topic in DevRel for years. While some argue that DevRel impact is too qualitative to measure, the reality is that showing concrete value is more important than ever.
+
+Through my research and studies in DevRel metrics, I've found that measuring success in Developer Relations presents unique challenges. While traditional business metrics like sales figures or Marketing Qualified Leads (MQLs) are straightforward, DevRel often has longer-term, qualitative impacts that aren't easily captured by conventional metrics.
+
+My studies have identified two primary categories of metrics:
+
+| Metric Type | Description | Examples |
+|------------|-------------|-----------|
+| **Qualitative** | Data points that cannot be defined numerically | • Feedback form comments<br/>• Social media interactions<br/>• Direct community feedback |
+| **Quantitative** | Data points that can be defined numerically | • Monthly active users<br/>• Content quality scores<br/>• Distribution metrics |
+
+<Callout>
+From my experience, established metrics tend to be quantitative since numeric data is more digestible for other functions and leaders, thereby garnering more trust.
+</Callout>
+
+<Cards>
+  <Card title="Why Metrics Matter" icon={<Target className="text-blue-300" />}>
+    - Communicate value to leadership
+    - Guide program direction and improvements
+    - Validate resource investments
+    - Enable data-driven decisions
+  </Card>
+  
+  <Card title="Common Challenges" icon={<AlertTriangle className="text-red-300" />}>
+    - Metrics can feel reductive for relationship work
+    - Long feedback loops make attribution difficult
+    - Multiple teams influence key metrics
+    - Qualitative impacts are hard to quantify
+  </Card>
+</Cards>
+
+
+### Evaluating Metric Effectiveness
+
+My research has revealed clear patterns in what makes metrics effective or potentially detrimental:
+
+#### Content-Specific Metrics
+
+<Cards>
+  <Card title="Content Quality" icon={<Eye className="text-green-300" />}>
+    - Average time on page
+    - Bounce rates
+    - Video watch duration
+    - Completion rates
+    - User satisfaction scores
+  </Card>
+
+  <Card title="Content Distribution" icon={<TrendingUp className="text-yellow-300" />}>
+    - Topic coverage percentages
+    - Theme distribution
+    - Persona targeting metrics
+    - Channel effectiveness
+    - Geographic reach
+  </Card>
+</Cards>
+
+#### Favorable Metrics
+Metrics that provide a more definitive depiction of the DevRel team's reach, engagement, and influence are deemed 'favorable'. These metrics are essential for tracking community growth, measuring the impact of content and educational resources, and assessing overall brand visibility within the developer ecosystem.
+
+When selecting metrics, it's important to focus on those that provide meaningful insights into your DevRel efforts.\ 
+Here are key metrics across different aspects of Developer Relations:
+
+| Category | Metrics |
+|----------|---------|
+| Community Growth | • Total community members<br/>• Total active community members<br/>• Total community contributions (forum posts, code)<br/>• Total newsletter subscribers<br/>• Total YouTube and social media followers |
+| Content Impact | • Total content pieces created (blogs, videos, tutorials)<br/>• Engagement metrics (views, likes, shares, comments)<br/>• Content quality metrics (time spent, bounce rate)<br/>• Total workshop completions<br/>• Total conference/meetup appearances<br/>• SEO Domain Authority |
+| Product Adoption | • Total launch day users and positive mentions<br/>• Total prioritized user issues from DevRel<br/>• Total monthly users of integrations/tooling<br/>• Value metric and % retention at ideal frequency<br/>• Developer exceptions tracking |
+
+These metrics help demonstrate the tangible impact of DevRel initiatives while providing actionable insights for program improvement. When tracked consistently, they create a comprehensive picture of your DevRel program's effectiveness and its contribution to broader business objectives.
+
+#### Detrimental Metrics
+
+Detrimental metrics in DevRel emphasize easily quantifiable aspects over actual value provided to the developer community. 
+These metrics can mislead teams by prioritizing surface-level measurements over meaningful engagement:
+
+| Metric | Why It's Detrimental |
+|--------|---------------------|
+| GitHub stars on demos | While easy to track, stars alone don't reflect the demo's actual usefulness or quality for developers |
+| Traffic from UTM tags | Raw visitor counts provide little insight into the depth or value of engagement |
+| Conference badge scans | Simply tracking interactions fails to measure the meaningful impact of conversations |
+| Page view analytics | As noted by Matt Broberg, "confusing pageviews with community health" can lead to detached leadership that hinders genuine community building |
+
+---
+
+### Key Metrics Frameworks
+
+#### The North Star Metric
+
+<ImageZoom  
+   alt="North Star" 
+   width={400}
+   height={400}
+   src={NorthStar}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+A North Star metric serves as the primary measure of success for DevRel initiatives, providing a clear focus for the team's efforts. While specific metrics vary by company and product, they should reflect meaningful developer engagement and align with business objectives. Here are key supporting metrics that often contribute to a DevRel North Star:
+
+<Cards>
+  <Card title="Community Metrics" icon={<Users className="text-purple-300" />}>
+    - Number of active members
+    - Topic engagement
+    - Contributor growth
+    - Event attendance
+  </Card>
+
+  <Card title="Content Metrics" icon={<FileText className="text-green-300" />}>
+    - Documentation usage
+    - Tutorial completions  
+    - Newsletter subscribers
+    - Video engagement
+  </Card>
+
+  <Card title="Product Metrics" icon={<Box className="text-blue-300" />}>
+    - Feature adoption
+    - Time to Hello World
+    - Integration usage
+    - Developer satisfaction
+  </Card>
+</Cards>
+
+---
+
+#### Kim Maida's Keystone Framework
+
+<ImageZoom  
+   alt="Kim Maida's Keystone Framework" 
+   width={400}
+   height={400}
+   src={KimMaidaKeystoneFramework}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+[This framework](https://maida.kim/how-to-measure-the-value-of-developer-relations/) ties metrics directly to business value through four key areas.
+It provides a structured way to measure and communicate DevRel value. Let's break down each area:
+
+<Accordions>
+  <Accordion title="Reach">
+    Top of funnel metrics that show initial awareness and interest:
+    - Social media engagement
+    - Website traffic from DevRel activities 
+    - Event/talk attendance
+    - Content views and downloads
+  </Accordion>
+
+  <Accordion title="Awareness">
+    Metrics showing deeper engagement with resources:
+    - Documentation usage patterns
+    - Tutorial completions
+    - Sample code downloads
+    - Resource library usage
+  </Accordion>
+
+  <Accordion title="Engagement">
+    Direct interaction metrics:
+    - GitHub interactions
+    - Community participation
+    - Support ticket engagement
+    - Feature requests/feedback
+  </Accordion>
+
+  <Accordion title="DevRel Qualified Leads">
+    Conversion and advocacy metrics:
+    - Active platform usage
+    - API/SDK adoption
+    - Community advocacy
+    - Enterprise conversions
+  </Accordion>
+</Accordions>
+
+<Callout>
+The key is tracking the developer's journey through these stages - from initial reach through to becoming an active platform advocate. Each stage builds upon the previous ones to create compounding value.
+</Callout>
+
+To implement this framework effectively:
+
+1. Define your keystone metric (e.g. registered developers)
+2. Assign relative values to each stage
+3. Track progression through the funnel
+4. Calculate combined business impact
+5. Adjust and refine over time
+
+Remember that developers may cycle through these stages multiple times as they deepen their engagement with your platform. The framework helps capture this cumulative value creation.
+
+
+---
+
+#### Example OKRs
+
+Based on the **OKRA framework**, here are examples with **SMART** key results. Please note that these are just examples, and you should adjust them to your specific situation. It doesn't make sense to work on SDK adoption if your SDK is just a simple wrapper around an API.
+
+Wait, I need to zoom in a little for this one 🔎
+
+<div className="text-2xl font-bold text-center my-6 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+  Focus on IMPACTFUL activities first, polish the rest later.
+</div>
+
+Okay, cool. You get the point. Now back to the examples:
+
+| Objective | Key Results |
+|-----------|-------------|
+| **Ecosystem Growth** | • Increase developer community members from 1,000 to 5,000 by Q4 2024<br/>• Grow monthly active developers from 100 to 500 by Q3 2024<br/>• Launch developer advocacy program with 10 advocates by Q2 2024 |
+| **Internal Advocacy** | • Establish monthly product feedback sessions with 80% engineering team attendance<br/>• Create developer sentiment dashboard tracking NPS with baseline of 30<br/>• Submit 20 validated developer-driven feature requests to product team per quarter |
+| **Developer Success** | • Reduce average time to first API call from 2 hours to 30 minutes<br/>• Increase documentation satisfaction score from 7.2 to 8.5 out of 10<br/>• Achieve 90% resolution rate for developer support tickets within 24 hours |
+| **Platform Evolution** | • Drive API adoption from 100k to 500k monthly calls<br/>• Launch 3 new SDKs with 50+ stars each on GitHub<br/>• Achieve 80% developer satisfaction rating for new platform features |
+
+<Callout>
+Remember: Your OKRs should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound) and directly tied to both business outcomes and developer success. Use the [OKRA Framework](/blog/2024-10-29-devrel-team-goal-planning-strategy-okr) to define clear metrics, actions, and timelines for each objective.
+</Callout>
+
+By setting clear objectives that align with both company goals and developer needs, you create a foundation for a successful DevRel strategy that delivers measurable value to all stakeholders. The key is to balance lead metrics (measuring work output) and lag metrics (measuring outcomes) based on your team composition and organizational structure.
+
+### Educational Impact Assessment
+
+Based on my research with, quoting Fontão et al. (2021), successful DevRel programs should measure educational impact through:
+
+| Category | Key Metrics |
+|----------|-------------|
+| **Event Promotion & Reach** | • Value proposition effectiveness<br/>• Community engagement rates<br/>• Social media impact |
+| **Structured Learning** | • Advanced learning completion rates<br/>• Workshop effectiveness<br/>• Hackathon outcomes |
+| **Community Discussion** | • Online group engagement<br/>• Content distribution success<br/>• Developer feedback quality |
+| **Developer Recognition** | • Contribution acknowledgment<br/>• Community leadership<br/>• Developer progression |
+
+
+### Practical Implementation
+
+Great, we've covered a LOT of theory. It's time to use it in practice.
+
+<Callout type="warn">
+Start small with 2-3 key metrics that align with your current goals. You can expand measurement over time as your program matures.
+</Callout>
+
+Here's how to get started:
+
+1. Identify your company's key business objectives
+2. Define metrics that show DevRel's contribution
+3. Set up measurement systems and baselines
+4. Report regularly on progress and learnings
+5. Iterate based on what you discover
+
+Remember: The goal isn't perfect measurement, but rather showing clear progress toward business goals while maintaining authentic developer relationships.
+If you notice constantly lagging/red metrics, you need to ask yourself why and adjust your strategy accordingly asap. **Do not hesitate to pivot.**
+
+I will create a dedicated blog post on this topic soon.
+
+*Please get [in touch](https://x.com/0xfabs) with me if you would like to chat about this or read my Thesis on this topic.*
+
+---
+![Metrics](/images/blog/2024-11-06-devrel-strategy/community-approach-header.jpg)
+
+## Chapter Seven: Community-Centric Approaches
+
+
+<Callout type="info">
+The strength of your developer community directly correlates with the success of your developer platform.
+</Callout>
+
+### Understanding Community-Centric DevRel
+
+A community-centric approach puts developers at the heart of your DevRel strategy. Instead of pushing products, you're fostering an environment where developers can learn, share, and grow together.
+
+<Cards>
+  <Card title="Why Community First?" icon={<Users className="text-purple-300" />}>
+    - Organic product adoption through peer influence
+    - Authentic feedback channels
+    - User-generated content and solutions
+    - Sustainable growth through network effects
+  </Card>
+  
+  <Card title="Key Benefits" icon={<Trophy className="text-green-300" />}>
+    - Reduced support costs
+    - Higher user retention
+    - Stronger product advocacy
+    - Talent pipeline development
+  </Card>
+
+    <Card title="Sustainable Growth" icon={<Sprout className="text-emerald-300" />}>
+    - Self-sustaining support systems
+    - User-generated documentation
+    - Community-driven innovation
+    - Reduced support costs
+  </Card>
+</Cards>
+
+---
+
+### The Power of Network Effects
+
+When developers connect and collaborate around your product, they create a powerful network effect that drives adoption:
+
+<Cards>
+  <Card title="Knowledge Exchange" icon={<Share className="text-blue-300" />}>
+    - Peer-to-peer learning
+    - Shared solutions
+    - Community documentation
+    - Best practices evolution
+  </Card>
+  
+  <Card title="Entry Barriers" icon={<Shield className="text-green-300" />}>
+    - Easier onboarding through community support
+    - Reduced learning curve
+    - Ready-made solutions
+    - Mentorship opportunities
+  </Card>
+</Cards>
+
+### The Network Effect in Developer Communities
+
+When developers help other developers, your platform benefits from a powerful network effect:
+
+<Steps>
+  1. Early adopters solve problems and share solutions
+  2. Their shared knowledge attracts new developers
+  3. New developers learn from existing resources
+  4. Some become contributors themselves
+  5. The cycle continues, growing your community
+</Steps>
+
+---
+
+### Identifying and Nurturing Community Superstars
+![Developers](/images/blog/2024-11-06-devrel-strategy/developers-developers-developers.gif)
+
+Every thriving developer community has its superstars - highly engaged members who significantly impact community growth and health.
+
+<Cards>
+  <Card title="Superstar Traits" icon={<Star className="text-yellow-300" />}>
+    - Consistent engagement
+    - High-quality contributions
+    - Willingness to help others
+    - Technical expertise
+    - Community leadership
+  </Card>
+  
+  <Card title="Supporting Superstars" icon={<Heart className="text-red-300" />}>
+    - Recognition programs
+    - Early access to features
+    - Direct access to product team
+    - Speaking opportunities
+    - Community leadership roles
+  </Card>
+</Cards>
+
+### Building a Developer Champions Program
+
+Your most active community members are your best source of honest feedback and potential future employees. You should get to know them as much as possible.
+You should also consider offering them meaningful benefits to keep them engaged and motivated. 
+Need alpha testers? Need speakers? Need contributors? Go and ask your superstars. They will be happy to help and be seen at the same time.
+
+Here's how you could structure your champions program:
+
+<Steps>
+  <Step>
+    **Define clear criteria:**
+    - Track contribution metrics
+    - Monitor engagement levels 
+    - Assess technical expertise
+    - Measure community impact
+  </Step>
+
+  <Step>
+    **Offer meaningful benefits:**
+    - Provide exclusive swag
+    - Sponsor conference tickets
+    - Grant product credits
+    - Include in advisory board
+    - Support professional development
+  </Step>
+
+  <Step>
+    **Create growth paths:**
+    - Enable mentorship opportunities
+    - Facilitate speaking engagements
+    - Support content creation
+    - Consider for career opportunities
+  </Step>
+</Steps>
+
+
+---
+
+### The Hiring Advantage
+
+Oh, want to hear a secret? Come closer:\
+One often overlooked benefit of a community-centric approach is talent acquisition. 
+
+Your superstar community members make ideal candidates for hiring because they already have deep product knowledge, proven technical expertise, and demonstrated cultural alignment with your organization. They also bring built-in credibility within the community, having established themselves as trusted voices and contributors.
+So next time you're thinking about how to grow your community, don't forget to consider the talent pipeline it can provide.
+
+<Callout type="warn">
+Remember: While hiring from your community can be beneficial, maintain clear boundaries and transparency about potential opportunities to avoid undermining community trust.
+</Callout>
+
+---
+
+### Investing in Community Growth
+
+Building a strong developer community requires consistent investment in:
+
+<Cards>
+  <Card title="Education" icon={<GraduationCap className="text-blue-300" />}>
+    - Technical workshops
+    - Learning resources
+    - Certification programs
+    - Skill development paths
+  </Card>
+  
+  <Card title="Engagement" icon={<Heart className="text-red-300" />}>
+    - Regular events
+    - Recognition programs
+    - Feedback sessions
+    - Community challenges
+  </Card>
+  
+  <Card title="Enablement" icon={<Zap className="text-purple-300" />}>
+    - Developer tools
+    - API access
+    - Testing environments
+    - Documentation resources
+  </Card>
+</Cards>
+
+### Measuring Community Success
+
+Track these key metrics to gauge community health:
+
+<Cards>
+  <Card title="Engagement Metrics" icon={<Activity className="text-blue-300" />}>
+    - Active participants
+    - Response rates
+    - Solution quality
+    - Time to answer
+  </Card>
+  
+  <Card title="Growth Metrics" icon={<TrendingUp className="text-green-300" />}>
+    - New member retention
+    - Content creation rate
+    - Champion program participation
+    - Community satisfaction
+  </Card>
+</Cards>
+
+### Key Takeaways
+
+1. Put community value before product promotion
+2. Identify and nurture your superstar members
+3. Create clear paths for recognition and growth
+4. Listen to your power users' feedback
+5. Consider community members for hiring opportunities
+6. Measure and celebrate community success
+
+---
+
+![Content and Education Strategy](/images/blog/2024-11-06-devrel-strategy/content-education-header.jpg)
+## Chapter Eight: [**Content and Education Strategy**](#8-content-and-education-strategy)
+
+Building on the community-centric approach we discussed in Chapter Seven, content and education form the backbone of any successful DevRel program. 
+Great developer content isn't just about **what** you write - it's about creating the **right content**, for the **right audience**, at the **right time** in their journey. 
+As we'll explore in this chapter, a well-planned content strategy complements your community efforts and sets the stage for the advanced topics we'll cover in subsequent chapters.
+
+
+### The Four Pillars of Technical Content and the Diátaxis Framework
+<ImageZoom 
+   src={Diataxis} 
+   alt="Diataxis Framework" 
+   width={800} 
+   height={600} 
+   quality={100} 
+/>
+
+The [Diátaxis framework](https://diataxis.fr/) is a systematic approach to technical documentation that identifies four distinct types of documentation, each serving a specific purpose and audience.
+I highly recommend taking the time to fully digest the framework and how it can be applied to your use case. It will help you create a more comprehensive and effective content strategy.
+Feel free to get in touch with me if you would like to discuss this in more detail. I also can cover this in a later post if enough people are interested.
+
+But for now, let's explore the four pillars of technical content:
+
+<Cards>
+  <Card title="Tutorials" icon={<Footprints className="text-blue-300" />}>
+    - Learning-oriented
+    - Hands-on experience
+    - Practical exercises
+    - Getting started guides
+  </Card>
+  
+  <Card title="How-to Guides" icon={<Hammer className="text-green-300" />}>
+    - Problem-oriented
+    - Step-by-step solutions
+    - Practical scenarios
+    - Real-world tasks
+  </Card>
+  
+  <Card title="Reference" icon={<BookOpen className="text-purple-300" />}>
+    - Information-oriented
+    - Technical descriptions
+    - API documentation
+    - Code examples
+  </Card>
+  
+  <Card title="Explanation" icon={<BookMarked className="text-red-300" />}>
+    - Understanding-oriented
+    - Background information
+    - Technical concepts
+    - Design decisions
+  </Card>
+</Cards>
+
+Implementing the Diátaxis framework effectively requires careful planning and coordination across your content team. 
+Start by mapping your existing content to the four pillars, identifying gaps and opportunities. 
+Create a **content calendar** (more on this in the 'Tools' section) that balances the different types of documentation while maintaining consistency in voice and technical accuracy. 
+Regular content audits help ensure materials stay current and relevant. 
+Most importantly, establish feedback loops with your developer community to continuously refine and improve your content strategy. 
+
+Remember that great technical content is an iterative process - start small, measure impact, and scale what works.
+Let's move to the next step, where we will explore how to discover the right content to create.
+
+---
+
+### Content Discovery Methods
+
+Discovering what content to create is both an art and a science. 
+And I mean it, it requires a deep understanding of your developer audience and creativity combined with data-driven insights. 
+The key is to systematically identify knowledge gaps and pain points while staying aligned with your strategic goals. 
+Let's explore some proven methods for discovering high-impact content opportunities:
+
+| Method | Description | Key Activities |
+|--------|-------------|----------------|
+| **Documentation Gaps** | Analyze where developers are getting stuck or need help | • Review support tickets to identify common pain points and questions<br/>• Monitor community forums and chat channels for recurring topics<br/>• Track onboarding drop-off points and friction in user flows |
+| **Keyword Research** | Understand what developers are searching for | • Study search patterns in docs and community<br/>• Map technical terms developers use to find solutions<br/>• Identify common problem-solution combinations |
+| **Community Research** | Learn from direct developer interactions | • Follow discussions in developer forums<br/>• Track trending topics on social media<br/>• Note popular conference talks and workshops |
+| **User Journey Mapping** | Document the developer experience | • Map out where developers face learning challenges<br/>• Identify common obstacles in the development workflow<br/>• Document successful paths to help others follow |
+
+*(Did you notice it's a feedback loop again? It's all about listening.)*
+
+---
+
+### Breaking Down Barriers to "Hello World"
+
+It is crucial to make the onboarding process as smooth and frictionless as possible. 
+The faster developers can achieve their first success, the more likely they are to adopt your platform.
+Follow the Diataxis framework to create a comprehensive onboarding experience by providing clear, concise, and actionable ways to get started.
+I highly recommend a "Get started in 5 minutes" guide. This does not have to be a full fledged tutorial, but rather a collection of copy-paste examples and links to more in-depth guides so the "Discovery" phase is as frictionless as possible.
+
+Focus on these key areas:
+
+<Cards>
+  <Card title="Clear Prerequisites" icon={<CheckSquare className="text-yellow-300" />}>
+    - Development environment
+    - Required dependencies
+    - Access credentials
+    - System requirements
+  </Card>
+  
+  <Card title="Quick Wins" icon={<Zap className="text-green-300" />}>
+    - Copy-paste examples
+    - Working code samples
+    - Interactive tutorials
+    - Immediate feedback
+  </Card>
+  
+  <Card title="Progressive Learning" icon={<ArrowUpRight className="text-blue-300" />}>
+    - Basic to advanced paths
+    - Modular tutorials
+    - Skill-based tracks
+    - Achievement markers
+  </Card>
+</Cards>
+
+---
+
+### Content Creation Strategy
+
+Let's talk about the different ways to create content.\
+In this article, I won't go into the different types of content, but rather how to structure your content team.
+It's your job to figure out if you need written content, video content, podcasts, etc. 
+
+Let's explore the available content options so you can make an informed decision based on your specific needs and resources.
+
+#### Content Types
+
+| Content Type | Pros | Cons | Examples |
+|--------------|------|------|----------|
+| **Written Documentation** | • Easy to maintain and update<br/>• Great for SEO<br/>• Self-paced learning | • Can become outdated<br/>• May lack interactivity<br/>• Language barriers | • API references<br/>• Getting started guides<br/>• Code tutorials |
+| **Video Content** | • Visual learning<br/>• Engaging format<br/>• Shows real-time implementation | • Time-consuming to produce<br/>• Hard to update<br/>• Higher production costs | • Code walkthroughs<br/>• Live coding sessions<br/>• Product demos |
+| **Interactive Tutorials** | • Hands-on learning<br/>• Immediate feedback<br/>• High engagement | • Complex to maintain<br/>• Platform dependencies<br/>• Resource intensive | • Code sandboxes<br/>• Interactive CLIs<br/>• Coding challenges |
+| **Podcasts/Audio** | • Passive consumption<br/>• Great for interviews<br/>• Community building | • Limited for technical details<br/>• No visual aids<br/>• Time-bound content | • Tech discussions<br/>• Developer stories<br/>• Industry trends |
+| **Social Content** | • Wide reach<br/>• Quick updates<br/>• Community engagement | • Short lifespan<br/>• Platform limitations<br/>• Less detailed | • Code snippets<br/>• Quick tips<br/>• Release announcements |
+
+#### Internal vs External Writers
+
+So, you've decided on the type of content you want to create. Now, you need to decide if you want to use internal or external writers.
+Remember, the goal is to create high-quality content that resonates with your audience. So it makes sense to use internal writers for the important core content and external writers for more niche content. 
+
+Also: Don't forget about your community superstars! IMO, they are one of your best sources of externally created content.
+
+
+<Cards>
+  <Card title="Internal Team" icon={<Users className="text-purple-300" />}>
+    - Deep product knowledge
+    - Brand consistency
+    - Direct feedback loop
+    - Higher cost
+  </Card>
+  
+  <Card title="External Writers" icon={<UserPlus className="text-green-300" />}>
+    - Scalable production
+    - Fresh perspectives
+    - Specialized expertise
+    - Cost-effective
+  </Card>
+</Cards>
+
+#### Content Quality Checklist
+
+It's important to remember that the quality of your content is of highest importance. Here's a checklist to ensure your content meets high standards:
+
+- **Technical accuracy:** Verify all technical details and code samples.
+- **Code testing:** Test code examples in relevant environments.
+- **Clear explanations:** Use simple language and logical flow.
+- **Consistent style:** Follow style guide and maintain voice.
+- **SEO optimization:** Include relevant keywords and meta data.
+- **Regular updates:** Review and refresh content periodically.
+
+---
+
+### Measuring Content Success
+
+Once you have a working content strategy in place, you need to measure its success. Otherwise it's just a guessing game (there are many professionals out there who prefer to "vibe check" instead).
+
+We have covered this in the [Metrics](#9-metrics) chapter, so here's a quick recap on what you could measure:
+
+| Category | Metrics | Example Variables |
+|----------|---------|-------------------|
+| **Engagement** | • Time on page<br/>• Completion rates<br/>• Code copy events<br/>• Return visits<br/>• Scroll depth<br/>• Comments/reactions<br/>• Social shares | • Avg. session duration > 5 min<br/>• Tutorial completion rate > 80%<br/>• Code snippets copied > 100/week<br/>• 30% monthly return rate |
+| **Content Performance** | • Page views<br/>• Bounce rate<br/>• Search rankings<br/>• Referral sources<br/>• Content downloads<br/>• Video watch time | • >1000 monthly views/article<br/>• Bounce rate < 40%<br/>• Top 3 SERP position<br/>• Video completion rate > 60% |
+| **Developer Impact** | • Implementation success<br/>• Support ticket reduction<br/>• Developer satisfaction<br/>• Product adoption<br/>• API usage post-content<br/>• Documentation feedback | • 90% implementation success<br/>• 25% reduction in support tickets<br/>• CSAT score > 4.5/5<br/>• 40% increase in API calls |
+| **Business Value** | • Lead generation<br/>• Revenue influence<br/>• Community growth<br/>• Brand awareness<br/>• Developer retention | • 20% conversion to paid<br/>• 30% YoY community growth<br/>• 50% increase in brand mentions |
+
+---
+
+### Key Takeaways
+
+Thats about it for the content and education strategy. You can check the references at the end of the post for more in-depth guides on each topic. 
+Let's recap the key takeaways:
+
+1. Have a clear vision and get it by doing a proper internal kick-off.
+2. Create content that maps to your developer journey stages and personas
+3. Balance educational content types (tutorials, guides, reference docs, etc.)
+4. Focus on quality over quantity and maintain high standards
+5. Set up clear measurement frameworks from the start
+6. Track key metrics and iterate based on data and feedback
+7. Build a sustainable content creation process with the right team mix
+
+---
+![Hiring](/images/blog/2024-11-06-devrel-strategy/hiring-header.jpg)
+
+## Chapter Nine: [**Hiring**](#9-hiring)
+
+DevRel roles require a unique blend of technical expertise, communication skills, and community-building abilities. Understanding the different roles and their requirements is crucial for both hiring managers and candidates.
+Let's explore the different roles, responsibilities and skills needed for each before we dive into the hiring process:
+
+### The pillars of DevRel
+
+Overall, DevRel consists of four pillars where each role contributes to the overall success of the program. 
+Grouping them together helps to find a way to group similar activities together.
+
+| Pillar | Key Responsibilities |
+|--------|---------------------|
+| **Developer Marketing** | • Understanding target developer segments<br/>• Creating compelling value propositions<br/>• Providing tools and resources<br/>• Guiding developers through adoption funnel<br/>• Measuring marketing effectiveness |
+| **Developer Enablement** | • Creating comprehensive documentation<br/>• Building educational resources<br/>• Providing technical support<br/>• Optimizing developer experience<br/>• Ensuring developer success |
+| **Developer Advocacy** | • Building developer awareness<br/>• Establishing technical credibility<br/>• Bridging company and developer needs<br/>• Gathering community feedback<br/>• Representing developer interests |
+| **Developer Community** | • Fostering collaborative environments<br/>• Supporting shared goals and growth<br/>• Enabling peer-to-peer learning<br/>• Creating engagement opportunities<br/>• Building sustainable communities |
+
+These four pillars provide a framework for organizing DevRel activities and understanding how different roles contribute to overall program success. Each pillar represents key functions that, when working together, create a comprehensive developer relations strategy.
+
+<Callout>
+The pillars aren't silos - they often overlap and reinforce each other. A strong DevRel program needs to balance activities across all four areas while maintaining focus on both business objectives and developer needs.
+</Callout>
+
+### DevRel activities in each pillar
+
+While these pillars provide a useful framework, it's important to recognize that DevRel activities often transcend these boundaries. 
+For instance, a technical blog post might primarily serve as advocacy, but could simultaneously support marketing initiatives and provide educational value. 
+The key is understanding that while activities may span multiple pillars, their primary classification often aligns with the strategic intent behind their creation. 
+This overlap actually strengthens the overall DevRel program, as initiatives can serve multiple objectives while maintaining clear strategic focus. 
+
+Below is a comprehensive overview of how different activities typically align with each pillar:
+
+<ImageZoom  
+   alt="DevRel Pillars Activities" 
+   width={600}
+   height={600}
+   src={DevRelPillarActivities}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+### Activity Focus Areas
+
+The radar charts below illustrate different focus areas within DevRel roles, showing how activities and responsibilities can vary based on team objectives:
+
+<ImageZoom  
+   alt="DevRel Hiring Activity Radar" 
+   width={600}
+   height={600}
+   src={HiringActivityRadar}
+   className="!my-0 rounded-xl bg-fd-background"
+   priority
+/>
+
+<Accordions>
+  <Accordion title="Adoption Focus">
+    Emphasizes developer enablement and advocacy to drive product adoption. These roles focus heavily on creating educational content, providing technical support, and helping developers successfully implement solutions.
+  </Accordion>
+
+  <Accordion title="Sales Enablement Focus">
+    Balanced across pillars but with emphasis on marketing and enablement. These roles support sales teams by creating technical content, providing developer perspective, and helping bridge technical gaps.
+  </Accordion>
+
+  <Accordion title="Developer Enablement Focus">
+    Heavily weighted toward enablement activities. These roles concentrate on documentation, SDKs, tools, and resources that make developers successful with the product.
+  </Accordion>
+
+  <Accordion title="Product Input Focus">
+    Emphasizes gathering and channeling developer feedback to product teams. These roles act as the voice of the developer within the organization, helping shape product direction.
+  </Accordion>
+
+  <Accordion title="Ecosystem Focus">
+    Balanced across advocacy and community building. These roles work to build and nurture developer ecosystems through partnerships, integrations, and community programs.
+  </Accordion>
+
+  <Accordion title="Contributor Community Focus">
+    Heavily weighted toward community building and enablement. These roles focus on growing and supporting open source or product contributor communities.
+  </Accordion>
+
+  <Accordion title="Employer Branding Focus">
+    Emphasizes advocacy and marketing to attract developer talent. These roles help position the organization as a great place for developers to work.
+  </Accordion>
+</Accordions>
+
+
+One important side note I think is worth mentioning:\
+It's important to note that understanding these different focus areas is crucial for both hiring managers and candidates. 
+It helps ensure role expectations align with organizational needs and individual strengths. Seriously, take the time to understand these areas and make sure you're hiring for the right fit.
+If you already have BD people handling outreach, you don’t want to hire a ‘Developer Advocate’ just to send them to conferences. Instead, consider hiring a Developer Relations Engineer who could focus on more technical enablement work that aligns better with your team’s needs.
+
+
+*The images are from the [DevRel Job Titles and Career Progression Report](https://developerrelations.com/wp-content/uploads/2023/05/hoopy-devrel-job-titles-report-may2023.pdf)* (read it!)
+
+---
+
+### Understanding DevRel Roles
+
+Oh, this is a fun one. Try to ask anyone working in DevRel what they do and you will get a different answer every time.\
+Some of them even say they're a 'DevRel', but they really are a 'Developer Advocate'. 
+
+And some are are this:
+<video src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTdxcTJ5dHRvMTZ4NGY4ODBsczllMmM5ZzE5MHZ6bjIwdXl5YTdraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GVzDhKdpiPUIZJlh7M/giphy.mp4" autoPlay loop muted playsInline />
+
+Let's continue...\
+Based on my own experience and academic research, DevRel roles typically fall into these categories. 
+We will go into more detail in a bit.
+
+<Cards>
+  <Card title="Developer Advocate" icon={<Code className="text-blue-300" />}>
+    - Deep technical understanding
+    - Communication skills
+    - Problem-solving ability
+    - Community engagement
+    - Product feedback gathering
+  </Card>
+  
+  <Card title="Developer Evangelist" icon={<Megaphone className="text-green-300" />}>
+    - Public speaking
+    - Technical writing
+    - Event management
+    - Social media presence
+    - Feature promotion
+  </Card>
+  
+  <Card title="Developer Experience Engineer" icon={<Workflow className="text-purple-300" />}>
+    - UX/DX design skills
+    - API/SDK design
+    - Documentation expertise
+    - Onboarding optimization
+    - Technical writing
+  </Card>
+  
+  <Card title="Developer Marketing Specialist" icon={<Target className="text-red-300" />}>
+    - Marketing strategy
+    - Content creation
+    - Event sponsorship
+    - Campaign management
+    - Analytics skills
+  </Card>
+
+  <Card title="Developer Relations Engineer" icon={<Code className="text-yellow-300" />}>
+    - Technical expertise
+    - Automation and integration
+    - Developer tooling
+    - Developer experience
+  </Card>
+
+  <Card title="Developer Relations Manager" icon={<Users className="text-orange-300" />}>
+    - Leadership and mentorship
+    - Strategy and planning
+    - Team management
+    - Cross-functional collaboration
+  </Card>
+</Cards>
+
+*(Note there are more DevRel related roles out there, like 'Community Manager', 'Developer Educator', 'Solutions Engineer', etc.)*
+
+---
+
+### Core Skills
+
+When you're hiring for a DevRel role, you want to make sure the candidate has the core skills that are most important for the role.
+It highly depends on the stage of the company, too. In the beginning you might want to hire a more generalist who can do a bit of everything and has founder experience.
+The more mature the company gets, the more you want to hire specialists who can focus on a few key areas.
+
+| Skill Category | Key Components |
+|----------------|----------------|
+| Technical Foundation | • Coding experience<br/>• API knowledge<br/>• Development workflows<br/>• Technical writing |
+| Communication Skills | • Public speaking<br/>• Technical writing<br/>• Community management<br/>• Social media presence |
+| Business Skills | • Strategic thinking<br/>• Metrics understanding<br/>• Stakeholder management<br/>• Project planning |
+| Soft Skills | • Empathy<br/>• Active listening<br/>• Problem-solving<br/>• Time management |
+
+---
+### Defining Role Requirements
+
+We know about the different nuances of the different roles - now we need to have clear role definitions when looking for candidates.
+It helps align expectations, enables targeted candidate searches, and ensures effective evaluation.
+
+The process of defining role requirements typically involves three key phases. 
+- First, conduct a thorough needs assessment by working closely with stakeholders to identify key responsibilities, define success metrics, and ensure alignment with the company's current stage. 
+- Next, create a detailed role specification that outlines technical requirements, required experience level, primary focus areas, and how the role will integrate with existing teams. 
+- Finally, establish clear success metrics by defining relevant KPIs, setting expectations, establishing evaluation criteria, **and planning a growth path for the role**. 
+
+This should help you find candidates who can truly drive value for your DevRel initiatives.
+
+<div className="text-2xl font-bold text-center my-6 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+🚨 PSA: Please DO NOT use AI to write your JDs... it's so frustrating to read them, because it shows you don't care about the individual needs of the role internally.
+</div>
+
+---
+
+### Building an Effective Hiring Process
+
+The hiring process for DevRel roles should be thorough and well-structured, while aligning with your existing HR practices.\
+Here's a suggested framework that you can adapt to your needs:
+
+#### Assessment Areas
+
+When evaluating candidates, pick some of these key areas:
+
+- **Technical Proficiency**
+  - Understanding of your tech stack
+  - Previous development experience
+  - API/SDK knowledge
+  - System design understanding
+  - Documentation capabilities
+
+- **Communication Skills**
+  - Written communication (blog posts, documentation)
+  - Verbal communication (presentations, videos)
+  - Teaching ability (workshops, tutorials)
+  - Social media presence
+  - Community engagement history
+
+- **Strategic Thinking**
+  - Program planning experience
+  - Metrics and KPI understanding
+  - Resource prioritization
+  - Problem-solving approach
+  - Business acumen
+
+#### Interview Process Structure
+
+The following is a suggested and tested structure - adapt it to align with your hiring practices and team needs.\
+Note: It doesn't make sense to ask a DevRel marketing focussed person hardcore tech questions while it totally makes sense to ask a DevRel Engineer about their side projects and prior Engineering experience. You get the point.
+
+1. **Initial Screening**
+   - Resume review focusing on relevant experience
+   - Portfolio assessment (content, talks, community work)
+   - Brief technical background check
+   - Cultural alignment preliminary assessment
+
+2. **Technical Evaluation**
+   - Code review or small technical project
+   - API design discussion
+   - Documentation writing sample
+   - Technical presentation
+   - System architecture understanding
+
+3. **Communication Assessment**
+   - Mock presentation or workshop
+   - Writing exercise
+   - Community scenario roleplay
+   - Stakeholder communication simulation
+
+4. **Team Fit**
+   - Cross-functional team interviews
+   - Culture and values alignment
+   - Collaboration style assessment
+   - Working style discussion
+
+#### Evaluation Framework
+
+Having just the right questions is not enough. 
+You need to make sure to also be able to evaluate the candidates properly - in the best case without help of AI (yet), as the individual journey and experience is so important.
+
+Use these points as inspiration:
+<Cards>
+  <Card title="Role-Specific Skills" icon={<Target className="text-blue-300" />}>
+    - Technical depth appropriate for role
+    - Communication abilities matching needs
+    - Experience in key responsibility areas
+    - Tools and platform knowledge
+  </Card>
+  
+  <Card title="Growth Potential" icon={<TrendingUp className="text-green-300" />}>
+    - Learning ability and adaptability
+    - Leadership capabilities
+    - Strategic thinking
+    - Initiative and proactivity
+  </Card>
+  
+  <Card title="Cultural Impact" icon={<Users className="text-purple-300" />}>
+    - Values alignment
+    - Team collaboration style
+    - Communication approach
+    - Community building mindset
+  </Card>
+</Cards>
+
+Remember that hiring processes should be consistent across candidates, documented and transparent, flexible enough to accommodate different backgrounds, and regularly reviewed and improved based on outcomes. (don't forget the retro, folks)
+
+You also can read into the way [**a16z**](https://a16z.com/the-hiring-process) or [**Coinbase**](https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-people-cbfdf93b1c5c) do it for more inspiration.
+
+#### Post-Hire Integration
+
+Last but not least, don't forget to get the new hire up to speed **asap**.
+In my experience, the best way to do so is by having clear 30-60-90 day objectives, team and stakeholder introductions, product and technical training, a streamlined community introduction strategy, and early wins identification.
+
+**Unpopular Opinion:**\
+Some don't want to hear this, but if you note it's a bad hire, try to let them go asap. (Try to fix things first, obviously)
+It's a lose-lose situation if you don't. Eventually you'll be both unhappy. Plus: it's a waste of time and money.
+
+
+---
+![Tools and Tech](/images/blog/2024-11-06-devrel-strategy/tools-and-tech-header.jpg)
+## Chapter Ten: [**Tools and Tech**](#10-tools-and-tech)
+
+This will be the last chapter and a short one, as it's a bit more of a general overview.\
+A special thanks to the [DevRel Collective](https://devrelcollective.fun/) for maintaining an extensive [awesome-devrel](https://github.com/devrelcollective/awesome-devrel) list of tools, which helped inform this chapter.
+
+### Essential DevRel Tooling Categories
+
+| Category | Purpose | Tools |
+|----------|---------|-------|
+| **Documentation Platforms** | Core documentation hosting | - [ReadMe](https://readme.com)<br/>- [GitBook](https://www.gitbook.com)<br/>- [Docusaurus](https://docusaurus.io)<br/>- [Nextra](https://nextra.vercel.app)<br/>- [Mintlify](https://mintlify.com)<br/>- [Fumadocs](https://fumadocs.vercel.app) |
+| **API Tools** | API documentation & testing | - [Postman](https://www.postman.com)<br/>- [Insomnia](https://insomnia.rest)<br/>- [Swagger](https://swagger.io) |
+| **Community Platforms** | Developer engagement | - [Discord](https://discord.com)<br/>- [Telegram](https://telegram.org)<br/>- [Discourse](https://discourse.org)<br/>- [GitHub Discussions](https://github.com/discussions) |
+| **Content Creation** | Educational materials | - [Figma](https://figma.com)<br/>- [Canva](https://canva.com)<br/>- [Loom](https://loom.com) |
+| **Video Production** | Video content creation | - [OBS Studio](https://obsproject.com)<br/>- [CapCut](https://capcut.com)<br/>- [Descript](https://descript.com)<br/>- [Screen Studio](https://screen.studio) |
+| **Deployment & Hosting** | Content publishing | - [Cloudflare Pages](https://pages.cloudflare.com)<br/>- [GitHub Pages](https://pages.github.com)<br/>- [Vercel](https://vercel.com) |
+| **Interactive Learning** | Code education | - [CodePen](https://codepen.io)<br/>- [Replit](https://replit.com)<br/>- [CodeSandbox](https://codesandbox.io) |
+| **Analytics & Monitoring** | Community insights | - [Orbit](https://orbit.love)<br/>- [Common Room](https://commonroom.io)<br/>- [PostHog](https://posthog.com) |
+| **Event Management** | Community events | - [Bevy](https://bevy.com)<br/>- [Sessionize](https://sessionize.com)<br/>- [StreamYard](https://streamyard.com) |
+
+Most tools offer free tiers or startup programs. Start with essential tools and expand as your needs grow and budget allows.
+
+When selecting tools, consider key factors like API availability for automation, integration capabilities with your existing tech stack, data portability options, scalability to support growth, budget limitations, and your team's familiarity with the tools to ensure smooth adoption and efficient usage.
+
+
+---
+
+## Last words
+
+<video src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhycTRmemI5ZzhjM2d3OW0zMDNxbWhraWVlY2twYWp3czU3N2d3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BWKSvQtpUS226xHy7G/giphy.mp4" autoPlay loop muted playsInline />
+*What took you so long to get down here?, hah!*
+
+Phew, we made it! This guide turned out way longer than I initially planned, but I hope it provides a solid foundation for building your DevRel strategy. Whether you're just starting out or looking to level up your existing program, remember that DevRel is a marathon, not a sprint.
+
+Throughout this guide, we've covered everything from understanding your developer audience to measuring success, but perhaps the most important takeaway is this: DevRel is about building genuine relationships with developers while delivering real value to your organization. It's a delicate balance, but when done right, it's incredibly rewarding.
+
+A few final thoughts:
+- Start small and iterate. You don't need to implement everything at once.
+- Listen to your community. They'll tell you what they need if you pay attention.
+- Stay authentic. Developers can spot insincerity from miles away.
+- Measure what matters, not just what's easy to measure.
+- Take care of your DevRel team - they're the bridge between your product and the developer community.
+
+I'd love to hear about your experiences implementing these strategies or any questions you might have. Feel free to reach out to me on [Twitter/X](https://x.com/0xfabs) or [GitHub](https://github.com/fabianhug).
+
+And hey, if you've read this far - thank you! I know it's been a long journey through this guide. If you found it helpful, consider sharing it with others who might benefit from it. The DevRel community grows stronger when we share knowledge and lift each other up.
+
+Keep building awesome things! 🚀
+
+So long\
+Fabian
+
+---
+
+## Sources & Credits
+
+### Articles
+
+- https://www.leaddevrel.com/p/how-to-craft-a-great-developer-relations
+- https://www.tessakriesel.com/devrel-strategy-breakdown/
+- https://devrelbook.substack.com/p/youre-targeting-developers-so-is 
+- https://www.devrel.agency/developerjourney
+- https://medium.com/codex/developer-relations-the-developer-journey-map-36bd4619f5f3
+- https://medium.com/@haleymassa/mapping-the-customer-journey-for-developer-products-9787935997fb
+- https://dx.tips/first-90
+- https://www.developermarketing.io/the-science-behind-feedback-gathering-from-developers/
+- https://draft.dev/learn/devrel-harnessing-the-power-of-community-feedback-for-product-development
+- https://glaforge.dev/talks/2020/08/06/the-developer-advocacy-feedback-loop/
+- https://daily.dev/blog/optimizing-developer-feedback-loops-guide-2024
+- https://filestage.io/blog/feedback-loops/
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-01-a-comprehensive-devrel-metrics-guide-part1
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-05-a-comprehensive-devrel-metrics-guide-part2
+- https://fiveandahalfstars.ninja/blog/2023/2023-06-15-a-comprehensive-devrel-metrics-guide-part3.html#_the_solid_framework_kim_maidas_keystone_framework
+- https://www.swyx.io/measuring-devrel
+- https://jmeiss.me/posts/talk-about-devrel-metrics/
+- https://www.atlassian.com/agile/agile-at-scale/okr
+- https://www.atlassian.com/blog/productivity/how-to-write-smart-goals
+- https://maida.kim/how-to-measure-the-value-of-developer-relations/
+- https://servingdevelopers.com/2019/02/17/budgeting-for-developer-evangelism/
+- https://draft.dev/learn/the-network-effect-in-devrel-how-community-centric-models-boost-software-adoption
+- https://developerrelations.com/developer-experience/approaching-developer-education
+- https://developerrelations.com/developer-experience/breaking-down-barriers-to-hello-world
+- https://www.devrelx.com/post/content-for-developers-what-and-how
+- https://www.learnwithjason.dev/blog/get-hired-devrel/
+- https://developerrelations.com/how-to-get-a-job-in-devrel
+- https://www.linkedin.com/pulse/hiring-within-developer-relations-how-successfully-define-owen-parker-jgirc/
+- https://developerrelations.com/announcements/looking-at-devrel-job-titles
+- https://developerrelations.com/wp-content/uploads/2023/05/hoopy-devrel-job-titles-report-may2023.pdf
+- https://a16z.com/the-hiring-process
+- https://barmstrong.medium.com/35-ways-coinbase-hires-develops-and-retains-great-people-cbfdf93b1c5c
+- https://github.com/devrelcollective/awesome-devrel
+
+### Images 
+*(if not mentioned below the img themself)*
+
+- Cover BG by [Daniel Falcão](https://unsplash.com/@danielsfalcao) on [Unsplash](https://unsplash.com/photos/macro-photography-of-lights-Pt27b3dRdVA)
+- Value Proposition by [DevRel Book](https://www.devrelbook.com/)
+- Developer Audience by [Muhammad Raufan Yusup](https://unsplash.com/@muhraufan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-facing-laptop-inside-room-rYRE6ju-2K8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Developer Journey by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/time-lapse-photography-sky-fPN1w7bIuNU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Timeline & Milestones Photo by [Tony Reid](https://unsplash.com/@togna_bologna?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-person-standing-in-a-dark-tunnel-with-bright-lights-PGdMhonLLZk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Feedback Loop Photo by [Visax](https://unsplash.com/@visaxslr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/background-pattern-BYmWSPYzONQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Metrics Photo by [Maxim Berg](https://unsplash.com/@maxberg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-very-large-group-of-trees-that-are-very-colorful-kE8-rUKjtQU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- North Star Photo by [Dana Andreea Gheorghe](https://unsplash.com/@dana_andreea?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-night-sky-with-stars-and-a-bright-red-tent-in-the-foreground-8MsbxJnlvm0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)  
+- Content and Education Strategy Photo by [Robin Neufeld](https://unsplash.com/@robinne?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-group-of-people-standing-next-to-each-other-HOrhCnQsxnQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Hiring Photo by [Google DeepMind](https://unsplash.com/@googledeepmind?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-group-of-different-colored-objects-_aU_AxlS04E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Tools and Tech Photo by [Laura Ockel](https://unsplash.com/@viazavier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/green-and-brown-abstract-painting-nIEHqGSymRU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

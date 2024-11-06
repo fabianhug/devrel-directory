@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+    <!-- Background -->
+    <rect width="800" height="200" fill="#f8f9fa"/>
+    
+    <!-- Connected nodes representing community/network -->
+    <circle cx="100" cy="100" r="20" fill="#6366f1"/>
+    <circle cx="200" cy="80" r="20" fill="#6366f1"/>
+    <circle cx="300" cy="120" r="20" fill="#6366f1"/>
+    <circle cx="400" cy="90" r="20" fill="#6366f1"/>
+    
+    <!-- Connection lines -->
+    <line x1="120" y1="100" x2="180" y2="84" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="220" y1="84" x2="280" y2="116" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="320" y1="116" x2="380" y2="94" stroke="#94a3b8" stroke-width="2"/>
+    
+    <!-- Title -->
+    <text x="500" y="90" fill="#1e293b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">DevRel Strategy</text>
+    
+    <!-- Subtitle -->
+    <text x="500" y="120" fill="#64748b" font-family="Arial, sans-serif" font-size="16">A Comprehensive Guide</text>
+</svg>
