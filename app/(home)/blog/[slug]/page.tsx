@@ -8,7 +8,7 @@ import { createMetadata } from "@/utils/metadata";
 import { buttonVariants } from "@/components/ui/button";
 import { Control } from "@/app/(home)/blog/[slug]/page.client";
 import Image from "next/image";
-import { Giscus } from "@/components/giscus";
+import { Giscus } from "@/components/Giscus";
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
