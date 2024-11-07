@@ -8,6 +8,8 @@ import { createMetadata } from "@/utils/metadata";
 import { buttonVariants } from "@/components/ui/button";
 import { Control } from "@/app/(home)/blog/[slug]/page.client";
 import Image from "next/image";
+import { Giscus } from "@/components/Giscus";
+
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
 }): Promise<React.ReactElement> {
@@ -82,6 +84,10 @@ export default async function Page(props: {
           <Control url={page.url} />
         </div>
       </article>
+      {/* Discussions */}
+      <div className="container px-4 py-8">
+        <Giscus />
+      </div>
     </>
   );
 }
