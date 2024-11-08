@@ -46,7 +46,7 @@ export default function PostCarousel({
           transition={{ delay: 0.1 }}
           className="text-muted-foreground"
         >
-          Explore the latest trends and strategies in Developer Relations
+          Read our latest insights on Developer Relations:
         </motion.p>
       </div>
 
