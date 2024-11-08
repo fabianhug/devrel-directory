@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-
+import PostCarousel from "@/components/PostCarousel";
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-background/50">
@@ -41,6 +41,10 @@ export default function LandingPage() {
           </Button>
         </div>
       </div>
+      <div className="w-full max-w-2xl px-4 my-16">
+        <div className="h-px bg-border" />
+      </div>
+      <PostCarousel />
     </div>
   );
 }

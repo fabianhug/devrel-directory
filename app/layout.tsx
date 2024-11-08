@@ -17,9 +17,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body>
         <Banner variant="rainbow">
           <p>
-            We're thrilled to launch devrel.directory - read more about it{" "}
-            <Link href="/blog/2024-10-25-what-is-the-devrel-directory-and-how-to-contribute">
-              here
+            Read our latest article:{" "}
+            <Link href="/blog/2024-11-06-devrel-strategy">
+              "DevRel Strategy - A Comprehensive Guide"
             </Link>
           </p>
         </Banner>
